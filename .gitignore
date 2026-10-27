@@ -1,0 +1,10 @@
+# 备份与临时文件
+*.bak-*
+*.bak
+index.html.bak*
+# 系统/编辑器
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+PROJECT.md
