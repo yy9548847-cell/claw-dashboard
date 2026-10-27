@@ -1,0 +1,18 @@
+{
+  "name": "Claw 资讯台",
+  "short_name": "Claw",
+  "description": "私人 AI / 市场 / 趋势仪表盘",
+  "start_url": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f4f6fb",
+  "theme_color": "#f4f6fb",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
