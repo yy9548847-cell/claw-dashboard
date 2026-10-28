@@ -1140,16 +1140,27 @@
   }
   restoreOrder();
 
-  // 我的首页 + 资讯广场：订阅式板块管理（偏好存 localStorage.clawHome，每台设备独立）
-  var HOME_KEY='clawHome';
+  // 我的首页 + 资讯广场：订阅式板块管理（偏好存 localStorage.clawHomeV2，每台设备独立）
+  // 2026-10-28 变更：默认首页只放 5 个核心模块，其余进资讯广场由用户自行添加（键名升 V2 做一次性迁移）
+  var HOME_KEY='clawHomeV2';
+  var DEFAULT_HOME=['p-ai','p-git','p-mkt','p-tv','p-paper'];
   function loadHome(){
     var saved=null;
     try{saved=JSON.parse(localStorage.getItem(HOME_KEY)||'null');}catch(e){}
     var all=Object.keys(pageMeta).filter(function(id){return id!=='p-plaza'});
-    if(!Array.isArray(saved)) return all; // 首次使用：默认展示全部既有模块
+    if(!Array.isArray(saved)) return DEFAULT_HOME.filter(function(id){return all.indexOf(id)>=0;}); // 首次使用：核心 5 个
     return saved.filter(function(id){return all.indexOf(id)>=0});
   }
   function saveHome(arr){try{localStorage.setItem(HOME_KEY,JSON.stringify(arr));}catch(e){}}
+  // 首次使用（含从旧版升级）：把默认顺序写进 clawOrder，让首页按 AI日报 → GitHub趋势 → 行情 → 联播速览 → 论文速递 呈现
+  try{
+    if(!localStorage.getItem('clawOrderV2')){
+      var rest=Object.keys(pageMeta).filter(function(id){return id!=='p-plaza'&&DEFAULT_HOME.indexOf(id)<0;});
+      localStorage.setItem('clawOrder',JSON.stringify(DEFAULT_HOME.concat(rest)));
+      localStorage.setItem('clawOrderV2','1');
+      restoreOrder();
+    }
+  }catch(e){}
   function splitMeta(t){var mm=t.match(/^(\S+)\s+(.*)$/);return mm?[mm[1],t.slice(t.indexOf(' ')+1)]:['📦',t];}
   var homeSet={};
   function ensureHomeCard(id){
