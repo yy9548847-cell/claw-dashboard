@@ -155,8 +155,8 @@
 <header>
   <button id="backBtn" title="返回首页" style="display:none">‹ 首页</button>
   <div class="hgroup">
-    <h1 id="hdTitle">📡 Claw 资讯台</h1>
-    <p id="hdSub">2026年10月28日 周三 · 你的私人 AI / 市场 / 趋势仪表盘</p>
+    <h1 id="hdTitle">📰 你的 AI 日报</h1>
+    <p id="hdSub">2026年10月28日 周三<br>你的私人 AI / 市场 / 趋势仪表盘</p>
   </div>
   <button id="fsBtn" title="全屏">⛶</button>
   <button id="themeBtn" title="切换主页风格">☀️ 浅色</button>
@@ -166,7 +166,6 @@
 
   <!-- 首页：模块列表 -->
   <div class="page active" id="p-home">
-    <div class="section-title">我的首页 · 点击进入（每天早上 8:00 自动更新）</div>
     <div class="drag-hint">长按卡片可拖动排序 · 点卡片右上角「移除」拿掉板块</div>
     <div id="homeEmpty">首页还是空的 · 点下方「资讯广场」挑几个板块吧</div>
 
@@ -979,7 +978,7 @@
       hdTitle=document.getElementById('hdTitle'),
       hdSub=document.getElementById('hdSub');
   if(backBtn&&hdTitle&&hdSub){
-  var homeTitle=hdTitle.textContent, homeSub=hdSub.textContent;
+  var homeTitle=hdTitle.textContent, homeSub=hdSub.innerHTML; // 副标题含换行，须存 innerHTML
   var pageMeta={
     'p-ai':{t:'🤖 AI 日报',s:'大模型发布 · 国产AI动态 · 行业大事件'},
     'p-mkt':{t:'📈 行情',s:'A股收盘 · 隔夜美股 · 盘面看点'},
@@ -1000,7 +999,7 @@
     document.getElementById(id).classList.add('active');
     var m=pageMeta[id];
     if(m){hdTitle.textContent=m.t;hdSub.textContent=m.s;}
-    else{hdTitle.textContent=homeTitle;hdSub.textContent=homeSub;}
+    else{hdTitle.textContent=homeTitle;hdSub.innerHTML=homeSub;}
     backBtn.style.display=(id==='p-home')?'none':'inline-block';
     window.scrollTo(0,0);
   }
@@ -1042,7 +1041,7 @@
       if(order&&order.length){
         var map={};
         homePage.querySelectorAll('.module-item[data-t]').forEach(function(m){map[m.dataset.t]=m});
-        var anchor=homePage.querySelector('.section-title');
+        var anchor=homePage.querySelector('.drag-hint')||homePage.querySelector('.section-title')||homePage;
         order.forEach(function(id){
           if(map[id]){anchor.insertAdjacentElement('afterend',map[id]);anchor=map[id];}
         });
