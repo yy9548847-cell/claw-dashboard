@@ -90,6 +90,15 @@
   .plaza-cell h4{font-size:11.5px;margin-top:7px;font-weight:600;line-height:1.3}
   .plaza-cell .st{font-size:10px;margin-top:5px;font-weight:700;color:var(--accent)}
   .plaza-cell.in .st{color:var(--sub)}
+  /* 资讯广场：分类标题 + 已添加角标 */
+  .plaza-cat{font-size:12px;color:var(--sub);font-weight:700;letter-spacing:1px;margin:16px 2px 9px}
+  .plaza-cat:first-child{margin-top:2px}
+  .plaza-cell{position:relative}
+  .plaza-cell .inbadge{position:absolute;top:5px;right:6px;font-size:10px;font-weight:800;color:#fff;background:var(--accent);border-radius:9px;padding:0 5px;line-height:1.6}
+  /* 模块页内：添加到首页 / 移除 */
+  .homeswitch{display:inline-block;font-size:11.5px;font-weight:700;padding:5px 13px;border-radius:20px;border:1px solid var(--accent);color:var(--accent);background:transparent;margin:0 2px 10px;cursor:pointer;font-family:inherit;transition:transform .1s}
+  .homeswitch:active{transform:scale(.96)}
+  .homeswitch.on{border-color:var(--line);color:var(--sub)}
   .module-item.dragging{
     opacity:.99;z-index:99;pointer-events:none;transform-origin:center;
     box-shadow:0 18px 40px rgba(30,40,90,.26),0 3px 10px rgba(30,40,90,.12);
@@ -1112,23 +1121,23 @@
   if(backBtn&&hdTitle&&hdSub){
   var homeTitle=hdTitle.textContent, homeSub=hdSub.innerHTML; // 副标题含换行，须存 innerHTML
   var pageMeta={
-    'p-60s':{t:'⚡ 今日 60 秒',s:'今天最值得看的 3-5 条 · 一分钟读完'},
-    'p-ai':{t:'🤖 AI 日报',s:'大模型发布 · 国产AI动态 · 行业大事件'},
-    'p-mkt':{t:'📈 行情',s:'A股收盘 · 隔夜美股 · 盘面看点'},
-    'p-git':{t:'⭐ GitHub 趋势',s:'当日热门开源项目精选'},
-    'p-cal':{t:'📅 财经日历',s:'财报 · 经济数据 · 大事件时间表'},
-    'p-paper':{t:'📄 论文速递',s:'arXiv 精选 · 人话解读 · 附原文链接'},
-    'p-essay':{t:'📚 深度长文',s:'研报与技术博客精选 · 附原文链接'},
-    'p-hist':{t:'🎲 科技史上的今天',s:'每天三件小事 · 附出处'},
-    'p-tv':{t:'📺 新闻联播速览',s:'前一天联播要点 · 分组归纳 · 官方出处'},
-    'p-geo':{t:'🛰️ 地缘热点',s:'近期国际热点 · 每条附 AI 评论'},
-    'p-try':{t:'🧪 值得试',s:'每天 1-3 个能上手的工具 · 附三步试用法'},
-    'p-new':{t:'🆕 今日新玩意',s:'普通人当天就能上手的新应用 · 新功能'},
-    'p-myth':{t:'🩺 每日一问',s:'健康辟谣 · 每天一条 · 真相 + 科学依据'},
-    'p-ent':{t:'🎬 娱乐新闻',s:'影视综官宣 · 音乐现场 · 只收正规报道'},
-    'p-coll':{t:'🎓 高校新闻',s:'专业目录 · 招生政策 · 高校动态'},
-    'p-work':{t:'💼 职场新闻',s:'就业政策 · 行业风向 · 薪酬榜'},
-    'p-plaza':{t:'🛍️ 资讯广场',s:'全部模块 · 挑选添加到我的首页'}
+    'p-60s':{t:'⚡ 今日 60 秒',s:'今天最值得看的 3-5 条 · 一分钟读完',c:'edit'},
+    'p-ai':{t:'🤖 AI 日报',s:'大模型发布 · 国产AI动态 · 海外一手源',c:'tech'},
+    'p-mkt':{t:'📈 行情',s:'A股收盘 · 隔夜美股 · 盘面看点',c:'fin'},
+    'p-git':{t:'⭐ GitHub 趋势',s:'当日热门开源项目精选',c:'tech'},
+    'p-cal':{t:'📅 财经日历',s:'财报 · 经济数据 · 大事件时间表',c:'fin'},
+    'p-paper':{t:'📄 论文速递',s:'arXiv 精选 · 人话解读 · 附原文链接',c:'tech'},
+    'p-essay':{t:'📚 深度长文',s:'研报与技术博客精选 · 附原文链接',c:'tech'},
+    'p-hist':{t:'🎲 科技史上的今天',s:'每天三件小事 · 附出处',c:'life'},
+    'p-tv':{t:'📺 新闻联播速览',s:'前一天联播要点 · 分组归纳 · 官方出处',c:'news'},
+    'p-geo':{t:'🛰️ 地缘热点',s:'近期国际热点 · 每条附 AI 评论',c:'news'},
+    'p-try':{t:'🧪 值得试',s:'每天 1-3 个能上手的工具 · 附三步试用法',c:'tech'},
+    'p-new':{t:'🆕 今日新玩意',s:'普通人当天就能上手的新应用 · 新功能',c:'life'},
+    'p-myth':{t:'🩺 每日一问',s:'健康辟谣 · 每天一条 · 真相 + 科学依据',c:'life'},
+    'p-ent':{t:'🎬 娱乐新闻',s:'影视综官宣 · 音乐现场 · 只收正规报道',c:'news'},
+    'p-coll':{t:'🎓 高校新闻',s:'专业目录 · 招生政策 · 高校动态',c:'news'},
+    'p-work':{t:'💼 职场新闻',s:'就业政策 · 行业风向 · 薪酬榜',c:'news'},
+    'p-plaza':{t:'🛍️ 资讯广场',s:'全部模块 · 挑选添加到我的首页',c:'edit'}
   };
   function showPage(id){
     document.querySelectorAll('.page').forEach(function(p){p.classList.remove('active')});
@@ -1354,6 +1363,7 @@
     addRmButtons();
     var empty=document.getElementById('homeEmpty');
     if(empty)empty.style.display=home.length?'none':'block';
+    syncHomeSwitches();
     renderPlaza();
   }
   // 首页卡片右上角注入 ✕ 移除按钮（静态卡与动态生成卡统一处理）
@@ -1367,44 +1377,86 @@
       rm.textContent='移除';
       rm.addEventListener('click',function(ev){
         ev.stopPropagation();
-        var home=loadHome();
-        var i=home.indexOf(id);
-        if(i<0)return;
-        home.splice(i,1);saveHome(home);
-        try{ // 同步清理拖拽顺序记录里被移除的模块
-          var order=JSON.parse(localStorage.getItem('clawOrder')||'null');
-          if(Array.isArray(order)){localStorage.setItem('clawOrder',JSON.stringify(order.filter(function(x){return x!==id})));}
-        }catch(e){}
-        applyHome();
+        if(homeSet[id]) toggleHome(id);
       });
       m.appendChild(rm);
     });
+  }
+  var PLAZA_CATS=[['edit','⚡ 今日速览'],['news','📰 新闻时讯'],['fin','💰 财经'],['tech','🤖 科技 · AI'],['life','🏠 生活 · 轻松']];
+  function makeCell(id){
+    var m=pageMeta[id],sp=splitMeta(m.t);
+    var cell=document.createElement('div');
+    cell.className='plaza-cell'+(homeSet[id]?' in':'');
+    cell.innerHTML=(homeSet[id]?'<span class="inbadge">✓</span>':'')+'<div class="ic2">'+sp[0]+'</div><h4>'+sp[1]+'</h4><div class="st">'+(homeSet[id]?'已在首页':'点开看看')+'</div>';
+    cell.addEventListener('click',function(){showPage(id);});
+    return cell;
   }
   function renderPlaza(){
     var list=document.getElementById('plazaList');
     if(!list)return;
     list.innerHTML='';
-    var grid=document.createElement('div');
-    grid.className='plaza-grid';
+    var used={};
+    PLAZA_CATS.forEach(function(cat){
+      var ids=Object.keys(pageMeta).filter(function(id){
+        return id!=='p-plaza'&&(pageMeta[id].c||'other')===cat[0];
+      });
+      if(!ids.length)return;
+      var h=document.createElement('div');h.className='plaza-cat';h.textContent=cat[1];
+      list.appendChild(h);
+      var grid=document.createElement('div');grid.className='plaza-grid';
+      ids.forEach(function(id){used[id]=1;grid.appendChild(makeCell(id));});
+      list.appendChild(grid);
+    });
+    var rest=Object.keys(pageMeta).filter(function(id){return id!=='p-plaza'&&!used[id];});
+    if(rest.length){
+      var h2=document.createElement('div');h2.className='plaza-cat';h2.textContent='📦 其他';
+      list.appendChild(h2);
+      var g2=document.createElement('div');g2.className='plaza-grid';
+      rest.forEach(function(id){g2.appendChild(makeCell(id));});
+      list.appendChild(g2);
+    }
+  }
+  // 模块页顶部「添加到首页 / 已在首页」切换按钮（每页一个，状态统一刷新）
+  function toggleHome(id){
+    var home=loadHome();
+    var i=home.indexOf(id);
+    if(i<0){
+      home.push(id);saveHome(home);
+      try{
+        var o=JSON.parse(localStorage.getItem('clawOrder')||'[]');
+        if(Array.isArray(o)&&o.indexOf(id)<0){o.push(id);localStorage.setItem('clawOrder',JSON.stringify(o));}
+      }catch(e){}
+    }else{
+      home.splice(i,1);saveHome(home);
+      try{
+        var o2=JSON.parse(localStorage.getItem('clawOrder')||'null');
+        if(Array.isArray(o2))localStorage.setItem('clawOrder',JSON.stringify(o2.filter(function(x){return x!==id;})));
+      }catch(e){}
+    }
+    applyHome();
+  }
+  function buildHomeSwitches(){
     Object.keys(pageMeta).forEach(function(id){
       if(id==='p-plaza')return;
-      var m=pageMeta[id],sp=splitMeta(m.t);
-      var cell=document.createElement('div');
-      cell.className='plaza-cell'+(homeSet[id]?' in':'');
-      cell.innerHTML='<div class="ic2">'+sp[0]+'</div><h4>'+sp[1]+'</h4><div class="st">'+(homeSet[id]?'✓ 已添加':'＋ 添加')+'</div>';
-      cell.addEventListener('click',function(){
-        var home=loadHome();
-        if(home.indexOf(id)<0){
-          home.push(id);saveHome(home);applyHome();
-        }else{
-          showPage(id); // 已添加：点开直接预览模块内容
-        }
-      });
-      grid.appendChild(cell);
+      var pg=document.getElementById(id);
+      if(!pg||pg.querySelector('.homeswitch'))return;
+      var b=document.createElement('div');
+      b.className='homeswitch';
+      b.dataset.t=id;
+      b.addEventListener('click',function(ev){ev.stopPropagation();toggleHome(id);});
+      pg.insertBefore(b,pg.firstChild);
     });
-    list.appendChild(grid);
+    syncHomeSwitches();
+  }
+  function syncHomeSwitches(){
+    document.querySelectorAll('.homeswitch').forEach(function(b){
+      var on=!!homeSet[b.dataset.t];
+      b.classList.toggle('on',on);
+      b.textContent=on?'✓ 已在首页 · 点此移除':'＋ 添加到首页';
+    });
   }
   applyHome();
+  buildHomeSwitches();
 
   // 今日 60 秒：点速览行直接跳到对应模块
   document.addEventListener('click',function(e){
