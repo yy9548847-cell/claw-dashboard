@@ -69,14 +69,27 @@
   .module-item .info p{font-size:12px;color:var(--sub);margin-top:3px;line-height:1.45}
   .module-item .meta{font-size:10.5px;color:var(--accent);margin-top:4px;display:block}
   .module-item .arrow{flex:0 0 auto;color:var(--sub);font-size:18px}
+  .module-item{position:relative}
   .module-item.add-card{border-style:dashed;border-width:1.5px}
-  #homeEmpty{display:none;text-align:center;font-size:13px;color:var(--sub);padding:14px 8px}
-  .plaza-btn{
-    flex:0 0 auto;border:none;border-radius:999px;padding:8px 14px;
-    font-size:12.5px;font-weight:600;cursor:pointer;font-family:inherit;
-    background:var(--accent);color:#fff;
+  .module-item .rm{
+    position:absolute;top:6px;right:6px;width:26px;height:26px;
+    border:none;background:var(--card2);color:var(--sub);border-radius:50%;
+    font-size:13px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;
+    opacity:.8;font-family:inherit;padding:0;
   }
-  .plaza-btn.on{background:var(--card2);color:var(--sub)}
+  .module-item .rm:active{transform:scale(.9)}
+  #homeEmpty{display:none;text-align:center;font-size:13px;color:var(--sub);padding:14px 8px}
+  .plaza-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .plaza-cell{
+    background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:14px 4px 12px;text-align:center;cursor:pointer;box-shadow:var(--shadow);
+    font-family:inherit;color:var(--txt);transition:transform .1s;
+  }
+  .plaza-cell:active{transform:scale(.96)}
+  .plaza-cell .ic2{font-size:30px;line-height:1.15}
+  .plaza-cell h4{font-size:11.5px;margin-top:7px;font-weight:600;line-height:1.3}
+  .plaza-cell .st{font-size:10px;margin-top:5px;font-weight:700;color:var(--accent)}
+  .plaza-cell.in .st{color:var(--sub)}
   .module-item.dragging{opacity:.85;box-shadow:0 8px 24px rgba(30,40,90,.25);transform:scale(1.02);z-index:5;position:relative}
   /* 长按拖拽提示 */
   .drag-hint{font-size:10.5px;color:var(--sub);margin:2px 2px 10px;opacity:.75}
@@ -154,7 +167,7 @@
   <!-- 首页：模块列表 -->
   <div class="page active" id="p-home">
     <div class="section-title">我的首页 · 点击进入（每天早上 8:00 自动更新）</div>
-    <div class="drag-hint">长按卡片可拖动排序 · 自动记住顺序</div>
+    <div class="drag-hint">长按卡片可拖动排序 · 点卡片右上角 ✕ 移除板块</div>
     <div id="homeEmpty">首页还是空的 · 点下方「资讯广场」挑几个板块吧</div>
 
     <button class="module-item" data-t="p-ai">
@@ -290,7 +303,7 @@
   <!-- 资讯广场 -->
   <div class="page" id="p-plaza">
     <div class="section-title">资讯广场 · 全部模块</div>
-    <div class="drag-hint">点「＋ 添加」放进我的首页 · 点「移除」从首页拿掉 · 不影响模块内容</div>
+    <div class="drag-hint">点图标即添加到我的首页 · 带 ✓ 的可点开预览 · 移除请回首页点卡片右上角 ✕</div>
     <div id="plazaList"></div>
   </div>
 
@@ -1085,39 +1098,58 @@
       m.style.display=homeSet[m.dataset.t]?'':'none';
     });
     home.forEach(ensureHomeCard);
+    addRmButtons();
     var empty=document.getElementById('homeEmpty');
     if(empty)empty.style.display=home.length?'none':'block';
     renderPlaza();
+  }
+  // 首页卡片右上角注入 ✕ 移除按钮（静态卡与动态生成卡统一处理）
+  function addRmButtons(){
+    homePage.querySelectorAll('.module-item[data-t]').forEach(function(m){
+      if(m.classList.contains('add-card'))return;
+      if(m.querySelector('.rm'))return;
+      var id=m.dataset.t;
+      var rm=document.createElement('span');
+      rm.className='rm';rm.setAttribute('aria-label','移除该板块');
+      rm.textContent='✕';
+      rm.addEventListener('click',function(ev){
+        ev.stopPropagation();
+        var home=loadHome();
+        var i=home.indexOf(id);
+        if(i<0)return;
+        home.splice(i,1);saveHome(home);
+        try{ // 同步清理拖拽顺序记录里被移除的模块
+          var order=JSON.parse(localStorage.getItem('clawOrder')||'null');
+          if(Array.isArray(order)){localStorage.setItem('clawOrder',JSON.stringify(order.filter(function(x){return x!==id})));}
+        }catch(e){}
+        applyHome();
+      });
+      m.appendChild(rm);
+    });
   }
   function renderPlaza(){
     var list=document.getElementById('plazaList');
     if(!list)return;
     list.innerHTML='';
+    var grid=document.createElement('div');
+    grid.className='plaza-grid';
     Object.keys(pageMeta).forEach(function(id){
       if(id==='p-plaza')return;
       var m=pageMeta[id],sp=splitMeta(m.t);
-      var row=document.createElement('div');
-      row.className='module-item';
-      row.innerHTML='<div class="ic">'+sp[0]+'</div><div class="info"><h3>'+sp[1]+'</h3><p>'+m.s+'</p></div>';
-      var btn=document.createElement('button');
-      btn.className='plaza-btn'+(homeSet[id]?' on':'');
-      btn.textContent=homeSet[id]?'移除':'＋ 添加';
-      btn.addEventListener('click',function(){
+      var cell=document.createElement('div');
+      cell.className='plaza-cell'+(homeSet[id]?' in':'');
+      cell.innerHTML='<div class="ic2">'+sp[0]+'</div><h4>'+sp[1]+'</h4><div class="st">'+(homeSet[id]?'✓ 已添加':'＋ 添加')+'</div>';
+      cell.addEventListener('click',function(){
         var home=loadHome();
-        var i=home.indexOf(id);
-        if(i>=0){
-          home.splice(i,1);
-          try{ // 同步清理拖拽顺序记录里被移除的模块
-            var order=JSON.parse(localStorage.getItem('clawOrder')||'null');
-            if(Array.isArray(order)){localStorage.setItem('clawOrder',JSON.stringify(order.filter(function(x){return x!==id})));}
-          }catch(e){}
-        }else{home.push(id);}
-        saveHome(home);
-        applyHome();
+        if(home.indexOf(id)<0){
+          home.push(id);saveHome(home);applyHome();
+        }else{
+          showPage(id); // 已添加：点开直接预览模块内容
+        }
       });
-      row.appendChild(btn);
-      list.appendChild(row);
+      grid.appendChild(cell);
     });
+    list.appendChild(grid);
   }
   applyHome();
 
