@@ -148,6 +148,11 @@
   .card.read{opacity:.55}
   .card.read h3{color:var(--sub)}
   .card.read::after{content:'✓ 已读 · 点一下恢复';position:absolute;right:12px;bottom:10px;font-size:10px;color:var(--sub);opacity:.8}
+  /* 每日一问·健康辟谣：真相判定徽章 */
+  .verdict{display:inline-block;font-size:11px;font-weight:800;padding:3px 10px;border-radius:20px;margin:0 0 8px}
+  .v-no{background:rgba(224,45,45,.12);color:#d3352d}
+  .v-half{background:rgba(184,134,11,.15);color:var(--gold)}
+  .v-yes{background:rgba(15,157,88,.12);color:#0f9d58}
   /* 行情 */
   .quote{display:flex;align-items:baseline;justify-content:space-between;padding:10px 2px;border-bottom:1px dashed var(--line)}
   .quote:last-child{border-bottom:none}
@@ -334,6 +339,16 @@
       <div class="info">
         <h3>值得试</h3>
         <p>每天 1-3 个能直接上手的工具/项目 · 附三步试用法</p>
+        <span class="meta">每日自动更新</span>
+      </div>
+      <div class="arrow">›</div>
+    </button>
+
+    <button class="module-item" data-t="p-myth">
+      <div class="ic">🩺</div>
+      <div class="info">
+        <h3>每日一问</h3>
+        <p>健康辟谣 · 每天一条流传最广的说法 · 真相 + 科学依据</p>
         <span class="meta">每日自动更新</span>
       </div>
       <div class="arrow">›</div>
@@ -662,6 +677,28 @@
       <div class="ai"><b>💡 为什么值得试：</b>它做的是"AI 怎么当一个懂你的老师"，而不是"AI 怎么讲完一章"——教育行业的人点开看 10 分钟就明白差别在哪。</div>
       <a class="src" href="https://github.com/HKUDS/DeepTutor">🔗 github.com/HKUDS/DeepTutor</a>
     </div>
+  </div>
+
+  <!-- 每日一问·健康辟谣：每天一条流传最广的健康说法，真相判定 + 科学依据 + 附权威出处（每日自动化更新本页） -->
+  <div class="page" id="p-myth">
+
+    <div class="section-title">数据截至 10月28日 · 每天一条"餐桌话题级"辟谣</div>
+
+    <div class="card">
+      <span class="tag hot">❓ 今日一问</span>
+      <h3>换季了，要不要带家里老人去输液"通血管"、预防脑梗？</h3>
+      <div class="verdict v-no">❌ 谣言 · 没有科学依据</div>
+      <p>一到秋冬换季，"输液通血管"的说法就到处流传，不少老人专程去医院要求输液。真相是：<b>目前没有任何药物能把已经形成的血管斑块"冲走"或溶解</b>——脑梗大多由动脉粥样硬化斑块增厚堵塞血管或斑块破裂造成，门诊用于"通血管"的多为中成药，只能短时活血化瘀、改善脑部血液循环，代谢半衰期只有<b>几个小时</b>；临床上能实现斑块缩小的药物只有<b>他汀类</b>。输完液觉得"头不晕了、身体轻快了"，更多是短期改善循环加心理暗示。</p>
+      <div class="subhd">为什么不仅没用，还有害</div>
+      <ul><li>没有明确适应证就盲目输液，增加<b>药物过敏、静脉炎、感染</b>风险</li><li>过量输液会<b>加重心肺负担</b>，心肾功能较差的老人风险更高</li><li>最危险的是：有老人以为输完液就"安全了"，<b>擅自停用降压、抗血小板等基础药</b>，反而大幅增加脑血管事件风险</li></ul>
+      <div class="subhd">真正管用的预防</div>
+      <ul><li>降温注意保暖、密切监测血压，按医嘱调整降压药</li><li>高血压、糖尿病、高血脂及脑梗病史人群：<b>规律服药，不可自行增减停用</b></li><li>出现一侧肢体无力麻木、口角歪斜、言语不清等卒中信号，<b>第一时间就医</b>，切勿在家观察</li></ul>
+      <div class="ai"><b>🍽️ 餐桌怎么说：</b>别再每年排队输这个液了——神经内科医生说了，斑块冲不走，真正管用的是按时吃他汀和降压药。真想图个心安，今年冬天帮老人把血压计用起来。</div>
+      <a class="src" href="http://fashion.ce.cn/yw/202610/t20261028_3273524.shtml">🔗 来源：中国经济网（专访东南大学附属中大医院卒中中心）· 10月28日</a><br>
+      <a class="src" href="https://piyao.kepuchina.cn/h5/banddetail?id=KgBg">🔗 科普中国 · 科学流言榜</a>
+    </div>
+
+    <p class="note" style="padding:0 4px">⚠️ 本页为健康科普，不构成医疗建议；具体诊疗请遵医嘱。</p>
   </div>
 
 <!-- 教师岗位库 -->
@@ -1168,6 +1205,7 @@
     'p-tv':{t:'📺 新闻联播速览',s:'前一天联播要点 · 分组归纳 · 官方出处'},
     'p-geo':{t:'🛰️ 地缘热点',s:'近期国际热点 · 每条附 AI 评论'},
     'p-try':{t:'🧪 值得试',s:'每天 1-3 个能上手的工具 · 附三步试用法'},
+    'p-myth':{t:'🩺 每日一问',s:'健康辟谣 · 每天一条 · 真相 + 科学依据'},
     'p-plaza':{t:'🛍️ 资讯广场',s:'全部模块 · 挑选添加到我的首页'}
   };
   function showPage(id){
