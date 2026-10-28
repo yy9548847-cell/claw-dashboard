@@ -72,10 +72,10 @@
   .module-item{position:relative}
   .module-item.add-card{border-style:dashed;border-width:1.5px}
   .module-item .rm{
-    position:absolute;top:6px;right:6px;width:26px;height:26px;
-    border:none;background:var(--card2);color:var(--sub);border-radius:50%;
-    font-size:13px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;
-    opacity:.8;font-family:inherit;padding:0;
+    position:absolute;top:7px;right:8px;
+    border:none;background:var(--card2);color:var(--sub);border-radius:999px;
+    font-size:10.5px;font-weight:600;line-height:1;cursor:pointer;
+    padding:4px 10px;font-family:inherit;opacity:.85;
   }
   .module-item .rm:active{transform:scale(.9)}
   #homeEmpty{display:none;text-align:center;font-size:13px;color:var(--sub);padding:14px 8px}
@@ -167,7 +167,7 @@
   <!-- 首页：模块列表 -->
   <div class="page active" id="p-home">
     <div class="section-title">我的首页 · 点击进入（每天早上 8:00 自动更新）</div>
-    <div class="drag-hint">长按卡片可拖动排序 · 点卡片右上角 ✕ 移除板块</div>
+    <div class="drag-hint">长按卡片可拖动排序 · 点卡片右上角「移除」拿掉板块</div>
     <div id="homeEmpty">首页还是空的 · 点下方「资讯广场」挑几个板块吧</div>
 
     <button class="module-item" data-t="p-ai">
@@ -1111,7 +1111,7 @@
       var id=m.dataset.t;
       var rm=document.createElement('span');
       rm.className='rm';rm.setAttribute('aria-label','移除该板块');
-      rm.textContent='✕';
+      rm.textContent='移除';
       rm.addEventListener('click',function(ev){
         ev.stopPropagation();
         var home=loadHome();
