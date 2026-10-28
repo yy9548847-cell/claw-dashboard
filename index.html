@@ -69,7 +69,14 @@
   .module-item .info p{font-size:12px;color:var(--sub);margin-top:3px;line-height:1.45}
   .module-item .meta{font-size:10.5px;color:var(--accent);margin-top:4px;display:block}
   .module-item .arrow{flex:0 0 auto;color:var(--sub);font-size:18px}
-  .module-item.coming{opacity:.62}
+  .module-item.add-card{border-style:dashed;border-width:1.5px}
+  #homeEmpty{display:none;text-align:center;font-size:13px;color:var(--sub);padding:14px 8px}
+  .plaza-btn{
+    flex:0 0 auto;border:none;border-radius:999px;padding:8px 14px;
+    font-size:12.5px;font-weight:600;cursor:pointer;font-family:inherit;
+    background:var(--accent);color:#fff;
+  }
+  .plaza-btn.on{background:var(--card2);color:var(--sub)}
   .module-item.dragging{opacity:.85;box-shadow:0 8px 24px rgba(30,40,90,.25);transform:scale(1.02);z-index:5;position:relative}
   /* 长按拖拽提示 */
   .drag-hint{font-size:10.5px;color:var(--sub);margin:2px 2px 10px;opacity:.75}
@@ -146,8 +153,9 @@
 
   <!-- 首页：模块列表 -->
   <div class="page active" id="p-home">
-    <div class="section-title">模块 · 点击进入（每天早上 8:00 自动更新）</div>
+    <div class="section-title">我的首页 · 点击进入（每天早上 8:00 自动更新）</div>
     <div class="drag-hint">长按卡片可拖动排序 · 自动记住顺序</div>
+    <div id="homeEmpty">首页还是空的 · 点下方「资讯广场」挑几个板块吧</div>
 
     <button class="module-item" data-t="p-ai">
       <div class="ic">🤖</div>
@@ -269,13 +277,21 @@
       <div class="arrow">›</div>
     </button>
 
-    <div class="module-item coming">
-      <div class="ic">➕</div>
+    <button class="module-item add-card" data-t="p-plaza">
+      <div class="ic">🛍️</div>
       <div class="info">
-        <h3>更多模块</h3>
-        <p>后续添加的自动化模块（如岗位库、自选股盯盘）会出现在这里</p>
+        <h3>资讯广场 · 添加板块</h3>
+        <p>全部模块都在这里，挑感兴趣的放进我的首页</p>
       </div>
-    </div>
+      <div class="arrow">›</div>
+    </button>
+  </div>
+
+  <!-- 资讯广场 -->
+  <div class="page" id="p-plaza">
+    <div class="section-title">资讯广场 · 全部模块</div>
+    <div class="drag-hint">点「＋ 添加」放进我的首页 · 点「移除」从首页拿掉 · 不影响模块内容</div>
+    <div id="plazaList"></div>
   </div>
 
   <!-- AI 日报 -->
@@ -963,7 +979,8 @@
     'p-week':{t:'🗞️ 每周 AI 周报',s:'一周大事 · 能力/资本/安全'},
     'p-hist':{t:'🎲 科技史上的今天',s:'每天三件小事 · 附出处'},
     'p-tv':{t:'📺 新闻联播速览',s:'前一天联播要点 · 分组归纳 · 官方出处'},
-    'p-geo':{t:'🛰️ 地缘热点',s:'近期国际热点 · 每条附 AI 评论'}
+    'p-geo':{t:'🛰️ 地缘热点',s:'近期国际热点 · 每条附 AI 评论'},
+    'p-plaza':{t:'🛍️ 资讯广场',s:'全部模块 · 挑选添加到我的首页'}
   };
   function showPage(id){
     document.querySelectorAll('.page').forEach(function(p){p.classList.remove('active')});
@@ -1029,11 +1046,86 @@
     }catch(e){}
   }
   restoreOrder();
+
+  // 我的首页 + 资讯广场：订阅式板块管理（偏好存 localStorage.clawHome，每台设备独立）
+  var HOME_KEY='clawHome';
+  function loadHome(){
+    var saved=null;
+    try{saved=JSON.parse(localStorage.getItem(HOME_KEY)||'null');}catch(e){}
+    var all=Object.keys(pageMeta).filter(function(id){return id!=='p-plaza'});
+    if(!Array.isArray(saved)) return all; // 首次使用：默认展示全部既有模块
+    return saved.filter(function(id){return all.indexOf(id)>=0});
+  }
+  function saveHome(arr){try{localStorage.setItem(HOME_KEY,JSON.stringify(arr));}catch(e){}}
+  function splitMeta(t){var mm=t.match(/^(\S+)\s+(.*)$/);return mm?[mm[1],t.slice(t.indexOf(' ')+1)]:['📦',t];}
+  var homeSet={};
+  function ensureHomeCard(id){
+    var card=homePage.querySelector('.module-item[data-t="'+id+'"]');
+    if(card) return card;
+    var m=pageMeta[id]; if(!m) return null;
+    var sp=splitMeta(m.t);
+    card=document.createElement('button');
+    card.className='module-item';
+    card.dataset.t=id;
+    card.innerHTML='<div class="ic">'+sp[0]+'</div><div class="info"><h3>'+sp[1]+'</h3><p>'+m.s+'</p><span class="meta">来自资讯广场</span></div><div class="arrow">›</div>';
+    var anchor=homePage.querySelector('.add-card');
+    if(anchor){homePage.insertBefore(card,anchor);}else{homePage.appendChild(card);}
+    card.addEventListener('click',function(){
+      if(suppressClick){suppressClick=false;return;}
+      showPage(id);
+    });
+    return card;
+  }
+  function applyHome(){
+    var home=loadHome();
+    homeSet={};
+    home.forEach(function(id){homeSet[id]=1;});
+    homePage.querySelectorAll('.module-item[data-t]').forEach(function(m){
+      if(m.classList.contains('add-card'))return;
+      m.style.display=homeSet[m.dataset.t]?'':'none';
+    });
+    home.forEach(ensureHomeCard);
+    var empty=document.getElementById('homeEmpty');
+    if(empty)empty.style.display=home.length?'none':'block';
+    renderPlaza();
+  }
+  function renderPlaza(){
+    var list=document.getElementById('plazaList');
+    if(!list)return;
+    list.innerHTML='';
+    Object.keys(pageMeta).forEach(function(id){
+      if(id==='p-plaza')return;
+      var m=pageMeta[id],sp=splitMeta(m.t);
+      var row=document.createElement('div');
+      row.className='module-item';
+      row.innerHTML='<div class="ic">'+sp[0]+'</div><div class="info"><h3>'+sp[1]+'</h3><p>'+m.s+'</p></div>';
+      var btn=document.createElement('button');
+      btn.className='plaza-btn'+(homeSet[id]?' on':'');
+      btn.textContent=homeSet[id]?'移除':'＋ 添加';
+      btn.addEventListener('click',function(){
+        var home=loadHome();
+        var i=home.indexOf(id);
+        if(i>=0){
+          home.splice(i,1);
+          try{ // 同步清理拖拽顺序记录里被移除的模块
+            var order=JSON.parse(localStorage.getItem('clawOrder')||'null');
+            if(Array.isArray(order)){localStorage.setItem('clawOrder',JSON.stringify(order.filter(function(x){return x!==id})));}
+          }catch(e){}
+        }else{home.push(id);}
+        saveHome(home);
+        applyHome();
+      });
+      row.appendChild(btn);
+      list.appendChild(row);
+    });
+  }
+  applyHome();
+
   homePage.addEventListener('touchstart',function(e){
     if(e.touches.length!==1||drag) return;
     var t=e.touches[0];
     var item=t.target.closest('.module-item[data-t]');
-    if(!item) return;
+    if(!item||item.classList.contains('add-card')) return;
     drag={item:item,x:t.clientX,y:t.clientY,active:false,
       timer:setTimeout(function(){
         if(!drag) return;
@@ -1053,7 +1145,7 @@
       return;
     }
     e.preventDefault(); // 拖拽中锁定页面滚动
-    var list=Array.prototype.slice.call(homePage.querySelectorAll('.module-item[data-t]'));
+    var list=Array.prototype.slice.call(homePage.querySelectorAll('.module-item[data-t]:not(.add-card)'));
     var from=list.indexOf(drag.item), to=from;
     for(var i=0;i<list.length;i++){
       if(i===from) continue;
@@ -1072,7 +1164,7 @@
     if(drag.active){
       drag.item.classList.remove('dragging');
       suppressClick=true;
-      var order=Array.prototype.slice.call(homePage.querySelectorAll('.module-item[data-t]')).map(function(m){return m.dataset.t});
+      var order=Array.prototype.slice.call(homePage.querySelectorAll('.module-item[data-t]:not(.add-card)')).map(function(m){return m.dataset.t});
       try{localStorage.setItem('clawOrder',JSON.stringify(order));}catch(err){}
     }
     drag=null;
