@@ -93,12 +93,10 @@
   /* 资讯广场：分类标题 + 已添加角标 */
   .plaza-cat{font-size:12px;color:var(--sub);font-weight:700;letter-spacing:1px;margin:16px 2px 9px}
   .plaza-cat:first-child{margin-top:2px}
-  .plaza-cell{position:relative}
-  .plaza-cell .inbadge{position:absolute;top:5px;right:6px;font-size:10px;font-weight:800;color:#fff;background:var(--accent);border-radius:9px;padding:0 5px;line-height:1.6}
   /* 模块页内：添加到首页 / 移除 */
-  .homeswitch{display:inline-block;font-size:11.5px;font-weight:700;padding:5px 13px;border-radius:20px;border:1px solid var(--accent);color:var(--accent);background:transparent;margin:0 2px 10px;cursor:pointer;font-family:inherit;transition:transform .1s}
+  .homeswitch{display:block;width:fit-content;margin:22px auto 10px;font-size:13px;font-weight:700;padding:10px 26px;border-radius:22px;border:none;color:#fff;background:var(--accent);cursor:pointer;font-family:inherit;transition:transform .1s,opacity .2s;box-shadow:var(--shadow)}
   .homeswitch:active{transform:scale(.96)}
-  .homeswitch.on{border-color:var(--line);color:var(--sub)}
+  .homeswitch.on{background:transparent;border:1px solid var(--line);color:var(--sub)}
   .module-item.dragging{
     opacity:.99;z-index:99;pointer-events:none;transform-origin:center;
     box-shadow:0 18px 40px rgba(30,40,90,.26),0 3px 10px rgba(30,40,90,.12);
@@ -386,7 +384,7 @@
   <!-- 资讯广场 -->
   <div class="page" id="p-plaza">
     <div class="section-title">资讯广场 · 全部模块</div>
-    <div class="drag-hint">点图标即添加到我的首页 · 带 ✓ 的可点开预览 · 移除请回首页点卡片右上角 ✕</div>
+    <div class="drag-hint">点图标进模块看看内容 · 觉得不错就拉到页面底部点「添加到首页」</div>
     <div id="plazaList"></div>
   </div>
 
@@ -1387,7 +1385,7 @@
     var m=pageMeta[id],sp=splitMeta(m.t);
     var cell=document.createElement('div');
     cell.className='plaza-cell'+(homeSet[id]?' in':'');
-    cell.innerHTML=(homeSet[id]?'<span class="inbadge">✓</span>':'')+'<div class="ic2">'+sp[0]+'</div><h4>'+sp[1]+'</h4><div class="st">'+(homeSet[id]?'已在首页':'点开看看')+'</div>';
+    cell.innerHTML='<div class="ic2">'+sp[0]+'</div><h4>'+sp[1]+'</h4><div class="st">'+(homeSet[id]?'✓ 已在首页':'点开看看')+'</div>';
     cell.addEventListener('click',function(){showPage(id);});
     return cell;
   }
@@ -1416,7 +1414,7 @@
       list.appendChild(g2);
     }
   }
-  // 模块页顶部「添加到首页 / 已在首页」切换按钮（每页一个，状态统一刷新）
+  // 模块页最底部「添加到首页 / 已在首页」按钮（看完内容再决定，每页一个，状态统一刷新）
   function toggleHome(id){
     var home=loadHome();
     var i=home.indexOf(id);
@@ -1444,7 +1442,7 @@
       b.className='homeswitch';
       b.dataset.t=id;
       b.addEventListener('click',function(ev){ev.stopPropagation();toggleHome(id);});
-      pg.insertBefore(b,pg.firstChild);
+      pg.appendChild(b); // 页面最底部：先看内容，拉到底再决定加不加
     });
     syncHomeSwitches();
   }
