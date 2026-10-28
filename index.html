@@ -113,6 +113,7 @@
   }
   .backbar .title{font-size:15px;font-weight:600}
   .card{
+    position:relative;
     background:var(--card);border:1px solid var(--line);border-radius:14px;
     padding:13px 14px;margin-bottom:11px;box-shadow:var(--shadow);
   }
@@ -133,6 +134,20 @@
   .tag.hot{color:#ff8fa3}
   .tag.gold{color:var(--gold)}
   .section-title{font-size:12px;color:var(--sub);margin:4px 2px 10px;letter-spacing:1px}
+  /* 今日 60 秒：编号速览行，点行跳对应模块 */
+  .srow{display:flex;gap:10px;padding:11px 2px;border-bottom:1px dashed var(--line);cursor:pointer;align-items:flex-start}
+  .srow:last-child{border-bottom:none}
+  .srow:active{opacity:.7}
+  .srow b{flex:0 0 20px;height:20px;border-radius:6px;background:var(--accent);color:#fff;font-size:11.5px;display:flex;align-items:center;justify-content:center;margin-top:2px}
+  .srow .stx{flex:1;min-width:0}
+  .srow .stx p{margin:0!important;font-size:13px;color:var(--txt);line-height:1.65;font-weight:600}
+  .srow .stx span{display:block;font-size:11.5px;color:var(--sub);margin-top:3px;line-height:1.6}
+  .srow .stx em{display:block;font-style:normal;font-size:10.5px;color:var(--accent);margin-top:3px}
+  .srow>i{color:var(--sub);font-style:normal;align-self:center;flex:0 0 auto}
+  /* 已读变灰：点击卡片标记已读，再点取消 */
+  .card.read{opacity:.55}
+  .card.read h3{color:var(--sub)}
+  .card.read::after{content:'✓ 已读 · 点一下恢复';position:absolute;right:12px;bottom:10px;font-size:10px;color:var(--sub);opacity:.8}
   /* 行情 */
   .quote{display:flex;align-items:baseline;justify-content:space-between;padding:10px 2px;border-bottom:1px dashed var(--line)}
   .quote:last-child{border-bottom:none}
@@ -183,6 +198,16 @@
   <div class="page active" id="p-home">
     <div class="drag-hint">长按卡片可拖动排序 · 点卡片右上角「移除」拿掉板块</div>
     <div id="homeEmpty">首页还是空的 · 点下方「资讯广场」挑几个板块吧</div>
+
+    <button class="module-item" data-t="p-60s">
+      <div class="ic">⚡</div>
+      <div class="info">
+        <h3>今日 60 秒</h3>
+        <p>今天最值得看的 3-5 条 · 每条附「为什么值得看」</p>
+        <span class="meta">每日自动更新 · 一分钟读完</span>
+      </div>
+      <div class="arrow">›</div>
+    </button>
 
     <button class="module-item" data-t="p-ai">
       <div class="ic">🤖</div>
@@ -304,6 +329,16 @@
       <div class="arrow">›</div>
     </button>
 
+    <button class="module-item" data-t="p-try">
+      <div class="ic">🧪</div>
+      <div class="info">
+        <h3>值得试</h3>
+        <p>每天 1-3 个能直接上手的工具/项目 · 附三步试用法</p>
+        <span class="meta">每日自动更新</span>
+      </div>
+      <div class="arrow">›</div>
+    </button>
+
     <button class="module-item add-card" data-t="p-plaza">
       <div class="ic">🛍️</div>
       <div class="info">
@@ -319,6 +354,63 @@
     <div class="section-title">资讯广场 · 全部模块</div>
     <div class="drag-hint">点图标即添加到我的首页 · 带 ✓ 的可点开预览 · 移除请回首页点卡片右上角 ✕</div>
     <div id="plazaList"></div>
+  </div>
+
+  <!-- 今日 60 秒：每天最值得看的 3-5 条，每条一句话 + 为什么值得看 + 跳对应模块（每日自动化更新本页） -->
+  <div class="page" id="p-60s">
+
+    <div class="section-title">10月28日 · 预计阅读 1 分钟</div>
+
+    <div class="card">
+      <span class="tag hot">⚡ 今天就这 5 件事</span>
+      <div class="srow" data-go="p-ai">
+        <b>1</b>
+        <div class="stx">
+          <p>谷歌 Genie 4 发布：首个"边生成边出声"的实时世界模型，可交互时长翻倍到 2 分钟</p>
+          <span>为什么值得看：世界模型从"生成视频"变成"生成可交互环境"，最先被改写的是游戏与机器人仿真。</span>
+          <em>→ AI 日报</em>
+        </div>
+        <i>›</i>
+      </div>
+      <div class="srow" data-go="p-cal">
+        <b>2</b>
+        <div class="stx">
+          <p>今夜微软 + Alphabet 财报同日放榜，明晨 FOMC 决议接棒</p>
+          <span>为什么值得看：这 24 小时要回答"8000 亿美元 AI 投入谁在买单"，是全周情绪的总开关。</span>
+          <em>→ 监控日历</em>
+        </div>
+        <i>›</i>
+      </div>
+      <div class="srow" data-go="p-mkt">
+        <b>3</b>
+        <div class="stx">
+          <p>A股三大指数集体收跌、银行逆势走强；隔夜美股费半 +3.6%</p>
+          <span>为什么值得看：防守型下跌，内部信心是主要矛盾——外围在涨 A 股没跟，量能不放大的反弹都算反抽。</span>
+          <em>→ 行情</em>
+        </div>
+        <i>›</i>
+      </div>
+      <div class="srow" data-go="p-git">
+        <b>4</b>
+        <div class="stx">
+          <p>"反 AI 味"设计技能包 hallmark 连续第二天登顶 GitHub 趋势（今日 +2.6k 星）</p>
+          <span>为什么值得看：大家不缺会写的 AI，缺"看起来不像 AI 做的"——设计技能已从单品变成货架。</span>
+          <em>→ GitHub 趋势</em>
+        </div>
+        <i>›</i>
+      </div>
+      <div class="srow" data-go="p-ai">
+        <b>5</b>
+        <div class="stx">
+          <p>SK 海力士：存储芯片短缺将持续到 2030 年，美股存储链集体大涨</p>
+          <span>为什么值得看：AI 算力瓶颈正在外溢到内存——HBM 管训练、低功耗 DRAM 管端侧与机器人，后者坡更长。</span>
+          <em>→ AI 日报</em>
+        </div>
+        <i>›</i>
+      </div>
+    </div>
+
+    <p class="note" style="padding:0 4px">点任意一条可跳到对应模块看全文 · 看完记得回来看第 2 条：今夜明晨是关键窗口。</p>
   </div>
 
   <!-- AI 日报 -->
@@ -536,6 +628,42 @@
       <a class="src" href="https://ysxw.cctv.cn/video.html?toc_style_id=video_default&amp;t=1793100942626&amp;item_id=15608237531900654820&amp;channelId=1117">🔗 来源：央视新闻·国际联播快讯 · 10月27日</a>
     </div>
   </div>
+  <!-- 值得试：每天 1-3 个能直接上手的工具/项目，附三步试用法（每日自动化更新本页） -->
+  <div class="page" id="p-try">
+
+    <div class="section-title">数据截至 10月28日 · 看完就能上手</div>
+
+    <div class="card">
+      <span class="tag">🎨 设计增强</span>
+      <h3>hallmark：给 Claude Code / Cursor 装"反 AI 味"设计技能包，专治一眼模板感</h3>
+      <p>Nutlope 出品，57 项反模式检测 + 21 套主题系统，让 AI 生成的页面有<b>独特设计指纹</b>。今日 +2.6k 星、连续两天登顶 GitHub 趋势。</p>
+      <div class="subhd">三步试用法</div>
+      <ul><li>打开 GitHub 仓库，把 skill 目录复制进 Claude Code 的 skills 文件夹（Cursor 用户放进规则目录）</li><li>让它重新设计你手头的一个页面，要求"用 hallmark"</li><li>和上一版对比：宏观结构、配色、排版指纹的差异一目了然</li></ul>
+      <div class="ai"><b>💡 为什么值得试：</b>AI 写代码已经不稀奇，"写出来不像 AI 做的"成了新的稀缺能力——这个包等于把一套设计规范直接塞进 Agent 手里。</div>
+      <a class="src" href="https://github.com/Nutlope/hallmark">🔗 github.com/Nutlope/hallmark</a>
+    </div>
+
+    <div class="card">
+      <span class="tag">🏫 知识库</span>
+      <h3>WeKnora：腾讯开源的企业级知识平台，把一堆文档变成能问答的网页</h3>
+      <p>文档变 RAG 可查询知识库 + 自主推理 Agent + 自我维护的 Wiki，3.6 万星、正经产品级开源。</p>
+      <div class="subhd">三步试用法</div>
+      <ul><li>clone 仓库后 docker compose 一键启动</li><li>把教案、制度文件、教研资料批量导入</li><li>得到一个可以自然语言问答的知识库页面，发同事直接用</li></ul>
+      <div class="ai"><b>💡 为什么值得试：</b>单位里那些"堆在文件夹里没人看"的资料，是它最典型的应用场景——搭建成本几乎为零。</div>
+      <a class="src" href="https://github.com/Tencent/WeKnora">🔗 github.com/Tencent/WeKnora</a>
+    </div>
+
+    <div class="card">
+      <span class="tag">🎓 教学场景</span>
+      <h3>DeepTutor：港大的终身个性化教学平台，"AI 当一个懂你的老师"</h3>
+      <p>Python + Next.js，把大模型、知识库检索（RAG）与教学智能体拼成自适应学习系统，支持引导式学习路径与多模态交互。今日 +1.9k 星。</p>
+      <div class="subhd">三步试用法</div>
+      <ul><li>clone 仓库，配置任一模型 API key</li><li>上传一份自己的教案或课件</li><li>让它生成引导式学习路径，自己先当一遍学生试用</li></ul>
+      <div class="ai"><b>💡 为什么值得试：</b>它做的是"AI 怎么当一个懂你的老师"，而不是"AI 怎么讲完一章"——教育行业的人点开看 10 分钟就明白差别在哪。</div>
+      <a class="src" href="https://github.com/HKUDS/DeepTutor">🔗 github.com/HKUDS/DeepTutor</a>
+    </div>
+  </div>
+
 <!-- 教师岗位库 -->
   <div class="page" id="p-job">
     <div class="section-title">定制关注：广东佛山 · 小学语文 · 公办/民办/代岗 + 教培语文岗 · 只留报名期内 · 数据截至 10月28日</div>
@@ -1026,6 +1154,7 @@
   if(backBtn&&hdTitle&&hdSub){
   var homeTitle=hdTitle.textContent, homeSub=hdSub.innerHTML; // 副标题含换行，须存 innerHTML
   var pageMeta={
+    'p-60s':{t:'⚡ 今日 60 秒',s:'今天最值得看的 3-5 条 · 一分钟读完'},
     'p-ai':{t:'🤖 AI 日报',s:'大模型发布 · 国产AI动态 · 行业大事件'},
     'p-mkt':{t:'📈 行情',s:'A股收盘 · 隔夜美股 · 盘面看点'},
     'p-git':{t:'⭐ GitHub 趋势',s:'当日热门开源项目精选'},
@@ -1038,6 +1167,7 @@
     'p-hist':{t:'🎲 科技史上的今天',s:'每天三件小事 · 附出处'},
     'p-tv':{t:'📺 新闻联播速览',s:'前一天联播要点 · 分组归纳 · 官方出处'},
     'p-geo':{t:'🛰️ 地缘热点',s:'近期国际热点 · 每条附 AI 评论'},
+    'p-try':{t:'🧪 值得试',s:'每天 1-3 个能上手的工具 · 附三步试用法'},
     'p-plaza':{t:'🛍️ 资讯广场',s:'全部模块 · 挑选添加到我的首页'}
   };
   function showPage(id){
@@ -1180,7 +1310,7 @@
   // 我的首页 + 资讯广场：订阅式板块管理（偏好存 localStorage.clawHomeV2，每台设备独立）
   // 2026-10-28 变更：默认首页只放 5 个核心模块，其余进资讯广场由用户自行添加（键名升 V2 做一次性迁移）
   var HOME_KEY='clawHomeV2';
-  var DEFAULT_HOME=['p-ai','p-git','p-mkt','p-tv','p-paper'];
+  var DEFAULT_HOME=['p-60s','p-ai','p-git','p-mkt','p-tv','p-paper'];
   function loadHome(){
     var saved=null;
     try{saved=JSON.parse(localStorage.getItem(HOME_KEY)||'null');}catch(e){}
@@ -1195,6 +1325,23 @@
       var rest=Object.keys(pageMeta).filter(function(id){return id!=='p-plaza'&&DEFAULT_HOME.indexOf(id)<0;});
       localStorage.setItem('clawOrder',JSON.stringify(DEFAULT_HOME.concat(rest)));
       localStorage.setItem('clawOrderV2','1');
+      restoreOrder();
+    }
+  }catch(e){}
+  // 2026-10-28 一次性迁移：新增「今日 60 秒」，老用户的首页与拖拽顺序自动把它置顶
+  try{
+    if(!localStorage.getItem('claw60sV1')){
+      var saved60=null;
+      try{saved60=JSON.parse(localStorage.getItem(HOME_KEY)||'null');}catch(e){}
+      if(Array.isArray(saved60)&&saved60.indexOf('p-60s')<0){
+        localStorage.setItem(HOME_KEY,JSON.stringify(['p-60s'].concat(saved60)));
+      }
+      var ord60=null;
+      try{ord60=JSON.parse(localStorage.getItem('clawOrder')||'null');}catch(e){}
+      if(Array.isArray(ord60)&&ord60.indexOf('p-60s')<0){
+        localStorage.setItem('clawOrder',JSON.stringify(['p-60s'].concat(ord60)));
+      }
+      localStorage.setItem('claw60sV1','1');
       restoreOrder();
     }
   }catch(e){}
@@ -1280,6 +1427,45 @@
     list.appendChild(grid);
   }
   applyHome();
+
+  // 今日 60 秒：点速览行直接跳到对应模块
+  document.addEventListener('click',function(e){
+    var row=e.target.closest?e.target.closest('.srow[data-go]'):null;
+    if(row)showPage(row.dataset.go);
+  });
+
+  // 已读变灰：点卡片任意处标记已读（点来源链接也算已读），再点一下取消
+  // 状态按卡片标题哈希存 localStorage.clawRead，内容每日更新后旧哈希自动失效、新内容默认未读
+  (function(){
+    var READ_KEY='clawRead';
+    function hashStr(str){var h=5381,i;for(i=0;i<str.length;i++){h=(((h<<5)+h)+str.charCodeAt(i))>>>0;}return h.toString(36);}
+    function loadRead(){try{return JSON.parse(localStorage.getItem(READ_KEY)||'{}');}catch(e){return {};}}
+    function saveRead(r){try{
+      var ks=Object.keys(r);
+      if(ks.length>600){for(var i=0;i<ks.length-500;i++)delete r[ks[i]];}
+      localStorage.setItem(READ_KEY,JSON.stringify(r));
+    }catch(e){}}
+    document.querySelectorAll('.page .card').forEach(function(c){
+      var h3=c.querySelector('h3');
+      if(h3)c.dataset.rk=hashStr(h3.textContent.trim());
+    });
+    var r0=loadRead();
+    document.querySelectorAll('.page .card[data-rk]').forEach(function(c){
+      if(r0[c.dataset.rk])c.classList.add('read');
+    });
+    document.addEventListener('click',function(e){
+      var card=e.target.closest('.page .card[data-rk]');
+      if(!card)return;
+      if(e.target.closest('.srow[data-go]'))return; // 60秒速览行交给跳转逻辑
+      var r=loadRead();
+      if(e.target.closest('a')){ // 点了来源链接：只标已读，不取消
+        if(!r[card.dataset.rk]){r[card.dataset.rk]=1;saveRead(r);card.classList.add('read');}
+        return;
+      }
+      if(r[card.dataset.rk]){delete r[card.dataset.rk];card.classList.remove('read');}
+      else{r[card.dataset.rk]=1;saveRead(r);card.classList.add('read');}
+    });
+  })();
 
   // 长按 260ms 拎起（桌面图标同款：先长按再拖）
   homePage.addEventListener('touchstart',function(e){
