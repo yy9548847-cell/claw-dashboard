@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>每日资讯 · Android 安装包下载</title>
+<style>
+  :root{
+    --bg:#f4f6fb; --card:#ffffff; --card2:#eef1fa; --line:#e3e7f2;
+    --txt:#1c2033; --sub:#666d8f; --accent:#3b5bdb;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;
+    background:var(--bg); color:var(--txt); min-height:100vh;
+    display:flex; flex-direction:column; align-items:center;
+    padding:calc(env(safe-area-inset-top) + 28px) 18px 40px;
+  }
+  .logo{
+    width:76px;height:76px;border-radius:22px;overflow:hidden;
+    box-shadow:0 6px 18px rgba(59,91,219,.18);margin-bottom:14px;
+  }
+  .logo img{width:100%;height:100%;display:block}
+  h1{font-size:19px;margin-bottom:4px}
+  .ver{font-size:12.5px;color:var(--sub);margin-bottom:22px}
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:16px;width:100%;max-width:400px;margin-bottom:12px;
+    box-shadow:0 2px 8px rgba(30,40,90,.06);
+  }
+  .card h3{font-size:14px;margin-bottom:9px}
+  .card ol{padding-left:19px;font-size:13px;color:var(--txt);line-height:1.9}
+  .tip{
+    background:var(--card2);border-radius:10px;padding:11px 13px;
+    font-size:12.5px;color:var(--sub);line-height:1.75;width:100%;max-width:400px;
+    margin-bottom:20px;
+  }
+  .tip b{color:var(--txt)}
+  .dl{
+    display:block;width:100%;max-width:400px;text-align:center;
+    background:var(--accent);color:#fff;text-decoration:none;
+    font-size:16px;font-weight:700;padding:15px 0;border-radius:14px;
+    box-shadow:0 6px 16px rgba(59,91,219,.35);margin-bottom:10px;
+  }
+  .dl:active{transform:scale(.98)}
+  .web{
+    font-size:12.5px;color:var(--sub);width:100%;max-width:400px;text-align:center;
+  }
+  .web a{color:var(--accent);text-decoration:none;font-weight:600}
+</style>
+</head>
+<body>
+  <div class="logo"><img src="icon-app.png" alt="每日资讯"></div>
+  <h1>每日资讯 · Android App</h1>
+  <div class="ver">v1.4.1 · 2026-10-28 · 约 229KB · 自签名安装包</div>
+
+  <a class="dl" href="apk/claw-news-1.4.1.apk" download>⬇️ 下载安装包（v1.4.1）</a>
+
+  <div class="tip">
+    📱 <b>用微信扫码进来的朋友</b>：微信内无法直接下载 APK，请点右上角「···」→
+    <b>在浏览器打开</b>本页面，再点上面的下载按钮。
+  </div>
+
+  <div class="card">
+    <h3>📲 安装步骤</h3>
+    <ol>
+      <li>点上面按钮下载 APK 文件</li>
+      <li>下载完成后点开文件，系统提示「未知来源应用」时选择<b>允许</b></li>
+      <li>如果装过旧版本，请先卸载再装（签名已更新）</li>
+      <li>打开 App 即是最新内容——内容每天早上 8:00 自动更新，<b>无需重新安装</b></li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h3>✨ 功能亮点</h3>
+    <ol style="line-height:1.8">
+      <li>我的首页 + 资讯广场：自选板块、想看才看</li>
+      <li>打开即最新：强回源，告别旧缓存</li>
+      <li>新闻原文自动跳浏览器，返回键顺手</li>
+      <li>下拉刷新，切回来自动更新</li>
+    </ol>
+  </div>
+
+  <div class="web">不想装 App？<a href="index.html">直接用网页版 →</a></div>
+</body>
+</html>
