@@ -90,7 +90,16 @@
   .plaza-cell h4{font-size:11.5px;margin-top:7px;font-weight:600;line-height:1.3}
   .plaza-cell .st{font-size:10px;margin-top:5px;font-weight:700;color:var(--accent)}
   .plaza-cell.in .st{color:var(--sub)}
-  .module-item.dragging{opacity:.85;box-shadow:0 8px 24px rgba(30,40,90,.25);transform:scale(1.02);z-index:5;position:relative}
+  .module-item.dragging{
+    opacity:.99;z-index:99;pointer-events:none;transform-origin:center;
+    box-shadow:0 18px 40px rgba(30,40,90,.26),0 3px 10px rgba(30,40,90,.12);
+    will-change:transform;
+  }
+  /* 拖动时原位置的虚线占位块（桌面图标拖动同款“让位”提示） */
+  .drag-ph{
+    border-radius:14px;border:1.5px dashed rgba(59,91,219,.42);
+    background:rgba(59,91,219,.055);margin-bottom:11px;box-sizing:border-box;
+  }
   /* 长按拖拽提示 */
   .drag-hint{font-size:10.5px;color:var(--sub);margin:2px 2px 10px;opacity:.75}
   /* 模块内页 */
@@ -1035,29 +1044,76 @@
     });
   }else if(fsBtn){fsBtn.style.display='none';}
 
-  // 首页长按拖拽排序（悬停插入算法：向上/向下/跨多格都生效）
+  // ===== 首页板块拖拽：仿手机桌面图标（拎起跟手 + 其他卡片 FLIP 平滑让位）=====
   var homePage=document.getElementById('p-home');
-  var drag=null, suppressClick=false;
+  var drag=null, press=null, suppressClick=false;
+  var FLIP_MS=170;
+
   function sortableItems(){
     return Array.prototype.filter.call(
       homePage.querySelectorAll('.module-item[data-t]'),
-      function(m){ return !m.classList.contains('add-card') && m.style.display!=='none'; }
+      function(m){
+        return !m.classList.contains('add-card')
+            && !m.classList.contains('dragging')
+            && m.style.display!=='none';
+      }
     );
   }
-  // 把被拖卡片移到手指所在的位置：统计「中心线在手指上方」的卡片数 = 目标下标
-  function moveDragTo(y){
-    if(!drag||!drag.active) return;
-    var items=sortableItems().filter(function(m){return m!==drag.item;});
+
+  // 拎起：卡片变 fixed 浮层跟着手指，原位留一个虚线占位块
+  function beginDrag(item,touchY){
+    var r=item.getBoundingClientRect();
+    var ph=document.createElement('div');
+    ph.className='drag-ph';
+    ph.style.height=r.height+'px';
+    homePage.insertBefore(ph,item);
+    item.classList.add('dragging');
+    item.style.position='fixed';
+    item.style.left=r.left+'px';
+    item.style.top=r.top+'px';
+    item.style.width=r.width+'px';
+    item.style.height=r.height+'px';
+    item.style.margin='0';
+    item.style.transition='none';
+    item.style.transform='scale(1.04)';
+    drag={item:item,ph:ph,startY:touchY,lastY:touchY,h:r.height,top0:r.top,timer:0};
+    try{if(navigator.vibrate)navigator.vibrate(12);}catch(e){}
+    tick();
+    drag.timer=setInterval(tick,16); // 定时器驱动：跟手 + 贴边连续滚屏（比 rAF 在 WebView 里更稳）
+  }
+
+  // 每帧：算让位目标 → 重排占位块 → 跟手位移 → 贴边自动滚屏
+  function tick(){
+    if(!drag) return;
+    var dy=drag.lastY-drag.startY;
+    var center=drag.top0+dy+drag.h/2;
+    var items=sortableItems(), tops=[], i;
+    for(i=0;i<items.length;i++) tops.push(items[i].getBoundingClientRect().top);
     var k=0;
-    for(var i=0;i<items.length;i++){
-      var r=items[i].getBoundingClientRect();
-      if(r.height && (r.top+r.height/2) < y) k++;
+    for(i=0;i<items.length;i++){
+      if(tops[i]+items[i].offsetHeight/2<center) k++;
     }
     var ref=items[k]||homePage.querySelector('.add-card')||null;
-    if(ref){
-      if(drag.item.nextElementSibling!==ref) homePage.insertBefore(drag.item,ref);
-    }else if(homePage.lastElementChild!==drag.item){
-      homePage.appendChild(drag.item);
+    if(ref&&drag.ph.nextElementSibling!==ref) flipMove(items,tops,ref);
+    drag.item.style.transform='translateY('+dy+'px) scale(1.04)';
+    var H=window.innerHeight;
+    if(drag.lastY<H*0.14) window.scrollBy(0,-9);
+    else if(drag.lastY>H*0.86) window.scrollBy(0,9);
+  }
+
+  // FLIP：记住旧位置 → 挪占位块 → 其余卡片从旧位置滑到新位置（丝滑让位）
+  function flipMove(items,tops,ref){
+    homePage.insertBefore(drag.ph,ref);
+    for(var i=0;i<items.length;i++){
+      var d=tops[i]-items[i].getBoundingClientRect().top;
+      if(Math.abs(d)>0.5){
+        var el=items[i];
+        el.style.transition='none';
+        el.style.transform='translateY('+d+'px)';
+        void el.offsetHeight; // 强制生效，避免浏览器合并这两次改动
+        el.style.transition='transform '+FLIP_MS+'ms cubic-bezier(.2,.8,.2,1)';
+        el.style.transform='translateY(0)';
+      }
     }
   }
   function restoreOrder(){
@@ -1177,52 +1233,58 @@
   }
   applyHome();
 
+  // 长按 260ms 拎起（桌面图标同款：先长按再拖）
   homePage.addEventListener('touchstart',function(e){
-    if(e.touches.length!==1||drag) return;
+    if(e.touches.length!==1||drag||press) return;
     var t=e.touches[0];
     var item=t.target.closest('.module-item[data-t]');
     if(!item||item.classList.contains('add-card')) return;
     if(t.target.closest('.rm')) return; // 点「移除」不触发拖拽
-    drag={item:item,x:t.clientX,y:t.clientY,active:false,
+    press={item:item,x:t.clientX,y:t.clientY,y0:t.clientY,
       timer:setTimeout(function(){
-        if(!drag) return;
-        drag.active=true;
-        drag.item.classList.add('dragging');
-        try{if(navigator.vibrate) navigator.vibrate(12);}catch(err){}
+        var p=press; if(!p) return; press=null;
+        beginDrag(p.item,p.y0);
       },260)};
   },{passive:true});
   homePage.addEventListener('touchmove',function(e){
-    if(!drag||!e.touches.length) return;
-    var t=e.touches[0];
-    if(!drag.active){
-      // 未激活前小幅移动不算，超过阈值视为滚动、放弃拖拽
-      if(Math.abs(t.clientX-drag.x)+Math.abs(t.clientY-drag.y)>14){
-        clearTimeout(drag.timer);drag=null;
+    if(press&&!drag){
+      var p0=e.touches[0];
+      if(Math.abs(p0.clientX-press.x)+Math.abs(p0.clientY-press.y)>12){
+        clearTimeout(press.timer);press=null; // 手指在长按前就滑了 → 视为滚动
       }
       return;
     }
-    e.preventDefault(); // 拖拽中锁定页面滚动，改由边缘自动滚屏
-    moveDragTo(t.clientY); // 实时插入到手指所在位置（跟手效果由 DOM 重排体现）
-    // 靠近屏幕上/下缘时自动滚屏，方便跨多屏移动
-    var H=window.innerHeight;
-    if(t.clientY<H*0.12) window.scrollBy(0,-12);
-    else if(t.clientY>H*0.88) window.scrollBy(0,12);
-  },{passive:false});
-  function endDrag(){
     if(!drag) return;
-    clearTimeout(drag.timer);
-    if(drag.active){
-      drag.item.classList.remove('dragging');
+    e.preventDefault(); // 拖拽中锁页面的原生滚动，改由边缘自动滚屏
+    drag.lastY=e.touches[0].clientY;
+    tick(); // 触摸事件里立即响应，不等定时器
+  },{passive:false});
+  // 松手：卡片飞回占位块位置（200ms 收尾动画）→ 落位并存顺序
+  function endDrag(){
+    if(press){clearTimeout(press.timer);press=null;}
+    if(!drag) return;
+    var d=drag; drag=null;
+    clearInterval(d.timer);
+    var phTop=d.ph.getBoundingClientRect().top;
+    d.item.style.transition='transform 200ms cubic-bezier(.2,.8,.2,1),box-shadow 200ms';
+    d.item.style.transform='translateY('+(phTop-d.top0)+'px) scale(1)';
+    setTimeout(function(){
+      d.item.classList.remove('dragging');
+      d.item.style.cssText='';
+      if(d.ph.parentNode){d.ph.parentNode.insertBefore(d.item,d.ph);d.ph.parentNode.removeChild(d.ph);}
       suppressClick=true;
-      setTimeout(function(){suppressClick=false;},350); // 防拖拽结束后误触进入模块
+      setTimeout(function(){suppressClick=false;},320); // 防拖拽结束后误触进入模块
       var order=sortableItems().map(function(m){return m.dataset.t});
       try{localStorage.setItem('clawOrder',JSON.stringify(order));}catch(err){}
-    }
-    drag=null;
+      // 清掉 FLIP 留下的内联过渡，避免影响后续按下/点击态
+      homePage.querySelectorAll('.module-item').forEach(function(m){
+        m.style.transition='';m.style.transform='';
+      });
+    },205);
   }
   homePage.addEventListener('touchend',endDrag,{passive:true});
   homePage.addEventListener('touchcancel',endDrag,{passive:true});
-  homePage.addEventListener('contextmenu',function(e){if(drag)e.preventDefault();});
+  homePage.addEventListener('contextmenu',function(e){if(drag||press)e.preventDefault();});
 
   // 全面屏返回手势：二级页面从屏幕左缘向右滑返回首页
   var edgeStart=null;
