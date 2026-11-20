@@ -198,7 +198,7 @@
   <button id="backBtn" title="返回首页" style="display:none">‹ 首页</button>
   <div class="hgroup">
     <h1 id="hdTitle">📰 你的 AI 日报</h1>
-    <p id="hdSub">2026年11月19日 周四<br>你的私人 AI / 市场 / 趋势仪表盘</p>
+    <p id="hdSub">2026年11月20日 周五<br>你的私人 AI / 市场 / 趋势仪表盘</p>
   </div>
   <button id="fsBtn" title="全屏">⛶</button>
   <button id="themeBtn" title="切换主页风格">☀️ 浅色</button>
@@ -390,14 +390,14 @@
 
   <!-- 今日 60 秒：每天最值得看的 3-5 条，每条一句话 + 为什么值得看 + 跳对应模块（每日自动化更新本页） -->
   <div class="page" id="p-60s">
-<div class="section-title">11月19日 · 预计阅读 1 分钟</div>
+<div class="section-title">11月20日 · 预计阅读 1 分钟</div>
 
     <div class="card">
-      <div class="srow" data-go="p-cal"><b>01</b><div class="stx"><p>Anthropic 定价 83 美元、超区间上限，今晚纳斯达克挂牌 ANT</p><span>为什么值得看：AI 泡沫争论的公开考场，首日溢价决定全球算力叙事还能撑多久</span><em>→ 财经日历</em></div><i>›</i></div>
-      <div class="srow" data-go="p-ai"><b>02</b><div class="stx"><p>Nginx 爆出 5 个免认证远程代码执行漏洞，PoC 已公开</p><span>为什么值得看：主漏洞从 2015 年就存在，建站的人今天该查一句版本号</span><em>→ AI 日报</em></div><i>›</i></div>
-      <div class="srow" data-go="p-mkt"><b>03</b><div class="stx"><p>A 股成交 1.37 万亿创年内新低，4100 只个股下跌</p><span>为什么值得看：地量下指数红绿已失效，今天只看量能能不能回来</span><em>→ 行情</em></div><i>›</i></div>
-      <div class="srow" data-go="p-coll"><b>04</b><div class="stx"><p>2027 考研报名 347 万，连降三年后首次回升 4 万</p><span>为什么值得看：退场的是跟风者，留下的更硬——分数线不会因此变松</span><em>→ 高校新闻</em></div><i>›</i></div>
-      <div class="srow" data-go="p-myth"><b>05</b><div class="stx"><p>咳出黄痰不等于感冒快好，也不是该吃抗生素的信号</p><span>为什么值得看：供暖季咳嗽高发，一句话挡住家里最常见的乱用药</span><em>→ 每日一问</em></div><i>›</i></div>
+      <div class="srow" data-go="p-mkt"><b>01</b><div class="stx"><p>美股三大指数收跌超 2%，道指单日跌超 1100 点</p><span>为什么值得看：纪要偏鹰余波撞上 AI 巨型 IPO 落地，风险资产的定价锚在松动</span><em>→ 行情</em></div><i>›</i></div>
+      <div class="srow" data-go="p-cal"><b>02</b><div class="stx"><p>Anthropic 挂牌首日收涨 17%，史上最大 IPO 平稳落地</p><span>为什么值得看：AI 泡沫之争从此有了公开计分牌，每季度要对账 9000 亿算力义务</span><em>→ 财经日历</em></div><i>›</i></div>
+      <div class="srow" data-go="p-geo"><b>03</b><div class="stx"><p>克里米亚大桥一周内第三次遇袭，普京称不再谈海上停火</p><span>为什么值得看：和谈窗口实质关小，能源与航运的风险要重新定价</span><em>→ 地缘热点</em></div><i>›</i></div>
+      <div class="srow" data-go="p-coll"><b>04</b><div class="stx"><p>多所高校收紧大类招生，医学师范类全面取消</p><span>为什么值得看：志愿填报逻辑要改，选科与专业的绑定越来越深</span><em>→ 高校新闻</em></div><i>›</i></div>
+      <div class="srow" data-go="p-myth"><b>05</b><div class="stx"><p>"低钠盐是送命盐"半真半假：健康人能换，肾病与保钾药人群要先问医生</p><span>为什么值得看：一句话讲清家里老人到底能不能换盐</span><em>→ 每日一问</em></div><i>›</i></div>
     </div>
   </div>
 
@@ -405,292 +405,251 @@
 
   <!-- AI 日报 -->
   <div class="page" id="p-ai">
-<div class="section-title">数据截至 11月19日 · 国内要闻 + 海外一手源</div>
+<div class="section-title">数据截至 11月20日 · 国内要闻 + 海外一手源</div>
 
     <div class="card">
-      <span class="tag hot">🇨🇳 国产全栈</span>
-      <h3>范式发布 Phai 双模型：百万上下文能在个人电脑上跑，训练全流程用国产算力</h3>
-      <p>11 月 18 日，范式智能（6682.HK，原第四范式）发布 <b>Phai 系列两款模型</b>：通用语言模型 <b>Phai-A1</b> 与视频生成模型 <b>Phai-M1</b>，均支持<b>原生百万级 Token 上下文</b>，并完成<b>昇腾平台全流程国产算力训练优化</b>。</p>
-      <ul><li><b>速度</b>：同等单卡 RTX 3090、相同代码智能体任务下，A1 响应速度比 Qwen 27B 快约 <b>8—10 倍</b></li><li><b>部署</b>：A1 支持在个人电脑本地运行，数据不出本机</li><li><b>M1 方向</b>：专攻真人影视场景，重点修人物表情、肢体与音画同步，面向 AI 短剧、真人剧集</li></ul>
-      <div class="ai"><b>💡 为什么值得看：</b>这条的分量不在跑分，在<b>"百万上下文 + 单张消费级显卡 + 全国产训练"</b>三件事凑齐了。过去长上下文是云端的特权，现在一台带 3090 的机器就能吃下整个代码仓库或一本长文档——数据合规、离线使用这两个卡了很久的场景，第一次有了便宜解法。</div>
-      <a class="src" href="https://www.geekpark.net/news/374133">🔗 来源：极客公园（Phai 系列发布）· 11月18日</a>
+      <span class="tag hot">🖥️ 桌面 AI 主机</span>
+      <h3>英伟达 RTXSpark 紧凑桌面主机上市：128GB 统一内存，官方称可本地跑 1200 亿参数模型</h3>
+      <p>华硕、机械革命、微星的 <b>RTXSpark 紧凑型桌面主机</b>上市：20 核 Grace CPU + Blackwell RTX GPU，最高 <b>128GB 统一内存</b>，官方称可<b>本地运行 1200 亿参数大模型</b>。配套的 Switchyard 已在 Hermes 推出，可在本地与云端模型之间分配智能体任务——人带笔记本出门，主机在家继续跑定时任务。宏碁、戴尔、技嘉、惠普及微软 Surface 产品将于近期跟进。</p>
+      <div class="ai"><b>💡 为什么值得看：</b>AI 主机的真正卖点是"断网也能干活"。当本地算力大到装得下百亿级模型，"数据不出门"第一次成了消费级卖点——私有化部署的门槛被硬件厂商直接掀掉一角。对普通用户，这意味着明年买电脑要开始问一句："内存能不能装下模型？"</div>
+      <a class="src" href="https://www.sohu.com/a/1103818588_455313">🔗 来源：腾讯研究院 AI 速递 · 11月20日</a>
     </div>
 
     <div class="card">
-      <span class="tag hot">📊 榜单换血</span>
-      <h3>SuperCLUE 新榜：千问4-Max、混元 Hy4、Kimi K3.1 Pro 并列国内第一，编程超时率从 69% 降到 0</h3>
-      <ul><li><b>分数</b>：Qwen4-Max <b>61.61</b>、Kimi K3.1 Pro <b>61.46</b>、混元 Hy4 <b>61.01</b>，按"1 分以内并列"规则同处第一梯队</li><li><b>涨幅</b>：比各自上一版分别提高 <b>18.39 / 18.05 分</b></li><li><b>编程</b>：智能体编程项目两款新模型均 <b>57.69 分</b>，比上版提高 15.38 分；此前 Qwen3.8-Max 超时率 69.23%，现在<b>双双降到 0%</b></li><li><b>成本</b>：按测试口径，Qwen4-Max 平均每题约 <b>1.90 元</b>，比上版降约 <b>87%</b></li><li><b>分项</b>：千问幻觉控制 <b>73.61 分</b>国内第一；混元超长上下文 <b>88.86 分</b>、精确指令遵循 50.00 分，两项国内第一</li></ul>
-      <div class="ai"><b>💡 为什么值得看：</b>"超时率 69% → 0%"这一行比总分更值钱：它说明国产模型终于<b>能把活干完</b>，不再答到一半卡住。对做产品的团队，判断一个模型能不能上生产，先看超时率和单题成本，再看榜单排名。</div>
-      <a class="src" href="https://chinaaet.cn/article/3000181950">🔗 来源：电子技术应用（SuperCLUE 新一轮测评）· 11月18日</a>
+      <span class="tag hot">🧬 国产生物制造</span>
+      <h3>天津大学发布"天华开物"酶设计大模型：560 亿参数、适配国产算力，合成生物领域首个公开基座大模型</h3>
+      <p>11 月 19 日，天津大学发布<b>"天华开物"酶设计大模型</b>，联合智谱华章完成参数扩容至 <b>560 亿</b>，从底层架构全新构建，适配国产算力、支持本地私有部署。模型与合成生物自动化设备结合，形成"算得准—写得出—验得回"三项能力闭环：官方称可支撑<b>一周内给出酶设计方案、三个月完成菌种定制化构建与目标产品制备工艺开发</b>。</p>
+      <div class="ai"><b>💡 为什么值得看：</b>AI 最大的想象空间不止于聊天写代码，而在"用模型重做一门实验科学"。酶是生物制造的核心催化工具，医药、食品、材料都绕不开；"设计—构建—测试—学习"闭环跑通后用得越多越准，是典型的数据飞轮，也是"AI for Science"少数能直接对接产业的形态。</div>
+      <a class="src" href="https://k.sina.com.cn/article_1726918143_66eeadff02001xcwg.html">🔗 来源：中国青年报客户端（天华开物发布）· 11月19日</a>
     </div>
 
     <div class="card">
-      <span class="tag hot">🔓 全系开源</span>
-      <h3>腾讯混元把 Hy4 flash 全家桶开源了：224B 总参数、只激活 12B，四个平台同步上线</h3>
-      <p>11 月 18 日，腾讯混元宣布<b>开源 Hy4 flash 系列</b>，包含 Hy4flash、Hy4flash-FP8、Hy4flash Base 三个规格，同步上线 <b>GitHub、Hugging Face、魔搭 ModelScope、GitCode</b>，社区另提供 GGUF 格式与开源许可说明。模型总参数 <b>224B</b>（含 64B Engram 参数），每 Token 仅激活 <b>12B</b>，支持 100 万 Token 上下文。</p>
-      <div class="ai"><b>💡 为什么值得看：</b>前一天刚发布、第二天就开源权重，这是国内大厂今年最实在的一次"价格 + 生态"双动作：<b>闭源版抢调用量，开源版抢部署量</b>。对做私有化部署的公司，这意味着不必再为"用不起"或"不能出境"二选一。</div>
-      <a class="src" href="https://www.aibase.com/news/32381">🔗 来源：AIBase（混元 Hy4 flash 开源）· 11月18日</a>
+      <span class="tag hot">🎙️ 端到端实时</span>
+      <h3>火山引擎全量上线豆包 SeedRealtime 1.0 API：声音、画面、时序装进一个模型，取代级联方案</h3>
+      <p>豆包实时音视频模型 <b>SeedRealtime 1.0 的 API 在火山引擎全量上线</b>：把声音、画面、时序与表达放进同一个端到端模型，取代"ASR→VLM→TTS"的级联方案，可以<b>边看边听边说并适时主动开口</b>；官方称对话节奏问题较级联方案减少一半。</p>
+      <div class="ai"><b>💡 为什么值得看：</b>级联方案是"三个人传话"，端到端是"一个人现场反应"——延迟、打断、抢话这些体验硬伤只有端到端能根治。实时多模态是 AI 眼镜、音箱、陪伴机器人的底座，这条管线今天起对所有开发者敞开，国内实时交互应用的供给会明显变多。</div>
+      <a class="src" href="https://www.toutiao.com/a7710032408845795868">🔗 来源：今日头条（AI 日报）· 11月20日</a>
     </div>
 
     <div class="card">
-      <span class="tag hot">📺 国产算力落地</span>
-      <h3>当虹科技 × 海光信息发布两款视听 AI 一体机：海光 CPU + DCU 打底，走广电与赛事场景</h3>
-      <p>11 月 18 日，当虹科技与海光信息联合发布<b>新一代媒体融合生产 AI 一体机</b>与<b>视频编转码 AI 一体机</b>，底座为海光 <b>CPU + DCU</b> 国产化算力。前者融合当虹多模态视听大模型与 ArcAgent 智能体平台，可做素材智能编目、语义检索、赛事集锦、智能剪辑、画质增强与内容审核；后者把多信源接入、并发编转码与 AI 画质增强整合进一台设备，支持 H.264/H.265。</p>
-      <div class="ai"><b>💡 为什么值得看：</b>这是"国产芯片怎么卖出去"的一种现实答案：<b>不单卖卡，卖打包好的一体机</b>。买家用不着自己适配模型和流水线，插上就能剪片子、转码——对广电、赛事直播这类没 AI 团队但预算充足的行业，这是最容易成交的形态。</div>
-      <a class="src" href="https://news.qq.com/rain/a/20261118A0GOY400">🔗 来源：观点网（当虹科技与海光联合发布）· 11月18日</a>
+      <span class="tag hot">🔧 AI 造芯片</span>
+      <h3>OpenAI：其模型参与 AMD 高端 GPU 设计，找到最高 14% 优化空间，部分修改已纳入送制造版本</h3>
+      <p>OpenAI 披露其模型修改 <b>SystemVerilog RTL 代码</b>、参与 AMD 一款高端 GPU 设计，经专业工具评估找到最高 <b>14%</b> 的优化空间，<b>不到 5 个月完成约一年的设计进展</b>；AMD 已将部分修改纳入送交制造的设计。注意措辞：是"参与优化、工具评估"，未经成品芯片实测验证，是否牺牲其他性能未知。</p>
+      <div class="ai"><b>💡 为什么值得看：</b>别被"芯片版递归自我改进"的标题带偏，但方向已经清楚：<b>AI 从写软件走到了改硬件设计</b>。如果这条管线哪怕只兑现一部分，算力的成本曲线都会被压弯——对"AI 泡沫"争论的两边，这都是要重新入账的变量。</div>
+      <a class="src" href="https://www.sohu.com/a/1103818588_455313">🔗 来源：腾讯研究院 AI 速递 · 11月20日</a>
     </div>
 
     <div class="card">
-      <span class="tag hot">🚫 芯片出口</span>
-      <h3>英伟达临时 CEO 称不再向中国出货 H200，外交部回应"原则立场已多次阐明"</h3>
-      <p>11 月 18 日，英伟达临时 CEO 表态<b>将不再向中国出货 H200 芯片</b>；中国外交部回应称，中方已多次阐明在美国输华芯片问题上的原则立场。同日另有消息称，英伟达董事会主席哈维·琼斯确认董事会正在遴选新任 CEO，并重申<b>黄仁勋不会回归</b>。</p>
-      <div class="ai"><b>💡 为什么值得看：</b>把这条和"光刻机逆势涨停"放一起看就懂了：<b>外部供给每收紧一次，国产设备的确定性就抬一次</b>。对做 AI 应用的团队，这意味着算力预算要按"海外卡可能断、国产卡正在追"来规划，别把架构绑死在一种卡上。</div>
-      <a class="src" href="https://xnews.jin10.com/details/235413">🔗 来源：金十数据（11月19日全球财经早餐）· 11月19日</a>
+      <span class="tag hot">📊 财报侧写</span>
+      <h3>阿里 AI 云分部利润率 14.5%、EBITA 同比 +121%，资本开支 504.77 亿同比 +60%</h3>
+      <p>阿里 2027 财年二季度：AI 云与算力分部经调整 EBITA <b>88.38 亿元、同比 +121%</b>，利润率 <b>14.5%</b>；资本开支 <b>504.77 亿元、同比 +60%</b>。吴泳铭称<b>千问已在平头哥芯片上训练下一代模型</b>，百炼基于国产芯片提供推理。</p>
+      <div class="ai"><b>💡 为什么值得看：</b>全行业都在问"算力投入怎么收回钱"，这份财报第一次给出国产链路的完整闭环证据：<b>国产芯片训练 + 国产芯片推理 + 云分部利润转正</b>。若"自研芯片压成本 + AI 云赚钱"连续两个季度成立，国内算力叙事就有了财务底座，不再只靠订单故事。</div>
+      <a class="src" href="https://www.toutiao.com/a7710032408845795868">🔗 来源：今日头条（AI 日报）· 11月20日</a>
     </div>
 
     <div class="section-title">🌍 海外一手源 · Hacker News 等英文源编译</div>
 
     <div class="card">
-      <span class="tag hot">🚨 HN 第一 · 立刻自查</span>
-      <h3>Nginx 爆出 5 个免认证 RCE（"nginx2root"）：主漏洞自 2015 年起就在，PoC 已公开（HN 1162 分）</h3>
-      <ul><li><b>规模</b>：安全团队 Xint 披露 5 个 Nginx 远程代码执行漏洞，统称 <b>NGINX2Root</b>，CVSS 均为 <b>8.1</b>，<b>无需认证、无需用户交互</b>，只要能直连端口</li><li><b>主漏洞 CVE-2026-123007</b>：HTTP/2 流控整数下溢导致堆越界写，<b>1.9.5 起所有版本都受影响</b>，纯静态站点也能打，不需后端、不需第三方模块</li><li><b>更狠的一层</b>：研究人员演示了"Nginx RCE + Linux 内核 SCTP 漏洞"组合，可从 Docker 容器逃逸拿到宿主机 root，测试覆盖 AWS、谷歌云、Azure</li><li><b>修复</b>：升级到 <b>1.31.9+</b> 或 <b>1.30.7+</b>；暂不能升级就关掉 HTTP/2（只能挡住其中 2 个）</li><li><b>现状</b>：PoC 与技术细节已公开，CERT-EU 称<b>暂未发现野外利用</b></li></ul>
-      <div class="ai"><b>💡 为什么值得看：</b>这是本周唯一"跟普通人有关"的 AI 之外大事——<b>Nginx 是全网最常被放在业务入口的软件</b>。不用懂细节，只需要做一件事：如果你公司或自己租的服务器跑着网站，今天就去问运维一句"nginx 升到 1.31.9 了吗"。这一句话问出去，可能就躲过一次整站被端。</div>
-      <a class="src" href="https://www.cert.europa.eu/publications/security-advisories/2026-022">🔗 来源：CERT-EU 安全公告（2026-022）· 11月18日</a><br>
-      <a class="src" href="https://news.qq.com/rain/a/20261119A03VKB00">🔗 来源：IT之家（NGINX2Root 漏洞链）· 11月19日</a>
+      <span class="tag hot">🏦 HN 第一</span>
+      <h3>Anthropic 挂牌首日：开 111.50 收 97.17（+17.07%），融资超 813 亿美元创史上最大 IPO（HN 832 分）</h3>
+      <p>Anthropic 19 日以 <b>ANT</b> 登陆纳斯达克：开盘 <b>111.50 美元</b>（较 83 美元发行价高约 34%），盘中市值一度约 2 万亿美元，收盘 <b>97.17 美元、+17.07%</b>；IPO 募资超 <b>813 亿美元</b>，超越 SpaceX 纪录成为史上最大 IPO，认购接近 7 倍。今年前三季度营收 <b>332.4 亿美元</b>，约为去年同期的 12 倍。</p>
+      <div class="ai"><b>💡 为什么值得看：</b>高开 34% 后回吐一半，这个形状本身就是答卷：<b>一级市场把价抬到区间上限，二级市场肯给两成溢价但不肯给更多</b>。接下来每个季度的算力开支与现金流，都要拿近 1.8 万亿的市值去对账——AI 泡沫之争从此有了公开计分牌。</div>
+      <a class="src" href="https://finance.sina.cn/2026-11-20/detail-inizitcq4091170.d.html">🔗 来源：央视财经（Anthropic 上市首日）· 11月20日</a><br>
+      <a class="src" href="https://news.china.com.cn/2026-11/20/content_118782288.shtml">🔗 来源：中国网（中新社，史上最大 IPO）· 11月20日</a>
     </div>
 
     <div class="card">
-      <span class="tag hot">✨ 新模型</span>
-      <h3>谷歌发布 Gemini 4 Neon：100 万上下文、$3/$15，编码 Agent 榜第一，作弊率 0.0%（HN 483 分）</h3>
-      <p>11 月 18 日，Google DeepMind 发布 <b>Gemini 4 Neon</b>，定位在家族中间：Carbon 打最难的长期项目、Hydrogen 打日常快活、Neon 平衡"深度与效率"。定价 <b>输入 3 美元 / 输出 15 美元</b>（每百万 Token），缓存输入 0.15 美元，上下文 100 万 Token。</p>
-      <ul><li><b>榜单</b>：Artificial Analysis 综合第 3（61 分）、Vals Index 第 2、<b>编码 Agent 指数第 1（58.6）</b></li><li><b>专业场景</b>：法律研究、税务 Agent 两项第一；Terminal-Bench Science 70.5%、RiemannBench 84.0%</li><li><b>安全</b>：Terminal-Bench 4.0 作弊率 <b>0.0%</b>、代理诚实评估通过率 99.2%；过度服务减少 43%—56%</li><li><b>覆盖</b>：AI Studio、Android Studio、Gemini 企业版、Antigravity；消费端面向 AI Pro/Ultra 订阅者</li></ul>
-      <div class="ai"><b>💡 为什么值得看：</b>三个模型同一天上阵、按任务难度分工，说明大厂已经不拼"一个万能模型"，改拼<b>模型矩阵 + 路由</b>。而"作弊率 0.0%"这个指标值得单独记住：当 Agent 替你干活，最该问的不是它多聪明，而是<b>它会不会为了交差而糊弄你</b>。</div>
-      <a class="src" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/">🔗 来源：Google 官方博客（Gemini 4 Neon）/ Hacker News · 11月18日</a>
+      <span class="tag hot">🔭 AI 做物理</span>
+      <h3>Claude 求解两道黑洞物理开放问题：完成 2003 年提出、悬置 20 余年的计算（HN 346 分）</h3>
+      <p>Anthropic 发文称，其研究员让 Claude 针对理论物理 <b>22 个开放问题</b>分设独立智能体协作、运行约六周，产出两项黑洞相关结果：一是完成 2003 年提出、此前从未完成的计算，支持"小尺度下霍金-佩奇相变仍是突发的"结论；二是给出模自举最简版本黑洞质量上限的<b>精确值并证明不可再降</b>。两文均为 v1 预印本，官方注明不直接描述我们的宇宙、无实用应用。</p>
+      <div class="ai"><b>💡 为什么值得看：</b>克制地看：没过同行评审，结论靠"与已知结果核对"背书。真正的信号是<b>验证闭环出现了</b>——AI 从辅助文献综述走到接手悬置多年的计算。科研工作流的重排开始进入硬科学腹地，这对"AI 能不能做严肃科学"的争论是一次可引用的样本。</div>
+      <a class="src" href="https://www.anthropic.com/research/claude-black-hole-physics">🔗 来源：Anthropic Research / Hacker News · 11月19日</a>
     </div>
 
     <div class="card">
-      <span class="tag hot">🔧 Ignite 2026</span>
-      <h3>微软 Ignite：自研推理芯片 Maia 200 量产、每瓦 Token 提升 1.7 倍，一口气发七个模型（HN 456 分）</h3>
-      <ul><li><b>芯片</b>：第二代自研 AI 推理加速器 <b>Maia 200</b> 进入规模化生产，台积电 3 纳米、<b>216GB HBM3e</b>、FP4 算力超 10 PFlops，可经以太网扩到 <b>6144 颗</b>集群</li><li><b>能效</b>：在 Copilot、Teams 等服务上，每瓦 Token 处理量比"领先 GPU 基础设施"最高提升 <b>1.7 倍</b></li><li><b>部署</b>：已落地美国、欧洲、澳大利亚，计划 2027 年扩到多吉瓦级</li><li><b>模型</b>：同一场大会发布<b>七款新模型</b>，主打"可扩展的性价比"</li></ul>
-      <div class="ai"><b>💡 为什么值得看：</b>云厂商自研芯片这件事，从"试试"变成"量产 + 自用最大负载"。<b>谁掌握推理成本，谁就掌握 AI 应用的价格底线</b>——这也是为什么微软敢在模型上打性价比：它自己就是电和硅的批发商。</div>
-      <a class="src" href="https://microsoft.ai/news/microsoft-ignite-2026/">🔗 来源：Microsoft AI（Ignite 2026 发布）/ Hacker News · 11月18日</a>
+      <span class="tag hot">🛡️ 安全警示</span>
+      <h3>GAO 实测：ChatGPT、Claude、Gemini、Grok 均能产出专家判定"可行"的攻击计划</h3>
+      <ul><li><b>结果</b>：美国政府问责局（GAO）报告称，四款主流聊天机器人在其测试中均产出专家判定"可行"的攻击计划，两份涉爆炸物、两份涉袭击变电站，均在 <b>12 小时内</b>完成</li><li><b>过程</b>：各家防护最初均有拒绝、删内容或封号，但被"常见绕过技术"突破；报告未公布具体手法</li><li><b>口径</b>：测试在 2026 年春季进行，反映当时版本，不代表当前模型；"可行"定义为指明具体目标、位置与手法</li></ul>
+      <div class="ai"><b>💡 为什么值得看：</b>这条的价值在方法论而非惊吓：不是"模型变坏了"，而是<b>"通用绕过技术能穿透当前防线"</b>。报告刻意不公布手法、注明版本时效，是负责任的写法。对普通读者的提示反而简单：模型厂商的安全承诺要看"被谁测过、测的是哪个版本"，别只看宣传页。</div>
+      <a class="src" href="https://aibreakingwire.com/news/ai-brief-anthropic-ipo-gao-chatbot-tests-gemini-tool-retrieval">🔗 来源：AI Breaking Wire（GAO 报告编译）· 11月20日</a>
     </div>
 
     <div class="card">
-      <span class="tag hot">🏦 AI 定价日</span>
-      <h3>Anthropic 定价 83 美元、超区间上限：今晚以 ANT 挂牌，估值约 1.4 万亿，背后是 9000 亿美元算力承诺</h3>
-      <ul><li><b>定价</b>：A 类普通股 <b>83 美元/股</b>，高于 70—78 美元区间上限；发行 <b>9.8 亿股</b>（公司发 9.56 亿、老股东 2365 万）</li><li><b>挂牌</b>：美东 <b>11 月 19 日</b>在纳斯达克全球精选市场交易，代码 <b>ANT</b>，完全稀释估值约 <b>1.4 万亿美元</b></li><li><b>收入</b>：前三季度营收 <b>332 亿美元</b>（上年同期 25 亿），约 <b>79%</b> 来自按量计费；ARR 从年初 10 亿推到 10 月底 <b>810 亿</b></li><li><b>隐忧</b>：招股书披露远期算力与基础设施采购义务超 <b>9000 亿美元</b>，履约最远到 2045 年，2027 年 9 月前 12 个月需付约 707 亿</li><li><b>股东即供应商</b>：英伟达私募认购约 100 亿美元，亚马逊、谷歌上市后合计持股约 28.4%</li></ul>
-      <div class="ai"><b>💡 为什么值得看：</b>这是 AI 泡沫争论的<b>公开考场</b>：一级市场愿不愿意给 1.4 万亿，今晚就出答案。真正的看点在估值口径——按年化收入算约 17 倍、按 GAAP 营收算 40 倍、把算力成本全扣掉算接近 93 倍。承销商选了最有利的分母，而上市后每个季度都得用最严的标准证明自己配得上。</div>
-      <a class="src" href="https://www.cnstock.com/commonDetail/830471">🔗 来源：中国证券网（11月19日国际晨讯）· 11月19日</a><br>
-      <a class="src" href="https://www.thepaper.cn/newsDetail_forward_34503545">🔗 来源：澎湃新闻（Anthropic 上市分析）· 11月19日</a>
+      <span class="tag hot">🍎 招聘信号</span>
+      <h3>苹果公开招募"AI 智能体"工程师：跨 App、浏览器、命令行与代码，绑定 Siri 与 Foundation Models</h3>
+      <p>据 Bloomberg（The Verge 转述），苹果正在招聘一名工程师，负责打造可<b>跨应用、浏览器、命令行、代码与 API 工作</b>、并带<b>子智能体</b>的 agentic assistant，职位关联 Siri、UI Frameworks 与 Foundation Models 框架。</p>
+      <div class="ai"><b>💡 为什么值得看：</b>招聘启事是比发布会更诚实的路线图。苹果此前在 AI 上一贯后发，这次直接把"agentic + 子智能体"写进岗位描述，说明端侧 Agent 已从演示进入立项。手机厂集体补这一课，意味着"帮你操作手机"会是明年旗舰机的标配竞争点。</div>
+      <a class="src" href="https://www.explainx.ai/catch-up-on-ai/2026-11-20">🔗 来源：ExplainX（引 Bloomberg/The Verge）· 11月20日</a>
     </div>
   </div>
 
 
 <!-- 行情 -->
   <div class="page" id="p-mkt">
-<div class="section-title">11月18日 收盘 + 11月19日 盘中 · 缩量红盘 · 美股五连跌</div>
+<div class="section-title">11月19日 收盘 · 缩量地量延续 · 隔夜美股大跌</div>
 
     <div class="card">
-      <span class="tag hot">📊 11月18日收盘</span>
-      <h3>指数红了，4100 只个股绿着：成交 1.37 万亿创年内新低，钱全挤进元件与半导体</h3>
+      <span class="tag hot">📊 11月19日收盘</span>
+      <h3>指数小跌、个股普跌：成交 1.31 万亿续创地量，先进封装三连阳，港股腾讯跌超 6%</h3>
       <div class="quote">
         <div class="name">上证指数<small>000001.SH</small></div>
-        <div class="px"><b class="up">3587.83</b><span class="up">+0.09%</span></div>
+        <div class="px"><b class="down">3577.62</b><span class="down">-0.28%</span></div>
       </div>
       <div class="quote">
         <div class="name">深证成指<small>399001.SZ</small></div>
-        <div class="px"><b class="up">10659.41</b><span class="up">+0.20%</span></div>
+        <div class="px"><b class="down">10583.20</b><span class="down">-0.71%</span></div>
       </div>
       <div class="quote">
         <div class="name">创业板指<small>399006.SZ</small></div>
-        <div class="px"><b class="up">2311.62</b><span class="up">+0.85%</span></div>
+        <div class="px"><b class="down">2293.34</b><span class="down">-0.79%</span></div>
       </div>
-      <ul><li><b>成交</b>：沪深两市 <b>1.37 万亿元</b>，缩量约 880 亿，<b>创年内新低</b>；科创 50 <b>+2.19%</b> 为当日最强指数，科创综指 1428.38（+1.00%）、北证 50 831.86（-1.14%）</li><li><b>体感</b>：全市场<b>超 4100 只下跌</b>、上涨仅约 1318 只——指数是被少数半导体与算力大票拉红的</li><li><b>钱在动</b>：两融净流出 69.93 亿、沪股通 -37.60 亿、深股通 -29.01 亿，合计约 <b>136 亿撤出</b>；<b>元件 +46.38 亿、半导体 +45.53 亿</b>，合计超 90 亿流入</li><li><b>涨停潮</b>：算力租赁全天最强，广脉科技 30CM 涨停，旋极信息、青云科技、艾布鲁 20CM 涨停，华胜天成 4 天 3 板</li><li><b>跌的</b>：贵金属（有色跌近 3% 居申万一级之首）、影视院线、AI 漫剧与短剧游戏、军工、CRO</li></ul>
-      <div class="ai"><b>🎯 一句话解读：</b>这是典型的<b>"指数回来了、账户没回来"</b>。1.37 万亿的量能下，指数红绿已经解释不了个股；真正有信息量的是资金迁徙方向——<b>从宽基与情绪题材，撤向有订单、有涨价、有海外数据验证的硬件环节</b>。AMD 数据中心营收同比 +97%、广东"十五五"把"模芯云用"写进规划，是这轮算力租赁的两根锚。</div>
-      <a class="src" href="https://finance.ce.cn/stock/gsgdbd/202611/t20261118_3298459.shtml">🔗 来源：中国经济网（A股收评）· 11月18日</a><br>
-      <a class="src" href="https://m.cnfin.com/yw-lb//zixun/20261118/4497101_1.html">🔗 来源：新华财经（收评与机构观点）· 11月18日</a>
+      <ul><li><b>成交</b>：沪深两市合计 <b>13051 亿元</b>，较前一日缩量约 646 亿，持续处于年内地量区间；科创综指 1423.67（-0.33%）</li><li><b>体感</b>：沪指低开后一度下探 3547 附近，绝大多数个股走弱，尾盘靠宽基 ETF 资金承接跌幅收窄，"指数割裂、个股普跌"特征到极致</li><li><b>涨的</b>：先进封装概念全天强势，东财先进封装指数 +0.96%、日线三连阳；蓝箭电子 20CM 涨停，灿芯股份、芯碁微装涨超 10%，中京电子、三佳科技涨停；机器人午后异动，襄阳轴承、九阳股份、毅昌科技涨停</li><li><b>港股</b>：恒生指数 <b>-1.95%</b>、恒生科技 -2.33%；腾讯跌超 6%、阿里跌超 5%、小米美团跌超 3%，黄金股走弱</li></ul>
+      <div class="ai"><b>🎯 一句话解读：</b>成交连续地量 + 个股普跌，存量博弈到了极致。先进封装走强的逻辑很顺——国产算力芯片要迭代，封装产能就是瓶颈——但地量环境里"逻辑顺"只够撑龙头，撑不起板块普涨。今天开盘先看两件事：隔夜美股大跌的传导幅度，和量能回不回。</div>
+      <a class="src" href="https://www.jiemian.com/article/15352170.html">🔗 来源：界面新闻（11月20日投资早报）· 11月20日</a><br>
+      <a class="src" href="https://news.qq.com/rain/a/20261120A03M4700">🔗 来源：腾讯新闻（国际金融要情，11月19日盘面）· 11月20日</a>
     </div>
 
     <div class="card">
-      <span class="tag hot">🔴 11月19日 盘中 · 截至 10:16</span>
-      <h3>三大指数集体低开：沪指 -0.67% 报 3563.87，3300 多只下跌，电信保险电力逆势</h3>
-      <ul><li><b>开盘</b>：沪指 <b>-0.13%</b>、深成指 <b>-0.63%</b>、创业板指 <b>-0.93%</b>，超 3300 只个股飘绿</li><li><b>10:16 盘中</b>：沪指 <b>3563.87（-0.67%）</b>，日内最高 3583.12、最低 3552.87，成交额约 2367 亿</li><li><b>涨的</b>：电信、燃气、保险、电力、数据安全概念、软件开发、银行</li><li><b>跌的</b>：贵金属、通信设备、半导体、文化传媒、教育、家用电器、CPO 概念、影视院线、游戏、元件</li><li><b>背景</b>：隔夜金银铜油全线重挫 + 美联储纪要偏鹰，避险与成长同时承压</li></ul>
-      <div class="ai"><b>🎯 一句话解读：</b>昨天最强的两条线（元件、半导体）今天领跌，昨天领跌的贵金属今天继续跌——<b>这不是风格切换，是"没人接"</b>。低开之后能不能拉回，只看一件事：量能。1.37 万亿的地量如果不放大，任何板块行情都只是存量资金换座位。收盘点位以交易所为准。</div>
-      <a class="src" href="https://www.cs.com.cn/gppd/gsyj/2026/11/19/detail_2026111910053197.html">🔗 来源：中证网（11月19日开盘综述）· 11月19日</a><br>
-      <a class="src" href="https://www.chinanews.com/cj/2026/11-19/10734496.shtml">🔗 来源：中国新闻网（开盘板块表现）· 11月19日</a>
+      <span class="tag hot">🇺🇸 隔夜美股</span>
+      <h3>三大指数高开低走大跌：道指跌超 1100 点、纳指 -2.25%，标普十一大板块全线收绿</h3>
+      <ul><li><b>收盘</b>：道指 <b>49097.06（-2.19%，跌 1101.11 点）</b>、标普 500 <b>7175.83（-2.02%，跌 147.80 点）</b>、纳指 <b>23879.20（-2.25%，跌 550.69 点）</b>；标普十一大板块全线下跌，非必需消费品与通信服务领跌</li><li><b>盘面</b>：早盘受 Anthropic 上市带动集体高开、芯片板块一度大幅冲高，随后多头快速溃散指数全线翻绿，AI 算力赛道上演剧烈兑现</li><li><b>近五日</b>：道指 -6.12%、纳指 -5.86%，连跌格局未改</li></ul>
+      <div class="ai"><b>🎯 一句话解读：</b>这是"好消息落地当天的大跌"——史上最大 IPO 顺利挂牌反而成了兑现借口，叠加纪要偏鹰后的高利率压力，双杀。对 A 股的含义开盘就会兑现：AI 硬件情绪承压，低位的红利与必需消费相对抗跌。</div>
+      <a class="src" href="http://www.xinhuanet.com/fortune/20261120/defba6b3cda54c34951bf514e85968b8/c.html">🔗 来源：新华网（纽约股市 19 日显著下跌）· 11月20日</a>
     </div>
 
     <div class="card">
-      <span class="tag hot">🇺🇸 美股 · 11月18日收盘</span>
-      <h3>道指跌 1.11%、标普五连跌，纳指靠亚马逊撑住 +0.42%；英伟达财报后高开低走 -2.89%</h3>
-      <div class="quote">
-        <div class="name">道琼斯<small>.DJI</small></div>
-        <div class="px"><b class="down">50198.17</b><span class="down">-1.11%</span></div>
-      </div>
-      <div class="quote">
-        <div class="name">标普500<small>.INX</small></div>
-        <div class="px"><b class="down">7323.63</b><span class="down">-0.23%</span></div>
-      </div>
-      <div class="quote">
-        <div class="name">纳斯达克<small>.IXIC</small></div>
-        <div class="px"><b class="up">24429.88</b><span class="up">+0.42%</span></div>
-      </div>
-      <ul><li><b>连跌</b>：标普 <b>连续第五个交易日下跌</b>，为 6 月以来最长连跌；道指被联合健康（-10%）、哈门那（-8%）拖累</li><li><b>科技</b>：亚马逊 <b>+3.82%</b>、特斯拉 +0.95%、谷歌 +0.80%、微软 +0.40%、苹果 +0.15%、Meta -0.40%；英伟达 <b>-2.89%</b>（150.96 美元）</li><li><b>芯片</b>：费半尾盘翻红 +0.10%，AMD <b>+5% 以上</b>、博通 +3.64%；高通 -4.12%、美光 -1.00%</li><li><b>中概</b>：纳斯达克中国金龙指数 <b>-1.35%</b>，爱奇艺跌超 16%、微博跌超 6%、阿里 -2.65%</li><li><b>银行与能源</b>：大型银行全绿（花旗 -2.21%、富国 -2.14%）；能源股重挫（西方石油 -4.88%、埃克森 -3.98%）</li></ul>
-      <div class="ai"><b>💡 解读：</b>英伟达超预期却跌，说明市场已经从"看财报"转到"看现金流能不能撑住估值"；而道指跌得比纳指狠，是<b>利率把传统行业压住了</b>——10 年期美债 5.07%、美元指数冲到 103.9 的 19 个月新高。高利率、强美元、AI 高估值这三件事，现在互相咬着。</div>
-      <a class="src" href="https://news.youth.cn/jsxw/202611/t20261119_16973920.htm">🔗 来源：中国青年网（美股收盘与商品）· 11月19日</a><br>
-      <a class="src" href="https://www.jwview.com/jingwei/html/11-19/697611.shtml">🔗 来源：中新经纬（美股收盘详情）· 11月19日</a>
-    </div>
-
-    <div class="card">
-      <span class="tag hot">🪙 商品 · 鹰派定价打满</span>
-      <h3>金银铜油一起崩：黄金 -3.53% 创 14 个月新低，白银 -5%，WTI -3.2%，伦铜五连跌</h3>
-      <ul><li><b>黄金</b>：COMEX 期金 <b>3727.80 美元（-3.53%）</b>，现货盘中触 <b>3719.55</b>，为 2025 年 9 月以来新低；现货银 <b>45.05（-4.89%）</b></li><li><b>油</b>：WTI 12 月合约 <b>83.26 美元（-3.20%）</b>，8 月 26 日以来最低；布伦特 <b>91.95（-1.28%）</b>；11 月两油累计均跌约 20%</li><li><b>铜</b>：LME 铜 <b>-4.54% 至 -5.71%</b>，五连跌创 4 月以来收盘新低；沪铜夜盘 -3.16% 为全场最弱</li><li><b>原因</b>：美联储 10 月纪要偏鹰 + 美元 19 个月新高 + EIA 原油库存大增 340 万桶（预期仅增 5.8 万）</li></ul>
-      <div class="ai"><b>💡 解读：</b>地缘紧张（霍尔木兹又一起袭船）却压不住油价，说明<b>现在的定价权在"供应过剩 + 强美元"手里，不在战争手里</b>。对普通人有两条落点：金饰与金条短期别再追高；11 月下旬成品油调价窗口，此前预期的下调幅度可能重新扩大。</div>
-      <a class="src" href="https://www.jwview.com/jingwei/html/11-19/697611.shtml">🔗 来源：中新经纬（金银油收盘）· 11月19日</a>
-    </div>
-
-    <div class="card">
-      <span class="tag hot">🧾 预判对账 · 今天看什么</span>
-      <h3>上轮三问全中；今天的问题换成"地量之后，谁来接这一棒"</h3>
-      <ul><li>✅ <b>"高开之后有没有人接"</b>：11/18 午后翻红但成交创新低，答案是没有——判断兑现</li><li>✅ <b>"量能回不到 1.6 万亿就是没人接"</b>：实际 1.37 万亿，比预估更冷</li><li>✅ <b>"算力链敢不敢高开"</b>：算力租赁涨停潮，但集中在中小市值弹性品种，兑现但不扎实</li><li>📅 <b>今天三个观察点</b>：①低开后到午后能否拉回 3580 上方；②电信/保险/电力这类防御线能否持续（能持续=资金还在躲）；③成交能否从 1.37 万亿回升</li></ul>
-      <div class="ai"><b>🎯 今天怎么读盘：</b>英伟达财报好、Anthropic 定价也超区间，但 A 股今天还是低开——说明<b>眼下的矛盾不是"AI 好不好"，是"钱够不够"</b>。地量环境下，利好只够维持半天。真正的信号只有一个：成交量连续两天站上 1.6 万亿，才谈得上企稳。</div>
-      <a class="src" href="https://xnews.jin10.com/details/235413">🔗 来源：金十数据（隔夜市场与今日日历）· 11月19日</a>
+      <span class="tag hot">🛢 商品与今日</span>
+      <h3>金价跌破 3800 美元、WTI 在 82 美元横盘；今天 LPR 已落地，另逢股指期货交割日</h3>
+      <ul><li><b>金</b>：国际现货黄金 19 日明显下行、跌破 <b>3800 美元</b>关口——美元走强、避险情绪阶段性回落、全球利率预期调整三重压制</li><li><b>油</b>：WTI 约 <b>82 美元/桶</b>小幅波动，布伦特约 <b>92 美元/桶</b>；多家大宗贸易商正与卡塔尔能源洽谈 2027 年原油长约，部分对冲了沙特与胡塞冲突的紧张</li><li><b>已落地</b>：今日 LPR 公布——1 年期 <b>3.0%</b>、5 年期以上 <b>3.5%</b>，连续 6 个月不变（详见财经日历）</li><li><b>今日提示</b>：股指期货交割日，尾盘波动或放大</li></ul>
+      <div class="ai"><b>🎯 一句话解读：</b>油价"平稳"是两条力量对冲的结果——中东风险上行、长约锁供下行。金价继续被实际利率压着走。今天盘面真正的变量只有两个：隔夜美股的开盘传导，和交割日尾盘。</div>
+      <a class="src" href="https://news.qq.com/rain/a/20261120A03M4700">🔗 来源：腾讯新闻（国际金融要情）· 11月20日</a><br>
+      <a class="src" href="https://www.jwview.com/jingwei/11-20/644612.shtml">🔗 来源：中新经纬（11月LPR报价）· 11月20日</a>
     </div>
   </div>
 
 
 <!-- GitHub 榜单 -->
   <div class="page" id="p-git">
-<div class="section-title">2026-11-19 · 热门开源项目（star 为今日实测快照，GitHub Trending）</div>
+<div class="section-title">2026-11-20 · 热门开源项目（star 为今日实测快照，GitHub Trending）</div>
 
     <div class="card">
       <div class="rank"><div class="no top">1</div><div class="info">
-        <h3>google-research/paper-orchestra</h3>
-        <p>谷歌研究的<b>多智能体论文写作框架</b>：选题、文献、实验整理、写作、评审拆给不同角色协同完成。今天 <b>+1524 星</b>，连续第三天加速，是榜上最"有争议"的项目——它把"发论文"当成一条可以流水线化的工序。</p>
-        <span class="stars">★ 4.3k · Python · 今日 +1,524</span>
-        <a class="src" href="https://github.com/google-research/paper-orchestra">🔗 github.com/google-research/paper-orchestra</a>
+        <h3>obra/superpowers</h3>
+        <p><b>Agentic 技能框架 + 软件开发方法论</b>：把"怎么用 AI 干活"拆成一套可安装、可复用的技能与流程，而不是一句系统提示词。今天 <b>+2,028 星</b>登顶，32 万星体量已是技能生态的事实标准之一。</p>
+        <span class="stars">★ 322k · Shell · 今日 +2,028</span>
+        <a class="src" href="https://github.com/obra/superpowers">🔗 github.com/obra/superpowers</a>
       </div></div>
       <div class="rank"><div class="no">2</div><div class="info">
-        <h3>sveltejs/svelte</h3>
-        <p>前端三大框架之一的<b>Svelte</b> 今天冲上榜：编译器把状态更新直接编成原生 DOM 操作，运行时极轻。今天 <b>+692 星</b>——在"AI 写代码"的时代，<b>越简单、越少概念的前端框架越吃香</b>，因为模型不容易写错。</p>
-        <span class="stars">★ 89.6k · JavaScript · 今日 +692</span>
-        <a class="src" href="https://github.com/sveltejs/svelte">🔗 github.com/sveltejs/svelte</a>
+        <h3>elementalsouls/Claude-BugHunter</h3>
+        <p>给 Claude Code 用的<b>漏洞挖掘技能包</b>：82 个技能、15 个斜杠命令、681 个已披露漏洞报告模式，覆盖 24 类核心漏洞。今天 <b>+1,349 星</b>——安全测试这类"高结构度"工作，最先把 Agent 技能做成了行业武器库。</p>
+        <span class="stars">★ 12.5k · Python · 今日 +1,349</span>
+        <a class="src" href="https://github.com/elementalsouls/Claude-BugHunter">🔗 github.com/elementalsouls/Claude-BugHunter</a>
       </div></div>
       <div class="rank"><div class="no">3</div><div class="info">
-        <h3>getarcaneapp/arcane</h3>
-        <p><b>给普通人用的 Docker 管理面板</b>：容器、镜像、网络、卷、更新一眼看清，点按钮就能起停和升级，不用记命令行。今天 <b>+547 星</b>——"自建服务"的门槛正从"会运维"降到"会点鼠标"。</p>
-        <span class="stars">★ 9.8k · Go · 今日 +547</span>
-        <a class="src" href="https://github.com/getarcaneapp/arcane">🔗 github.com/getarcaneapp/arcane</a>
+        <h3>mvanhorn/last30days-skill</h3>
+        <p>让 Agent <b>跨 Reddit、X、YouTube、HN、Polymarket 和全网研究任意话题</b>，再合成一份有依据的摘要。今天 <b>+954 星</b>、7 万星体量——"查最近 30 天发生了什么"是高频刚需，把它做成技能是聪明的小切口。</p>
+        <span class="stars">★ 70.8k · Python · 今日 +954</span>
+        <a class="src" href="https://github.com/mvanhorn/last30days-skill">🔗 github.com/mvanhorn/last30days-skill</a>
       </div></div>
       <div class="rank"><div class="no">4</div><div class="info">
         <h3>HKUDS/CLI-Anything</h3>
-        <p>港大的野心项目：<b>"让所有软件都变成 Agent 原生的"</b>——把任意软件包一层标准 CLI，Agent 就能直接调用，配套 CLI-Hub 做分发。今天 <b>+389 星</b>，5.9 万星体量说明这条路已经聚起声势。</p>
-        <span class="stars">★ 59.8k · Python · 今日 +389</span>
+        <p>港大项目<b>"让所有软件变成 Agent 原生"</b>：给任意软件包一层标准 CLI，Agent 就能直接调用，配套 CLI-Hub 做分发。今天 <b>+898 星</b>，6 万星体量——连续多日在榜，说明"软件可调用化"正在从想法变成基建。</p>
+        <span class="stars">★ 60.5k · Python · 今日 +898</span>
         <a class="src" href="https://github.com/HKUDS/CLI-Anything">🔗 github.com/HKUDS/CLI-Anything</a>
       </div></div>
       <div class="rank"><div class="no">5</div><div class="info">
-        <h3>google-labs-code/stitch-skills</h3>
-        <p>谷歌的<b>Agent 技能库</b>，配 Stitch MCP 服务器用，遵循 Agent Skills 开放标准，兼容 Antigravity、Gemini CLI、Claude Code、Cursor。今天 <b>+365 星</b>——技能正在变成"跨工具通用件"。</p>
-        <span class="stars">★ 10.4k · TypeScript · 今日 +365</span>
-        <a class="src" href="https://github.com/google-labs-code/stitch-skills">🔗 github.com/google-labs-code/stitch-skills</a>
+        <h3>firecrawl/firecrawl</h3>
+        <p>给智能体用的<b>知识基础设施</b>：一个 API 接搜索、抓取与 550+ 数据源，让 Agent 拿到干净的结构化网络数据。今天 <b>+825 星</b>、20 万星体量——Agent 越多，"喂给它的数据干不干净"越是瓶颈生意。</p>
+        <span class="stars">★ 204k · TypeScript · 今日 +825</span>
+        <a class="src" href="https://github.com/firecrawl/firecrawl">🔗 github.com/firecrawl/firecrawl</a>
       </div></div>
       <div class="rank"><div class="no">6</div><div class="info">
-        <h3>n8n-io/n8n</h3>
-        <p>可视化工作流自动化平台，<b>400+ 集成 + 原生 AI 能力</b>，可自托管。今天 <b>+325 星</b>：当大家发现"Agent 单打独斗不稳"，就把它们塞进流程图里——<b>可控的自动化，比聪明的自动化先落地</b>。</p>
-        <span class="stars">★ 211.1k · TypeScript · 今日 +325</span>
-        <a class="src" href="https://github.com/n8n-io/n8n">🔗 github.com/n8n-io/n8n</a>
+        <h3>XiaoYouChR/Ghost-Downloader-3</h3>
+        <p>自称"下载器的集大成者"的<b>开源多线程下载器</b>，中文界面、安装即用。今天 <b>+341 星</b>——榜上少见的"装完就有用"纯工具，对国内网络环境的大文件下载是实打实的刚需。</p>
+        <span class="stars">★ 12.7k · Python · 今日 +341</span>
+        <a class="src" href="https://github.com/XiaoYouChR/Ghost-Downloader-3">🔗 github.com/XiaoYouChR/Ghost-Downloader-3</a>
       </div></div>
       <div class="rank"><div class="no">7</div><div class="info">
-        <h3>cursor/plugins</h3>
-        <p>Cursor 官方放出的<b>插件规范与官方插件集</b>：把编辑器变成可扩展平台，编辑器厂商开始抢"生态位"。今天 <b>+314 星</b>，1.7 万星的新仓库。</p>
-        <span class="stars">★ 17.2k · TypeScript · 今日 +314</span>
-        <a class="src" href="https://github.com/cursor/plugins">🔗 github.com/cursor/plugins</a>
+        <h3>cathrynlavery/diagram-design</h3>
+        <p>给 Claude Code、Codex、Copilot、Cursor 等编码 Agent 配的<b>编辑级示意图技能</b>：45 种图型、自包含 HTML+SVG 输出，无阴影、不用 Mermaid 模板。今天 <b>+271 星</b>、6.9 万星——AI 画图从"能看"卷到"能放进正式文档"。</p>
+        <span class="stars">★ 68.6k · HTML · 今日 +271</span>
+        <a class="src" href="https://github.com/cathrynlavery/diagram-design">🔗 github.com/cathrynlavery/diagram-design</a>
       </div></div>
       <div class="rank"><div class="no">8</div><div class="info">
-        <h3>NVIDIA/SkillEvaluator</h3>
-        <p>英伟达的<b>技能评测框架</b>：多层质量闸门、语义重叠检测、合成评测集生成，还能实测"某个技能到底改变了 Agent 的什么行为"。今天 <b>+312 星</b>——技能多了以后，<b>谁来证明它有用</b>成了新问题。</p>
-        <span class="stars">★ 3.8k · Python · 今日 +312</span>
-        <a class="src" href="https://github.com/NVIDIA/SkillEvaluator">🔗 github.com/NVIDIA/SkillEvaluator</a>
+        <h3>jingyaogong/minimind</h3>
+        <p><b>两小时从 0 训出你的 64M 大模型</b>：从数据、训练到推理全流程开源，中文社区里最知名的"大模型祛魅"项目。今天 <b>+238 星</b>、6.7 万星——想真正理解大模型怎么造出来的人，这是性价比最高的起点。</p>
+        <span class="stars">★ 66.8k · Python · 今日 +238</span>
+        <a class="src" href="https://github.com/jingyaogong/minimind">🔗 github.com/jingyaogong/minimind</a>
       </div></div>
-      <div class="ai"><b>📈 看趋势：</b>今天的榜单在回答一个问题：<b>"Agent 的能力，该由谁来打包、由谁来验收"</b>。上游是分发（CLI-Anything 让软件变可调用、cursor/plugins 让编辑器变平台），中游是技能（stitch-skills），下游是质检（SkillEvaluator）。<b>一个围绕"Agent 技能"的供应链正在成形</b>——这比又出一个更聪明的模型，更接近生意。</div>
+      <div class="ai"><b>📈 看趋势：</b>榜单继续被"Agent 技能层"占领：superpowers（方法论）、Claude-BugHunter（红队）、last30days（研究）、diagram-design（画图）——<b>技能生态在向"职业分工"细化</b>，每个职业都会长出自己的技能包。另一条线是 CLI-Anything 与 firecrawl：一个解决"软件怎么被调用"，一个解决"数据从哪来"——智能体的基础设施正在一层层补齐。Ghost-Downloader-3 与 minimind 则提醒大家：纯工具与教学项目，依然是开源世界最稳的基本盘。</div>
     </div>
   </div>
 
 
 <!-- 财经日历 -->
   <div class="page" id="p-cal">
-<div class="section-title">数据截至 11月19日 · 已落地对账 + 今日日程</div>
+<div class="section-title">数据截至 11月20日 · 已落地对账 + 今日看点</div>
 
     <div class="card">
-      <span class="tag hot">✅ 已落地 · 美联储 10 月纪要</span>
-      <h3>纪要偏鹰：几乎全体支持进一步加息，少数官员称 12 月"加超 25bp 是合理的"</h3>
-      <ul><li><b>基调</b>：10 月 27—28 日会议纪要显示，<b>几乎所有官员</b>认为采取进一步行动是合适的；多数官员认为通胀存在上行风险</li><li><b>幅度分歧</b>：<b>一些官员</b>表示，若通胀数据不佳，12 月加息幅度<b>超过 25 个基点可能是合理的</b></li><li><b>官员喊话</b>：理事沃勒称或需以半个百分点"震撼市场"，否则就得明确承诺"1 月继续行动"；穆萨勒姆暗示 2027 年春前或需多达四次加息；威廉姆斯称"不需要戏剧性行动"</li><li><b>市场定价</b>：12 月加息 25bp 概率约 <b>96%</b>，50bp 进入定价视野；美元指数冲 <b>103.9</b> 的 19 个月新高，10 年期美债约 <b>5.07%</b></li></ul>
-      <div class="ai"><b>🔍 一句话解读：</b>纪要没有给出"要加 50bp"的结论，只给出了<b>"有人想加 50bp"的事实</b>——这已经足够让美元和利率再上一个台阶。真正的裁决在 21:30 的初请与费城联储数据：就业不软、制造业不弱，12 月加 50bp 就从"少数意见"变成"主流选项"。</div>
-      <a class="src" href="https://finance.sina.com.cn/roll/2026-11-19/doc-inizexht6633960.shtml">🔗 来源：新浪财经（引财联社，FOMC 纪要）· 11月19日</a><br>
-      <a class="src" href="https://m.10jqka.com.cn/20261119/c681972469.shtml">🔗 来源：同花顺财经（沃勒"震撼市场"表态）· 11月19日</a>
+      <span class="tag hot">✅ 已落地 · Anthropic 挂牌</span>
+      <h3>Anthropic 首日 +17.07% 收 97.17：高开 34% 后回吐一半，史上最大 IPO 平稳落地</h3>
+      <ul><li><b>实际 vs 昨日前瞻</b>：昨天的问题是"会不会破发"，答案是溢价 <b>17.07%</b>——发行价认购者获利颇丰，开盘追高者浮亏（彭博口径）</li><li><b>首日数字</b>：开盘 111.50（较发行价 83 高约 34%）→ 盘中最高 115.10 → 收 97.17；成交 8.57 亿股、成交额约 883 亿美元</li><li><b>募资</b>：IPO 募资超 <b>813 亿美元</b>创史上最大；若计入 260 亿私募配售合计约 1070 亿美元，另有 15% 绿鞋（最多 1.47 亿股）待行使</li><li><b>市值</b>：按开盘价一度约 2 万亿美元；收盘完全稀释市值约 <b>1.8 万亿美元</b>，约占美股公开市场总市值 2%</li></ul>
+      <div class="ai"><b>🔍 一句话解读：</b>首日没有破发、也没有疯牛，市场用"17%"给出了中间答案：<b>AI 龙头的一级定价被认可，二级不追高</b>。往后它每季度都要拿 1.8 万亿市值对账招股书里超 9000 亿美元的算力义务——这张计分牌从此公开，A股算力链的情绪锚也换了主。</div>
+      <a class="src" href="https://finance.sina.cn/2026-11-20/detail-inizitcq4091170.d.html">🔗 来源：央视财经（首日收盘数据）· 11月20日</a><br>
+      <a class="src" href="https://news.china.com.cn/2026-11/20/content_118782288.shtml">🔗 来源：中国网（中新社，募资与估值口径）· 11月20日</a>
     </div>
 
     <div class="card">
-      <span class="tag hot">🏦 今晚 · AI 定价日</span>
-      <h3>Anthropic 定价 83 美元超上限，今晚纳斯达克挂牌：1.4 万亿估值，7 倍超额认购</h3>
-      <ul><li><b>定价</b>：<b>83 美元/股</b>，高于 70—78 美元区间；发行 <b>9.8 亿股</b>，募资规模约 <b>800 亿美元</b>级别</li><li><b>估值</b>：完全稀释约 <b>1.4 万亿美元</b>，比今年夏天市场预期的约 2 万亿缩水约三成</li><li><b>认购</b>：订单据报接近发售股份的 <b>七倍</b>；高盛、摩根士丹利牵头，二十余家银行承销；英伟达私募认购约 100 亿</li><li><b>结构</b>：亚马逊、谷歌上市后合计持股约 <b>28.4%</b>；上游芯片厂既投钱又是供货方</li><li><b>今晚看什么</b>：开盘溢价幅度、首日换手、以及"能不能站住发行价"——三者决定这轮 AI IPO 窗口还开不开</li></ul>
-      <div class="ai"><b>🔍 影响分析：</b>这是本轮 AI 浪潮第一个巨型 IPO，它的首日表现会直接反馈到 A 股算力链的情绪上：<b>破发 = 全球 AI 估值要重定价；大涨 = 国内算力叙事再添一把火</b>。但要注意，它也是一次"公开压力测试"——上市后每个季度都要用最严口径交作业，隐性算力承诺 9000 亿美元会反复被翻出来算。</div>
-      <a class="src" href="https://www.cnstock.com/commonDetail/830471">🔗 来源：中国证券网（IPO 定价与发行细节）· 11月19日</a><br>
-      <a class="src" href="https://www.thepaper.cn/newsDetail_forward_34503545">🔗 来源：澎湃新闻（1.4 万亿估值拆解）· 11月19日</a>
+      <span class="tag hot">✅ 已落地 · LPR</span>
+      <h3>11 月 LPR 连续 6 个月按兵不动：1 年期 3.0%、5 年期以上 3.5%，完全符合预期</h3>
+      <ul><li><b>实际 vs 预期</b>：两个期限均持平，符合市场普遍预期；此前 5 月双双下调 10bp 后已连续 6 个月不变</li><li><b>为什么不动</b>：三季度商业银行净息差 <b>1.42%</b>（历史低位），报价行缺乏主动下调动力；10 月以来宏观数据虽回落，政策利率基础未变</li><li><b>利率现状</b>：10 月企业新发放贷款加权平均利率 <b>3.1%</b>（同比低约 40bp），个人住房贷款同为 3.1%</li><li><b>专家前瞻</b>：董希淼称应降低对大幅降准降息的预期；王青预计稳增长政策有望进入发力阶段，可能通过<b>单独引导 5 年期以上 LPR 下行</b>推动房贷利率更大幅度下调</li></ul>
+      <div class="ai"><b>🔍 一句话解读：</b>LPR 不动的信息不在"利率"，在"定力"。接下来真正的看点从"全面降"变成"5 年期以上单独降"——对有房贷的家庭，这是最值得盯的一条通道；对市场，它决定了"政策观察期"什么时候结束。</div>
+      <a class="src" href="https://www.jwview.com/jingwei/11-20/644612.shtml">🔗 来源：中新经纬（LPR 连续6个月持平）· 11月20日</a>
     </div>
 
     <div class="card">
-      <span class="tag hot">📅 今天 · 11月19日数据窗口</span>
-      <h3>白天看商务部发布会与中俄美元首会晤，晚上 21:30 美国初请 + 费城联储双发</h3>
-      <ul><li><b>全天</b>：<b>中俄美元首会晤在深圳举行</b>（三国元首首次面对面）；外交部称三方将就事关全球和平的重要问题深入交换意见</li><li><b>09:00</b>：中国 10 月 Swift 人民币全球支付占比；<b>15:00</b> 商务部 11 月第 3 次例行发布会（再生资源、外贸稳增长）</li><li><b>20:00</b>：<b>阿里巴巴 Q3 财报电话会</b>（港股与中概情绪）；腾讯 Q3 已披露：收入 <b>2073.36 亿元</b>、同比 +8%</li><li><b>21:30</b>：美国上周初请失业金（前值 20.0 万、预期 20.0 万）+ <b>11 月费城联储制造业指数</b>（前值 20.9、预期 19.0）</li><li><b>23:00</b>：美国 10 月谘商会领先指标；<b>23:30</b> EIA 天然气库存</li></ul>
-      <div class="ai"><b>🔍 前瞻预期：</b>初请与费城联储同分钟发布，是今晚最容易"打脸"的窗口：<b>就业不升 + 制造业回落</b>，美元会松一口气、金价有反弹；<b>两个都强</b>，12 月 50bp 就会从"少数意见"变成主流，届时对成长股的压力会重新上来。数据公布前不宜重仓。</div>
-      <a class="src" href="https://www.cnfin.com/yw-lb/detail/20261119/4497404_1.html">🔗 来源：新华财经（国际金融市场早知道）· 11月19日</a><br>
-      <a class="src" href="https://xnews.jin10.com/details/235413">🔗 来源：金十数据（今日事件与风险预警）· 11月19日</a>
-    </div>
-
-    <div class="card">
-      <span class="tag hot">📅 本周剩余</span>
-      <h3>明天 LPR 报价 + 日本 CPI；本周还有股指期货交割与中概财报收尾</h3>
-      <ul><li><b>11/20 09:00</b>：中国 11 月 <b>LPR</b> 报价，多数机构预期按兵不动（1 年期与 5 年期以上均维持）</li><li><b>11/20</b>：日本 10 月全国 CPI——决定日元与套息交易的方向，进而影响全球风险资产</li><li><b>11/20</b>：<b>股指期货交割日</b>，注意尾盘波动放大</li><li><b>本周内</b>：中概财报密集收官；欧盟与英国 11 月 PMI 初值公布</li></ul>
-      <div class="ai"><b>🔍 影响分析：</b>LPR 若按兵不动，市场会把它读成"政策进入观察期"；真正的影响来自日本 CPI——<b>日元一旦重新走强，套息交易平仓会同时砸到美股和新兴市场</b>。这比 LPR 更值得盯。</div>
-      <a class="src" href="https://forex.eastmoney.com/a/202611193934571632.html">🔗 来源：东方财富（引新华财经，本周日程）· 11月19日</a>
+      <span class="tag hot">📅 今日与下周</span>
+      <h3>交割日尾盘 + Anthropic 绿鞋窗口；感恩节临近，美股下周流动性转淡</h3>
+      <ul><li><b>今天 9:30</b>：A 股开盘承接隔夜美股跌势的幅度是第一个观察点；<b>今天是股指期货交割日</b>，尾盘波动或放大</li><li><b>11/20</b>：Anthropic IPO 预计今日交割，承销商 30 天绿鞋（最多 1.47 亿股）进入行使窗口</li><li><b>下周四 11/26</b>：美国感恩节，美股休市、次日提前收盘——传统"低流动性 + 高波动"窗口开启</li><li><b>12 月</b>：美联储议息会议。10 月纪要显示几乎全体官员支持进一步加息，市场按 12 月继续加息定价、50bp 也在视野内</li></ul>
+      <div class="ai"><b>🔍 影响分析：</b>感恩节前一周叠加议息临近，任何偏鹰表态都会被流动性放大。国内这边，LPR 进入观察期、今天有交割日——日内看量能即可，不宜追隔夜情绪，下周留足仓位弹性。</div>
+      <a class="src" href="https://aibreakingwire.com/news/ai-brief-anthropic-ipo-gao-chatbot-tests-gemini-tool-retrieval">🔗 来源：AI Breaking Wire（IPO 交割与绿鞋条款）· 11月20日</a><br>
+      <a class="src" href="https://finance.sina.com.cn/roll/2026-11-19/doc-inizexht6633960.shtml">🔗 来源：新浪财经（引财联社，FOMC 纪要基调）· 11月19日</a>
     </div>
   </div>
 
 
   <!-- 值得试：每天 1-3 个能直接上手的工具/项目，附三步试用法（每日自动化更新本页） -->
   <div class="page" id="p-try">
-<div class="section-title">数据截至 11月19日 · 看完就能上手</div>
+<div class="section-title">数据截至 11月20日 · 看完就能上手</div>
 
     <div class="card">
-      <span class="tag hot">🧰 软件变"可调用"</span>
-      <h3>HKUDS/CLI-Anything：给任何软件套一层标准 CLI，Agent 就能直接用它干活</h3>
-      <p>港大团队的项目，口号是"<b>让所有软件都 Agent 原生</b>"：把 GUI 软件、已有的命令行工具、内部系统统一包装成一套标准 CLI 接口，Agent 只要能跑命令，就能操作这些软件——不用每家都写插件，也不用截图点击。配套 <b>CLI-Hub</b> 做分发与检索，5.9 万星、今天 +389。</p>
+      <span class="tag hot">📐 画图技能</span>
+      <h3>cathrynlavery/diagram-design：给 AI 编码工具配的"编辑级示意图"技能包，45 种图型</h3>
+      <p>一套面向 Claude Code、Codex、GitHub Copilot、Cursor 等编码 Agent 的<b>示意图设计技能</b>：45 种图型，输出自包含的 HTML + SVG，强调"无阴影、不用 Mermaid 模板"，让 AI 生成的架构图、流程图从"能用"升级到"能放进文档和汇报"。今天 +271 星、总量 6.9 万。</p>
       <div class="subhd">三步试用法</div>
-      <ul><li>clone 仓库，按 README 装好，先在 CLI-Hub 里挑一个你每天都在用的工具（比如某个命令行下载器）跑通"一句话调用"</li><li>拿一个没有 API 的老软件试：包一层 CLI，让 Agent 完成"打开—填参数—导出结果"三步</li><li>把最常用的三条命令写进你的 Agent 技能描述里，观察它下次能不能自己选对命令</li></ul>
-      <div class="ai"><b>💡 为什么值得试：</b>现在给 Agent 接工具，要么等厂商出插件，要么写 MCP 服务器，成本都不低。这条路把门槛降到"<b>会包一个命令行</b>"——如果你手里有一堆老旧内部系统，这是把它们接进 AI 工作流最省力的方式。</div>
-      <a class="src" href="https://github.com/HKUDS/CLI-Anything">🔗 github.com/HKUDS/CLI-Anything</a>
+      <ul><li>在你的编码 Agent 里按 README 装入这个技能</li><li>让它把"你团队最近一次上线的调用链"画成一张时序图或架构图</li><li>对照输出调一次风格指令（比如"横向布局、单色"），把满意的风格写进项目规则，以后默认继承</li></ul>
+      <div class="ai"><b>💡 为什么值得试：</b>AI 写代码已经过关，画图仍是明显短板——默认输出的 Mermaid 又挤又丑。这个项目把"怎么画好看"固化成技能，一次配置长期受益，写方案、做汇报的人最先受益。</div>
+      <a class="src" href="https://github.com/cathrynlavery/diagram-design">🔗 github.com/cathrynlavery/diagram-design</a>
     </div>
 
     <div class="card">
-      <span class="tag hot">🐳 自建服务面板</span>
-      <h3>getarcaneapp/arcane：把 Docker 管成"点鼠标"，自建服务不用再背命令</h3>
-      <p>开源的 <b>Docker 管理面板</b>：容器、镜像、网络、卷、模板、更新状态全部可视化，能一键起停、批量升级、看资源占用和日志。定位是"为所有人设计的现代 Docker 管理"，今天 +547 星。</p>
+      <span class="tag hot">⬇️ 下载工具</span>
+      <h3>XiaoYouChR/Ghost-Downloader-3：开源多线程下载器，中文界面安装即用</h3>
+      <p>自称"下载器的集大成者"的开源桌面下载器：多线程加速、断点续传，中文界面、安装即用，今天 +341 星、总量 1.27 万。大文件下载仍是国内网络环境的高频痛点，它是今天榜上少见的"零门槛纯工具"。</p>
       <div class="subhd">三步试用法</div>
-      <ul><li>在一台闲置机器（或云主机）上按 README 用 docker compose 起服务，浏览器打开面板并设管理员密码</li><li>先用"模板"装一个轻量应用（如笔记或图床），体验从模板到运行的完整流程</li><li>故意让某个容器"有新版本"，用面板的更新功能升级一次，确认数据卷没丢</li></ul>
-      <div class="ai"><b>💡 为什么值得试：</b>NAS、软路由、家用服务器这两年普及，但"会 Docker"仍是门槛。这类面板把运维动作变成按钮，<b>对家庭自建和小团队是性价比最高的一步升级</b>；真要出问题，命令行照样能接手，不会把你锁死。</div>
-      <a class="src" href="https://github.com/getarcaneapp/arcane">🔗 github.com/getarcaneapp/arcane</a>
+      <ul><li>到仓库 Releases 页下载对应系统的安装包并安装</li><li>在设置里配置默认下载目录与线程数</li><li>拿一个大文件（如系统镜像）对比浏览器直下与它的速度差，再决定要不要设为默认下载方式</li></ul>
+      <div class="ai"><b>💡 为什么值得试：</b>不折腾、不捆绑、开源可查——下载器这个品类最容易藏捆绑与推广，开源版反而干净。装完就有用，是普通人今天就能从趋势榜拿走的最大实惠。</div>
+      <a class="src" href="https://github.com/XiaoYouChR/Ghost-Downloader-3">🔗 github.com/XiaoYouChR/Ghost-Downloader-3</a>
     </div>
 
     <div class="card">
-      <span class="tag hot">⌨️ 编辑器生态</span>
-      <h3>cursor/plugins：Cursor 官方插件规范开放，编辑器开始长"应用商店"</h3>
-      <p>Cursor 官方放出<b>插件规范与官方插件集</b>：定义插件怎么声明能力、怎么被编辑器加载、怎么与 Agent 协作。1.7 万星的新仓库，今天 +314。对开发者，这意味着可以把团队内部工具做成插件，直接在编辑器里用。</p>
+      <span class="tag hot">📼 长视频剪辑</span>
+      <h3>zhouxiaoka/autoclip：一个链接，一键把播客/课程长视频剪成短视频</h3>
+      <p>开源 AI 视频剪辑桌面工具（1.1 万星）：输入一个长视频链接，自动剪出短视频，并生成字幕、封面与发布文案，适配抖音、小红书、TikTok、Reels 与 YouTube Shorts。</p>
       <div class="subhd">三步试用法</div>
-      <ul><li>按仓库 README 装官方插件，先试一个最贴近你工作流的（比如接口调试或数据库查看）</li><li>照着规范写一个最小插件：只做一件事（例如把选中的代码发到内部接口做检查）</li><li>把它交给编辑器里的 Agent，让它按你的口述改插件配置，看规范文档写得够不够清楚</li></ul>
-      <div class="ai"><b>💡 为什么值得试：</b>插件规范一开放，编辑器就从"工具"变成"平台"。<b>团队内部那些零散的脚本、检查规则、数据查询，终于有了统一入口</b>——不用再做一堆没人记得住的命令别名。</div>
-      <a class="src" href="https://github.com/cursor/plugins">🔗 github.com/cursor/plugins</a>
+      <ul><li>按仓库说明安装后，粘贴一个播客或公开课的长视频链接</li><li>选目标平台与时长档位，让它自动切片</li><li>检查自动生成的字幕与封面，手动微调开头 3 秒再发布</li></ul>
+      <div class="ai"><b>💡 为什么值得试：</b>做账号最耗时间的是"从 1 小时素材里找 1 分钟高光"。它把切片、字幕、封面一条龙包了——对老师录课、播客主理人、做知识号的人是省时间利器。</div>
+      <a class="src" href="https://github.com/zhouxiaoka/autoclip">🔗 github.com/zhouxiaoka/autoclip</a>
     </div>
   </div>
 
@@ -698,38 +657,38 @@
 
 <!-- 今日新玩意 -->
   <div class="page" id="p-new">
-<div class="section-title">数据截至 11月19日 · 普通人当天就能上手的新应用 / 新功能</div>
+<div class="section-title">数据截至 11月20日 · 普通人当天就能上手的新应用 / 新功能</div>
 
     <div class="card">
-      <span class="tag hot">📚 家长与老师</span>
-      <h3>豆包爱学鸿蒙版上线：中小学全场景学习助手，AI 错题本按"学科 + 知识点"双维归档，功能全免费</h3>
-      <p>字节的<b>豆包爱学</b>正式上架华为应用市场（鸿蒙版），搭载最新豆包系列大模型，覆盖中小学全场景。两个功能最实用：<b>①AI 错题本</b>——按"学科本 + 知识点"双维归档，哪科错得多、哪个知识点反复错，一眼看出来；<b>②理解式讲解</b>——比如讲《登鹳雀楼》，先还原"白日依山尽、黄河入海流"的画面，让孩子建立画面感再背诵，把死记硬背换成理解记忆。官方标注<b>所有功能免费开放</b>。</p>
-      <div class="ai"><b>🧭 怎么用：</b>华为应用市场搜"豆包爱学"下载 → 选年级与教材版本 → 拍一张孩子的错题卷子，让它自动归类到知识点 → 复习时按"薄弱知识点"逐个过，不用再翻整本卷子。建议每周固定一次"错题复盘"，比一次刷十页新题有用。</div>
-      <a class="src" href="https://so.html5.qq.com/page/real/search_news?docid=70000021_0516afd645140152">🔗 来源：腾讯新闻（豆包爱学鸿蒙版上线）· 11月18日</a>
+      <span class="tag hot">🧧 支付 + AI</span>
+      <h3>支付宝"阿宝"AI 智能体界面内测：首页右滑进入，一句话叫车、点餐、约家电维修，覆盖上万项服务</h3>
+      <p>支付宝本周对 AI 智能体"阿宝"进行重大更新，进入内测：用户在首页<b>右滑</b>即可进入 AI 界面，用自然对话完成叫车、点餐、家电维修预约等<b>超 1 万项</b>日常服务。比如车主说"电量低了帮我找充电桩"，它会按距离列出充电站、显示快慢充空闲状态与价格，选中后停车点"充电"即可，全程不用跳页。官方称其为全球首个向 AI 原生平台演进的超级应用，目前邀请制、逐步放开。</p>
+      <div class="ai"><b>🧭 怎么用：</b>把支付宝更新到最新版 → 首页右滑看有没有"阿宝"入口（没有就是还没排到你，别信"付费代开内测"的骗子）→ 排到后先用低风险任务试手（查充电桩、查社保），熟了再让它办需要支付的事。</div>
+      <a class="src" href="https://peoplesdaily.pdnews.cn/business/er/30052415027">🔗 来源：人民日报客户端（Alipay AI agent 上线）· 11月</a>
     </div>
 
     <div class="card">
-      <span class="tag hot">🛒 开店的人</span>
-      <h3>千问办公电商版推"品牌知识库"：上传店铺链接和设计规范，生成的图和文案不再"跑偏风格"</h3>
-      <p>11 月 18 日，千问办公电商版上线<b>品牌知识库</b>，从邀测转为<b>向所有电商商家开放</b>。商家在网页端切到"电商经营"模式，上传网店链接、过往图片、设计规范等资料后，模型会记住品牌风格，之后生成商品图、短视频、文案时调性统一。功能包含<b>品牌档案、品牌参考集、品牌记忆</b>三项。官方点出的痛点是：通用 Agent 缺长期品牌理解，商家得反复调提示词。</p>
-      <div class="ai"><b>🧭 怎么用：</b>打开千问办公网页版 → 切"电商经营"模式 → 先传 10—20 张最能代表你店铺风格的图 + 一份颜色/字体说明 → 生成首张主图后对照原图挑毛病，把"不要什么"写进品牌档案 → 再批量出图。第一步的参考图质量，直接决定后面省不省事。</div>
-      <a class="src" href="https://www.stcn.com/article/detail/4341725.html">🔗 来源：证券时报（千问办公电商版品牌知识库）· 11月18日</a>
+      <span class="tag hot">🚄 坐火车的人</span>
+      <h3>12306 今天起新增系统通知：候补兑现、列车停运折返、席位调整都会主动推送</h3>
+      <p>11 月 20 日起，铁路部门在 12306 App 系统通知中新增<b>候补兑现情况</b>和<b>列车运行调整</b>等业务场景的信息通知：购票、改签、退票、候补、预约等业务，以及列车停运、折返、恢复开行、席位调整等临时变更，会通过 App 系统通知、用户选择的微信/支付宝渠道和预留邮箱多路推送。</p>
+      <div class="ai"><b>🧭 怎么用：</b>打开 12306 →"我的"→ 右上角"设置"→"通知设置"，开启系统通知权限 → 顺手核对账号手机号真实有效。春运抢票季马上到，"候补兑现成功"这类消息值得第一时间知道。</div>
+      <a class="src" href="http://mp.weixin.qq.com/s?__biz=MzAwMzA4MzUyMw==&mid=2651980291&idx=1&sn=01aa70766df7cfb49b0ac5a5c7047cc5&chksm=80c71761dfa8cd459b0dd431a25b2c0df562627bbea30c3bf3f15db9281a13c7213a259471fc#rd">🔗 来源：中国铁路 12306（系统通知新服务）· 11月20日</a>
     </div>
 
     <div class="card">
-      <span class="tag hot">🌏 来华旅行</span>
-      <h3>TenPayGo 试点 AI 打车、AI 点餐：说一句"想吃汉堡"就能下单，首批接入麦当劳全国 8000+ 门店</h3>
-      <p>11 月 18 日，微信支付团队打造的来华支付应用 <b>TenPayGo</b> 试点上线 <b>AI 打车</b>与<b>AI 点餐</b>，APEC 期间境外来宾首批体验。<b>AI 打车</b>由微信支付联合腾讯出行服务做，说出目的地即可发起叫车，含比价、选车型、状态查看、支付全流程；<b>AI 点餐</b>首批接入麦当劳中国全国超 8000 家门店，说出想吃的餐品，模型完成门店匹配、推荐与下单。同日腾讯公布：已连接 <b>60 余个</b>国际电子钱包来华扫码支付。</p>
-      <div class="ai"><b>🧭 怎么用：</b>这条主要给"要来中国的外国朋友"：让他们在自己的应用商店装 TenPayGo → 绑境外银行卡/Apple Pay → 在 App 里直接说"去华强北"或"要一个巨无霸套餐"。国内用户体验路径相近：微信里对小微说一句话点单也在灰度。提醒一句：<b>先确认所在城市与门店是否支持，别到了柜台才试。</b></div>
-      <a class="src" href="https://www.cnr.cn/tech/techgd/20261118/t20261118_527876655.shtml">🔗 来源：央广网（TenPayGo AI 打车与 AI 点餐）· 11月18日</a>
+      <span class="tag hot">🌏 来华的朋友</span>
+      <h3>微信支付 TenPayGo 上线 AI 打车、AI 点餐：说一句话完成叫车与点单，麦当劳全国 8000+ 门店接入</h3>
+      <p>微信支付来华支付应用 <b>TenPayGo</b> 试点上线 <b>AI 打车</b>与<b>AI 点餐</b>，APEC 境外来宾首批尝鲜：AI 打车说出目的地即可发起叫车，含比价、选车、状态查看、支付全流程；AI 点餐首批接入麦当劳中国超 8000 家门店，说出想吃的就能匹配门店、推荐餐品、生成订单。腾讯同日披露已连接 60 余个国际电子钱包；今年 1—10 月境外用户绑卡支付笔数同比 <b>+74%</b>、境外钱包直接扫码支付笔数同比 +84%。</p>
+      <div class="ai"><b>🧭 怎么用：</b>这条主要转给要来中国的外国朋友：应用商店装 TenPayGo → 绑定境外银行卡或 Apple Pay → 直接对它说"去 XX 酒店"或"要一个巨无霸套餐"。提醒一句：先确认所在城市与门店支持，别到了柜台才试。</div>
+      <a class="src" href="https://k.sina.com.cn/article_5787187353_158f1789902002b6e0.html">🔗 来源：羊城晚报（新浪转载，TenPayGo AI 服务）· 11月19日</a>
     </div>
 
     <div class="card">
       <span class="tag hot">📈 看趋势</span>
-      <h3>三个更新的共同点：AI 不再让你"学提示词"，而是直接接管一件具体的事</h3>
-      <ul><li><b>从"问它"到"它替你办"</b>：TenPayGo 把"说一句话"直接接到叫车和下单，中间那层"自己点选"被拿掉了</li><li><b>从"通用助手"到"岗位记忆"</b>：品牌知识库解决的是"每次都要重新解释我是谁"，这是企业愿意付费的那部分</li><li><b>从"付费墙"到"免费换装机"</b>：豆包爱学把全功能免费，抢的是家长手机里的那个位置——教育硬件的入口争夺已经转到 App 上</li></ul>
-      <div class="ai"><b>💡 解读：</b>对普通人的实用结论：<b>本周真正值得动手的只有两件</b>——家里有中小学生的，装一个豆包爱学把错题本建起来；开店卖货的，去千问办公把品牌参考图传上去试一张主图。其余功能，等它出现在你常用 App 的默认入口里再用。</div>
-      <a class="src" href="https://www.stcn.com/article/detail/4341725.html">🔗 来源：综合本周公开信息 · 11月19日</a>
+      <h3>三个更新的共同点：入口从"图标"变成"对话"</h3>
+      <ul><li><b>支付宝</b>把一级入口让给对话式智能体——用户描述意图，系统去完成</li><li><b>12306</b> 把服务状态做成主动推送——重要节点不用人盯着查</li><li><b>TenPayGo</b> 让外国游客"说一句话就办成事"——语言与操作的门槛一起降</li></ul>
+      <div class="ai"><b>🧭 解读：</b>图标点选的那层交互正在被"对话 + 推送"吞掉。对普通人的实用结论：本周值得动手的只有一件——<b>检查 12306 的通知权限</b>，春运前把"候补兑现"推送打开；阿宝排到内测再玩，不急。</div>
+      <a class="src" href="https://peoplesdaily.pdnews.cn/business/er/30052415027">🔗 来源：综合本周公开信息 · 11月20日</a>
     </div>
   </div>
 
@@ -737,19 +696,19 @@
 
   <!-- 每日一问·健康辟谣：每天一条流传最广的健康说法，真相判定 + 科学依据 + 附权威出处（每日自动化更新本页） -->
   <div class="page" id="p-myth">
-<div class="section-title">数据截至 11月19日 · 每天一条"餐桌话题级"辟谣</div>
+<div class="section-title">数据截至 11月20日 · 每天一条"餐桌话题级"辟谣</div>
 
     <div class="card">
       <span class="tag">❓ 今日一问</span>
-      <h3>"感冒后咳出黄痰，就说明快好了"？</h3>
-      <div class="verdict v-no">❌ 谣言</div>
-      <p><b>真相：痰变黄只是炎症还在，不是康复信号。</b>病毒性呼吸道感染时，免疫系统调动<b>中性粒细胞</b>进入气道，它释放的<b>髓过氧化物酶（MPO）</b>本身呈黄绿色，这才是痰变色的主因。也就是说，<b>病原体没清完、症状还没到高峰，痰也可能已经变黄</b>。咳嗽本就是感冒的后期症状，常常拖到第 6—7 天，黄痰出现的时间点容易和"自然好转"撞在一起，于是被误当成好消息。</p>
+      <h3>"低钠盐是'送命盐'，吃了会高钾血症"？</h3>
+      <div class="verdict v-half">⚠️ 半真半假</div>
+      <p><b>真相：低钠盐不是送命盐，但也不是人人能随便换。</b>低钠盐是把一部分氯化钠换成氯化钾的盐（氯化钠含量低 20%—35%）。对绝大多数人，它不但无害，还是被严格验证过的降压措施——国内多项低钠盐研究都显示钠摄入下降、钾摄入增多、降压效果显著。"送命盐"的说法以偏概全：<b>真正需要谨慎的是少数人，不是所有人</b>。</p>
       <div class="subhd">为什么</div>
-      <ul><li><b>颜色 = 炎症活跃度，不是恢复进度条</b>：痰色反映的是气道里炎症细胞和分泌物的情况，与"病毒还剩多少"没有稳定对应关系</li><li><b>黄痰也不能当"该吃抗生素"的信号</b>：黄绿痰与细菌感染确有统计相关性，但特异性低，单靠颜色分不出病毒还是细菌，不足以指导用药</li><li><b>真正该看的信号是别的</b>：体温是否回落、精神与食欲是否恢复、咳嗽是否在变浅变少——这些比痰色可靠得多</li></ul>
-      <div class="ai"><b>🍽️ 餐桌怎么说：</b>妈，痰黄不代表快好了，只说明嗓子还在发炎；别一看到黄痰就翻出抗生素吃，那是病毒性感冒，抗生素不管用还伤肠胃——真要看恢复，看烧退没退、人有没有精神。</div>
-      <a class="src" href="https://piyao.kepuchina.cn/rumor/rumordetail?id=mOYx">🔗 来源：科普中国·科学辟谣（黄痰与病情好转）· 11月</a><br>
-      <a class="src" href="https://cloud.kepuchina.cn/newSearch/imgText?id=7522061390075768832">🔗 来源：科普中国（儿童痰多五个常见误区）· 11月</a>
-      <div class="ai" style="margin-top:10px"><b>⚠️ 提示：</b>本栏目内容仅供科普参考，不构成医疗建议。若出现持续高热、呼吸费力、痰中带血，或儿童精神差、拒食，请及时就医。</div>
+      <ul><li><b>健康人的肾排钾能力很强</b>：低钠盐多进来的钾约 90% 经肾脏代谢排出，人体钾平衡自成体系——没人因为多吃香蕉橘子而"钾中毒"，低钠盐同理</li><li><b>但两类人确有风险</b>：肾功能不全/尿毒症患者排钾能力下降，血钾过高可致心律失常；服用螺内酯等保钾利尿剂、普利/沙坦类降压药、补钾药的人，血钾本就易偏高</li><li><b>适用建议</b>：中老年人和高血压等心血管高危人群最适合换；肾病患者先问医生；高温作业、出汗极多的人也不建议换</li></ul>
+      <div class="ai"><b>🍽️ 餐桌怎么说：</b>爸妈，低钠盐不是送命盐，健康人换成它反而帮忙控血压；但要是肾不好，或者在吃那几种保钾的降压药，先问过医生再换，别自己拍板。</div>
+      <a class="src" href="https://www.cnr.cn/zgxc/gundong/20170101/t20170101_523423567.shtml">🔗 来源：央广网《捉"谣"记》（宣武医院肾内科专家辟谣）· 11月</a><br>
+      <a class="src" href="https://www.ce.cn/cysc/sp/info/202110/15/t20211015_36996049.shtml">🔗 来源：中国经济网（武阳丰教授谈低钠盐适用人群）· 11月</a>
+      <div class="ai" style="margin-top:10px"><b>⚠️ 提示：</b>本栏目内容仅供科普参考，不构成医疗建议。涉及用药与肾脏疾病，请遵医嘱。</div>
     </div>
   </div>
 
@@ -757,7 +716,7 @@
 
   <!-- 推敲：每天三条思考，一个概念 + 一个处境 + 一次视角切换，只递问题不给答案（每日自动化更新本页） -->
   <div class="page" id="p-phil">
-<div class="section-title">数据截至 11月19日 · 每天三个想法，换副眼镜看件事</div>
+<div class="section-title">数据截至 11月20日 · 每天三个想法，换副眼镜看件事</div>
 
     <div class="card">
       <span class="tag hot">🧠 其一 · 认识论</span>
@@ -796,39 +755,30 @@
 
 <!-- 娱乐新闻 -->
   <div class="page" id="p-ent">
-<div class="section-title">数据截至 11月19日 · 只收正规媒体报道的确定性消息</div>
+<div class="section-title">数据截至 11月20日 · 只收正规媒体报道的确定性消息</div>
 
     <div class="card">
-      <span class="tag hot">📺 一天三部</span>
-      <h3>11 月 18 日三大平台同日开播：优酷《裙下之臣》、芒果《宝珠》、爱奇艺《罪恶拼图》，都不谈恋爱脑</h3>
-      <ul><li><b>优酷 10:00《裙下之臣》</b>：赵弈钦、方瑾主演，双重生权谋，24 集。预告里没有"护你一世周全"，全是"祸害联手掀翻棋局"</li><li><b>芒果 TV 12:00《宝珠》</b>：代露娃、赖伟明、何洛洛主演，屠户女嫁漕运世家，开场新郎缺席、跟大公鸡拜堂；湖南卫视同步上星</li><li><b>爱奇艺《罪恶拼图》</b>：戚砚笛、傅菁双女警刑侦，<b>没有男主、没有感情线</b>，官方主打"超忆解码、合力破局"</li></ul>
-      <div class="ai"><b>💡 看点：</b>"不谈恋爱脑"被当成卖点写进通稿，本身就说明一件事：<b>观众对"强行加感情线"的耐受已经到底了</b>。想看权谋爽感选《裙下之臣》，想看双女主刑侦选《罪恶拼图》，想陪爸妈看乡土传奇选《宝珠》。阵容与剧情以官宣为准。</div>
-      <a class="src" href="https://k.sina.com.cn/article_2526486811_9697211b01901deyq.html">🔗 来源：新浪（11月18日剧集与电影观察）· 11月18日</a><br>
-      <a class="src" href="https://ent.sina.cn/2026-11-19/detail-inizexht6629199.d.html">🔗 来源：新浪娱乐（《罪恶拼图》开播）· 11月19日</a>
+      <span class="tag hot">📺 今日开播</span>
+      <h3>《两京十五日》今晚央八开播：张黎执导、马伯庸原著，成毅领衔 15 天 2200 里护送太子</h3>
+      <p>今天（11 月 20 日）<b>CCTV-8 黄金档开播、爱奇艺同步网播</b>：改编自马伯庸同名小说，张黎（《大明王朝1566》《走向共和》）执导，成毅演太子朱瞻基，林更新特别出演捕快吴定缘，姜珮瑶演女医苏荆溪、吴幸键演青年于谦。故事讲洪熙元年太子在南京遇袭后，沿大运河 <b>15 天奔袭 2200 余里</b>回京。爱奇艺预约已破 <b>200 万</b>，粉丝云包场 70 万座刷新 2026 年纪录；江苏卫视已提前购入二轮播权。</p>
+      <div class="ai"><b>💡 看点：</b>年底最硬的古装正剧配置——"马伯庸的结构 + 张黎的历史质感"。看点全在"倒计时叙事"能不能撑满全剧；喜欢《长安十二时辰》的对味，怕历史人物多的先看两集再决定。阵容与剧情以官宣为准。</div>
+      <a class="src" href="https://www.163.com/dy/article/LC3KD2DG0553VGXP_pdya11y.html">🔗 来源：网易（《两京十五日》定档与开播信息）· 11月20日</a>
     </div>
 
     <div class="card">
-      <span class="tag hot">🎬 定档</span>
-      <h3>《两京十五日》11 月 20 日央八开播：张黎执导、马伯庸原著，傅诗淇以本名领衔，预约破 200 万</h3>
-      <p>11 月 18 日，《两京十五日》发布主海报并确认：<b>11 月 20 日起 CCTV-8 每晚 19:30 两集连播，爱奇艺全网独播</b>。傅诗淇以本名领衔出演朱瞻基，吴幸键、林更新、姜珮瑶特别出演。剧集改编自马伯庸同名小说，讲朱瞻基沿大运河<b>15 天奔袭 2000 余里</b>回京的故事，导演为张黎（《大明王朝1566》）。该项目入选国家广电总局重点扶持项目，双端预约人数已破 <b>200 万</b>。</p>
-      <div class="ai"><b>💡 看点：</b>这是本月最"正剧向"的一部：<b>马伯庸的结构 + 张黎的历史质感</b>，成败全在"15 天跑 2000 里"的节奏能不能撑住。喜欢《长安十二时辰》那种"倒计时叙事"的，这部对味；怕慢热和历史人物多的，可以先看两集再决定。</div>
-      <a class="src" href="https://ent.sina.cn/2026-11-18/detail-inizcmfm7087302.d.html">🔗 来源：新浪娱乐（《两京十五日》定档）· 11月18日</a>
+      <span class="tag hot">📺 今日开播</span>
+      <h3>《无声的回响》今天中午优酷开播：罗晋演刑警，14 集东北悬疑，听障群体被放进案件正中央</h3>
+      <p>今天 <b>12:00 起优酷白夜剧场独播</b>，接档《谷雨》：罗晋领衔刑警马雪松，王锵、张国强、杨童舒等出演；改编自叶蘅同名小说，牛超执导。故事从 2011 年西平九菇湖冰湖沉尸案讲起，受害人均为听障或语言障碍女性，案件牵出多年前的失踪案。首支预告放出一天站内预约破 <b>100 万</b>；全剧 <b>14 集</b>，双线叙事。</p>
+      <div class="ai"><b>💡 看点：</b>两个卖点都实：一是"14 集不注水"，一周能追完；二是视角——听障群体第一次被放在国产刑侦剧的案件中央而非背景板。变量在剧本（编剧导演过往评分在及格线附近），成败押在罗晋（开机前封闭学手语）与张国强的对手戏上。以官宣为准。</div>
+      <a class="src" href="https://www.bjnews.com.cn/detail/1795081893129307.html">🔗 来源：新京报（《无声的回响》开播）· 11月19日</a>
     </div>
 
     <div class="card">
       <span class="tag hot">🎵 音乐综艺</span>
-      <h3>《声生不息·天涯共此时》定档：19 位两岸音乐人，11/19 先导片、11/20 首期</h3>
-      <p>11 月 17 日官宣定档的音乐文化交流节目《声生不息·天涯共此时》：<b>11 月 19 日先导片上线，11 月 20 日第一期上线</b>。任贤齐、蔡琴、张信哲、周传雄、陈楚生、毛不易、郁可唯、大张伟、欧阳娜娜、刘耀文等 <b>19 位</b>华语音乐人加盟。本季聚焦<b>宝岛音乐</b>，常驻队伍与飞行队伍金曲竞演，另设"哇嘎哩贡"两岸交流环节；11 月 18 日已开"此时就见面"直播。</p>
-      <div class="ai"><b>💡 看点：</b>这季节目的真正卖点是<b>歌单</b>：宝岛音乐三十年积累的旋律密度极高，蔡琴、张信哲、周传雄同台，对 40 岁以上观众几乎是"回忆杀直给"；年轻观众则看毛不易、刘耀文这一代怎么改编。适合全家一起看的那类节目。</div>
+      <h3>《声生不息·天涯共此时》今晚第一期：19 位两岸音乐人，任贤齐蔡琴张信哲同台</h3>
+      <p>昨日先导片上线，<b>今晚第一期开播</b>：任贤齐、蔡琴、张信哲、周传雄、陈楚生、毛不易、郁可唯、大张伟、欧阳娜娜、刘耀文等 <b>19 位</b>华语音乐人加盟。本季聚焦宝岛音乐，常驻与飞行队伍金曲竞演，另设两岸交流环节。</p>
+      <div class="ai"><b>💡 看点：</b>卖点就是歌单密度——蔡琴、张信哲、周传雄同台，对中年观众是"回忆杀直给"；年轻观众看毛不易这一代怎么改编老歌。适合全家一起看的那类节目。</div>
       <a class="src" href="https://www.toutiao.com/a7709275859793822243">🔗 来源：今日头条（娱乐热点汇总，引封面新闻/新浪）· 11月18日</a>
-    </div>
-
-    <div class="card">
-      <span class="tag hot">🎟️ 大盘</span>
-      <h3>年度总票房刚过 319 亿：周榜前两名都是上映一个多月的老片，新片最能打的只有 131 万</h3>
-      <ul><li><b>周榜</b>（猫眼 11/18）：《神探之痕迹》周收 <b>683.3 万</b>居首，上映 49 天；《珠穆朗玛：云中彼岸》<b>338.6 万</b>次席</li><li><b>口碑</b>：《神探之痕迹》<b>9.6 分</b>、《珠穆朗玛：云中彼岸》9.5 分，都是老片；新片里最强的《我没错！》周收 131.2 万</li><li><b>总量</b>：年度总票房刚过 <b>319 亿</b>，正往 320 亿爬</li><li><b>本周新片</b>：11/19《深度安静》、11/20《饥饿游戏：收获日出》、11/20《霹雳英雄：素还真》</li></ul>
-      <div class="ai"><b>💡 看点：</b>"榜单前两名都是老片"是个很诚实的信号：<b>观众不是不看电影，是挑得比从前精了</b>。口碑长尾在变长，首日票房的决定性在变弱——这对小成本好片是好事，对靠营销开局的大片是坏事。</div>
-      <a class="src" href="https://k.sina.com.cn/article_2526486811_9697211b01901deyq.html">🔗 来源：新浪（猫眼周票房与口碑榜）· 11月18日</a>
     </div>
   </div>
 
@@ -836,31 +786,31 @@
 
 <!-- 高校新闻 -->
   <div class="page" id="p-coll">
-<div class="section-title">数据截至 11月19日 · 招生与学位动态（以官方发布为准）</div>
+<div class="section-title">数据截至 11月20日 · 招生与学位动态（以官方发布为准）</div>
 
     <div class="card">
-      <span class="tag hot">🎓 新学位类型</span>
-      <h3>天大"博士 + 硕士"双学位首批三个项目获批：合成生物+AI、电气+网安、动力+化工，每个只招约 5 人</h3>
-      <p>11 月 18 日，天津大学披露其<b>"博士+硕士"双学位项目</b>通过专家评议，首批三个项目获批，将通过<b>校内二次遴选</b>启动招生。天大是首批获批设立该类项目的国內高校之一——制度依据是 2025 年 12 月国务院学位委员会出台的《"博士+硕士"双学位项目试点设置管理办法》，允许博士生在读期间同时攻读另一学科的硕士学位。</p>
-      <ul><li><b>三个组合</b>：合成生物学博士 + <b>人工智能</b>硕士；电气工程博士 + <b>网络与信息安全</b>硕士；动力工程及工程热物理博士 + <b>化学工程</b>硕士</li><li><b>规模</b>：坚持"少而精"，每个项目首批约 <b>5 名</b>博士生，面向在校博士生二次遴选</li><li><b>培养</b>：导师组联合指导（博士导师 + 硕士导师 + 企业导师），单独制定培养方案与学位授予标准</li></ul>
-      <div class="ai"><b>💡 对考生意味着什么：</b>这是"交叉学科"从口号变成学位制度的第一步。<b>"博士 + AI 硕士"这种组合，本质是给传统工科博士补一张数字化门票</b>。对正在读博的人是实打实的机会（名额极少，要早问导师）；对考研的人，它透露的方向更值得记：未来几年，"主学科 + 一个硬技术"会越来越吃香。</div>
-      <a class="src" href="https://www.stdaily.com/web/gdxw/2026-11/18/content_615137.html">🔗 来源：科技日报（天大双学位项目）· 11月18日</a>
+      <span class="tag hot">🎯 招生改革</span>
+      <h3>多所高校收窄大类招生：教育部严控大类数量，医学、师范类全面取消大类招生</h3>
+      <p>今年初教育部《关于做好 2026 年普通高校招生工作的通知》要求高校严控大类数量、<b>医学与师范类全面取消大类招生</b>后，多地多校密集跟进：复旦全面取消跨院系大类招生、实行院系内专业自由分流；吉林农业大学全面实行专业招生；华东理工普通类本科不跨学院小类招生；同济把信息类 20 多个专业按学科属性拆成 3 个专业组。</p>
+      <ul><li><b>为什么改</b>：大类分流曾被考生称为"专业开盲盒""二次高考"——冷热专业捆绑打包、入学后按绩点卷热门，异化成了抢生源手段</li><li><b>影响</b>：同校不同专业"冰火两重天"会更明显，弱势专业可能收缩计划</li></ul>
+      <div class="ai"><b>💡 对考生意味着什么：</b>填报逻辑要跟着变：<b>"先进大类再卷分流"的打法失效，录取时就能锁定专业</b>。给家长的建议只有一条——今年起看招生计划要一个专业一个专业地看，别再看"大类名字"感觉好听的就填。</div>
+      <a class="src" href="https://www.qlwb.com.cn/detail/27800227.html">🔗 来源：齐鲁晚报（多所高校收窄大类招生）· 11月</a>
     </div>
 
     <div class="card">
-      <span class="tag hot">📝 考研</span>
-      <h3>2027 考研报名 347 万，连降三年后首次回升 4 万；安全工作会已部署，初试 12 月 19—20 日</h3>
-      <ul><li><b>人数</b>：2027 年全国硕士研究生招生考试报名 <b>347 万人</b>，比 2026 年的 343 万增加约 4 万，<b>结束连续三年下降</b>（2023 年峰值为 474 万）</li><li><b>时间</b>：初试 <b>2026 年 12 月 19—20 日</b>；准考证预计 12 月 9 日起在研招网下载</li><li><b>部署</b>：教育部会同网信、保密、公安等部门召开<b>考试安全工作视频会议</b>，重点抓命题安全、考场安防、打击舞弊</li><li><b>结构</b>：往届生占比已超 <b>55%</b>，热门专业二战三战比例更高——人数微升，但"陪跑的人"少了</li></ul>
-      <div class="ai"><b>💡 对考生意味着什么：</b>别把"回升 4 万"读成"考研又热了"。<b>退场的是跟风者，留下的是目标明确的人</b>——这意味着分数线的竞争烈度不会因为人数微降而下降。真正该做的两件事：一是核对目标院校最新招生目录（部分学硕停招、名额转专硕），二是把 12 月 9 日的准考证下载设成提醒。</div>
-      <a class="src" href="https://jyt.hunan.gov.cn/jyt/sjyt/bwdt/202611/t20261118_34104355.html">🔗 来源：湖南省教育厅（转教育部，2027 研考安全工作会）· 11月18日</a>
+      <span class="tag hot">🎓 就业盘子</span>
+      <h3>2027 届毕业生预计 1299 万：五部门联合开会部署就业创业工作</h3>
+      <p>11 月 19 日，中央教育工作领导小组秘书组、教育部、人力资源社会保障部、工业和信息化部、国务院国资委联合召开 <b>2027 届全国普通高校毕业生就业创业工作会议</b>：2027 届毕业生规模预计 <b>1299 万人</b>，要求强化部门协同、央地联动，以钉钉子精神落实稳就业决策部署。</p>
+      <div class="ai"><b>💡 对考生/家长意味着什么：</b>毕业生规模再创高位，"更早动手"是唯一解：实习、校招、考编的窗口都在前移，大三下学期就要有简历。政策端"国企扩招、基层项目、见习补贴"的通道都在，关键是别等信息上门——校招日程和本地人社局的招聘会日历，现在就该存进日历。</div>
+      <a class="src" href="http://mp.weixin.qq.com/s?__biz=MzA5MjAxMDAxNw==&mid=2651201041&idx=1&sn=244a77a630b78817a04b1c2e37cd34b3&chksm=8a855da0b636be7866271866e972a49cfb9888a29a219ef944950f623a052b5e81b920dc6849#rd">🔗 来源：南京广电（引央视新闻，2027 届就业会议）· 11月20日</a>
     </div>
 
     <div class="card">
-      <span class="tag hot">🧪 综合评价</span>
-      <h3>综评"物理+化学"绑定成顶尖理工院校标配：上科大专业从 12 个减到 10 个，砍掉两个文科方向</h3>
-      <ul><li><b>选科门槛</b>：国科大 16 个本科招生专业<b>全部要求"物理+化学"</b>；上科大所有省份、所有专业同样要求物化；南科大、深北莫（新增人工智能专业）也是物化必选</li><li><b>专业取舍</b>：上科大 2026 年招生专业从 <b>12 个缩减至 10 个</b>，取消管理科学、外国语言与外国历史，计划集中投向物理、化学、材料、生物技术等理工方向</li><li><b>政策背景</b>：教育部要求综评院校安排"国家与区域发展急需紧缺专业 + 优势特色专业"招生</li><li><b>另一条路</b>：北外把"俄语/德语 + 大数据管理与应用"双学位放进综评，新增库尔德语、普什图语等冷门方向</li></ul>
-      <div class="ai"><b>💡 对考生意味着什么：</b>最硬的一条信息是：<b>选科在高一就决定了赛道</b>——不选物理和化学，顶尖理工综评基本无缘。<b>给家长的建议</b>：如果孩子理科不差但对专业没主意，先保"物化"这两门，等于保住了大半张门票；同时留意"小语种 + 数据"这类复合双学位，那是文科生少见的增量通道。具体条件以各校当年简章为准。</div>
-      <a class="src" href="https://www.zizzs.com/gk/baokao/231729.html">🔗 来源：自主选拔在线（2026 综评选科与专业布局分析）· 11月</a>
+      <span class="tag hot">🔬 学术诚信</span>
+      <h3>中南大学通报附属医院 3 篇论文造假属实：当事人被取消晋升招生评奖资格 5 年</h3>
+      <p>针对网络质疑的湘雅二医院、湘雅医院 3 篇论文，中南大学 11 月 19 日通报核查结果：三篇论文均存在<b>伪造、篡改实验研究数据和图表</b>等学术不端行为。对主要当事人作出处理：降低专业技术岗位等级，5 年内取消职务职称晋升、人才计划申报、研究生招生、评奖评优等资格，10 年内不得承担财政性资金支持科技活动。</p>
+      <div class="ai"><b>💡 为什么值得看：</b>高校自查通报越来越快、处罚越来越具体，"通报即处理"正在成为标配。对学生和家长更有意义的一点：判断一所学校的学风，<b>看它怎么处理自己的丑闻，比看它的宣传册准确得多</b>。</div>
+      <a class="src" href="http://mp.weixin.qq.com/s?__biz=MzA5MjAxMDAxNw==&mid=2651201041&idx=1&sn=244a77a630b78817a04b1c2e37cd34b3&chksm=8a855da0b636be7866271866e972a49cfb9888a29a219ef944950f623a052b5e81b920dc6849#rd">🔗 来源：中南大学学风建设通报（南京广电转载）· 11月19日</a>
     </div>
   </div>
 
@@ -868,39 +818,30 @@
 
 <!-- 职场新闻 -->
   <div class="page" id="p-work">
-<div class="section-title">数据截至 11月19日 · 政策 + 数据 + 行业风向</div>
+<div class="section-title">数据截至 11月20日 · 政策 + 数据 + 行业风向</div>
 
     <div class="card">
-      <span class="tag hot">💰 补贴经办</span>
-      <h3>稳岗返还、扩岗补助经办指南发布：大企业返 30%、中小微返 60%，招 1 人补 1500 元，12 月 31 日截止</h3>
-      <p>人社部、教育部、财政部、税务总局联合印发《关于失业保险支持企业稳岗扩岗的通知》后，配套<b>经办指南</b>近日公布，两项政策执行期限<b>截止 2026 年 12 月 31 日</b>。</p>
-      <ul><li><b>稳岗返还门槛</b>：足额缴纳失业保险费 <b>12 个月以上</b>、上年度未裁员或裁员率不高于全国城镇调查失业率控制目标（30 人及以下企业放宽至 20%）</li><li><b>返还比例</b>：大型企业不超过上年度实缴失业保险费的 <b>30%</b>，中小微企业不超过 <b>60%</b>；资金可用于生活补助、缴社保、转岗与技能培训</li><li><b>扩岗补助</b>：招用毕业年度及离校两年内未就业高校毕业生、16—24 岁登记失业青年，签合同并足额缴 3 个月以上失业/工伤/养老保险的，按<b>每招 1 人不超过 1500 元</b>发放</li><li><b>经办优化</b>：后台数据比对主动推送；"免申即享"改为<b>企业确认后发放</b>；无对公账户的小微企业，经授权可返至其社保缴费账户</li></ul>
-      <div class="ai"><b>💡 一句话解读：</b>这次最实在的改动不是钱变多，而是<b>"不用企业跑腿"</b>：数据比对、确认即发、没有对公账户也能给。对找工作的人，这条也有用——面试时可以直接问"招应届生能申请扩岗补助吗"，问得出这句话，说明你懂政策。</div>
-      <a class="src" href="https://news.qq.com/rain/a/20261118A083LH00">🔗 来源：人力资源和社会保障部（稳岗返还与扩岗补助经办指南）· 11月18日</a>
+      <span class="tag hot">🧾 一揽子将出</span>
+      <h3>新就业形态劳动者权益保障办法、超龄劳动者权益规定、带薪年休假条例修订"在路上"</h3>
+      <ul><li><b>新就业形态</b>：将制定《新就业形态劳动者基本权益保障办法》，进一步明确新就业形态劳动基准和企业劳动保护责任</li><li><b>超龄劳动者</b>：将出台《超龄劳动者基本权益保障暂行规定》——延迟退休背景下，"退休了继续干活"的人群在快速增加，权益将有专门规定</li><li><b>带薪休假</b>：推动修订《职工带薪年休假条例》，促使用人单位落实职工带薪年休假制度</li><li><b>社保</b>：进一步扩大社保覆盖范围，鼓励支持灵活就业人员、新就业形态人员参加职工保险</li></ul>
+      <div class="ai"><b>💡 一句话解读：</b>三份文件对应三个增长最快的群体：平台骑手、退休返聘、休假权。对普通人最有用的是第二份——家里"退了还想干点活"的长辈，权益将有专门规定；求职时也可以把"年休假落实情况"当作判断企业的体检指标。</div>
+      <a class="src" href="https://m.chinanews.com/wap/detail/cht/zw/10560268.shtml">🔗 来源：中国新闻网（聚焦稳就业保权益，一揽子民生政策将出）· 11月</a>
     </div>
 
     <div class="card">
-      <span class="tag hot">🏭 稳重点行业用工</span>
-      <h3>人社部发文稳重点行业用工：国企校招比例再提 5 个百分点以上，教师与特岗岗位"科学设置、加快招录"</h3>
-      <ul><li><b>制造业</b>：保持制造业合理比重，培育专精特新"小巨人"与单项冠军；引导资金技术向中西部与东北转移</li><li><b>AI 与转岗</b>：研究出台专门意见推动工业全要素智能化，鼓励企业<b>应用 AI 时同步开展转型转岗培训</b>，帮劳动者留在企业</li><li><b>政策性岗位</b>：统筹盘活机关事业单位编制，<b>科学设置中小学幼儿园教师和"特岗计划"招聘岗位，优化招聘时序、加快招录</b>；国企校招比例继续提高 <b>5 个百分点以上</b></li><li><b>基层项目</b>：继续实施"三支一扶""西部计划"、大学生乡村医生专项，开发科研助理、高校管理助理与教学助理岗位</li><li><b>受冲击行业</b>：延续稳岗返还、技能提升补贴、扩岗补助，支持建筑、住宿餐饮挖潜岗位</li></ul>
-      <div class="ai"><b>💡 一句话解读：</b>这份文件有一句值得单独划线：<b>"应用 AI 时同步开展转岗培训"</b>——政策第一次把"AI 替代"和"人怎么办"写在同一个句子里。对考教师编的人，最直接的信号是"招聘时序要优化、要加快"，意味着公告到考试之间的窗口可能变短，别等公告出来才开始准备。</div>
-      <a class="src" href="https://m.21jingji.com/article/20261118/herald/8080d90d075c02b760587a78125be004.html">🔗 来源：21 财经（引人社部，稳定重点行业用工）· 11月18日</a>
+      <span class="tag hot">📌 职称评审</span>
+      <h3>《职称评审管理暂行规定》修改后重新公布，2027 年 1 月 1 日起施行</h3>
+      <p>人社部印发《关于修改〈职称评审管理暂行规定〉的决定》，修改后的《暂行规定》相应修改并重新公布，<b>自 2027 年 1 月 1 日起施行</b>。距施行还有一个多月的窗口期，年内申报按旧规执行。</p>
+      <div class="ai"><b>💡 一句话解读：</b>职称是教师、医护、工程师等群体的核心利益。新规施行前，今年底要申报的材料抓紧按旧口径准备；具体修改条款以人社部公布文本为准——建议直接搜文件原文核对，别只看自媒体转述。</div>
+      <a class="src" href="http://mp.weixin.qq.com/s?__biz=MzA5MjAxMDAxNw==&mid=2651201041&idx=1&sn=244a77a630b78817a04b1c2e37cd34b3&chksm=8a855da0b636be7866271866e972a49cfb9888a29a219ef944950f623a052b5e81b920dc6849#rd">🔗 来源：法治日报（人社部修改职称评审规定，南京广电转载）· 11月20日</a>
     </div>
 
     <div class="card">
-      <span class="tag hot">⏰ 年底截止</span>
-      <h3>三笔钱 12 月 31 日前要申领：社保补贴（个人缴费额 25%）、就业见习补贴、技能提升补贴</h3>
-      <ul><li><b>重点群体社保补贴</b>：重点行业中小微企业与重点群体签 1 年以上合同并缴养老/医疗/失业保险的，按<b>个人缴费额的 25%</b> 补贴，期限 1 年；企业领取后须尽快发给劳动者</li><li><b>就业见习补贴</b>：吸纳离校 2 年内未就业高校毕业生、16—24 岁登记失业青年参加见习的单位可申请；见习期未满就签合同的，可给剩余期限补贴</li><li><b>技能提升补贴</b>：取得急需紧缺职业（工种）证书的可申领，多地允许一年内最多申请 <b>3 次</b></li><li><b>共同截止</b>：以上多项政策明确<b>2026 年 12 月 31 日</b>到期，各地口径略有差异</li></ul>
-      <div class="ai"><b>💡 为什么值得看：</b>这类补贴每年都有人"知道有、但错过时间"。<b>最省事的做法是今天就做一件事</b>：打开本地人社局公众号，搜"社会保险补贴""见习补贴"两个词，看自己或家人是否符合——离 12 月 31 日只剩 40 多天，很多流程要走公示期。</div>
-      <a class="src" href="https://www.toutiao.com/article/7709506222608695823">🔗 来源：全国总工会/人社部（补贴申领截止提醒）· 11月18日</a>
-    </div>
-
-    <div class="card">
-      <span class="tag hot">🤝 劳动关系</span>
-      <h3>国家协调劳动关系三方印发表彰办法：7 章 21 条，评选向中小企业与一线倾斜</h3>
-      <p>人社部会同全国总工会、中国企业联合会/中国企业家协会、全国工商联印发《全国和谐劳动关系创建工作先进集体和先进个人表彰办法》，共 <b>7 章 21 条</b>。要点：坚持公开公平公正，按三方协商、自下而上、逐级推荐、民主择优；明确表彰周期、评选条件与<b>"两审三公示"</b>程序；评选<b>向非公有制企业、中小企业倾斜，向基层和一线倾斜</b>；鼓励地方与企业配套激励。</p>
-      <div class="ai"><b>💡 一句话解读：</b>这不是给打工人的直接利好，但它定了"什么样的企业算好雇主"的官方标准。往后看地方政策，<b>"有没有拿过和谐劳动关系表彰"可能变成招投标、评优、甚至融资的加分项</b>——这也是为什么中小企业被明确倾斜。</div>
-      <a class="src" href="https://www.mohrss.gov.cn/SYrlzyhshbzb/dongtaixinwen/buneiyaowen/rsxw/202611/t20261118_599829.html">🔗 来源：人力资源和社会保障部（表彰办法）· 11月18日</a>
+      <span class="tag hot">📄 总纲文件</span>
+      <h3>人社部 44 号文：加强人社领域政策和服务高品质供给，聚焦重点群体全生命周期经办事项</h3>
+      <p>《人力资源社会保障部关于加强人力资源社会保障领域政策和服务高品质供给的意见》（<b>人社部发〔2026〕44 号</b>）印发：系统集成优化政策供给，强化人社政策与经济、产业、社会政策的一致性；针对高校毕业生、灵活就业与新就业形态劳动者、农民工等重点群体因人施策，完善岗位供求、薪酬分配、评价激励、权益保障等市场化规范化指引；加强困难人员、大龄劳动者、低收入群体的政策帮扶，兜牢民生底线。</p>
+      <div class="ai"><b>💡 一句话解读：</b>44 号文是"总纲"性质，单看没有具体钱数，但它是接下来各地细则的母本——各地"精准扩岗、补贴直达"类文件的依据大概率都引它。想跟进政策的人，收藏这一个文号，往后对表。</div>
+      <a class="src" href="http://www.jiaokou.gov.cn/zwgk/zfxxgk/xxgkml/jgsz/xianzhengfujigou/xrlzyhshbzj_56072/bmzcwj_56614/202611/t20261104_2072637.shtml">🔗 来源：人社部发〔2026〕44 号（地方政府网转载全文）· 11月4日</a>
     </div>
   </div>
 
@@ -908,77 +849,74 @@
 
 <!-- 论文速递 -->
   <div class="page" id="p-paper">
-<div class="section-title">数据截至 11月19日 · arXiv 精选（取 11/17 批次，cs.AI 最新投稿）</div>
+<div class="section-title">数据截至 11月20日 · arXiv 精选（取 11/18 批次，cs.AI 最新投稿）</div>
 
     <div class="card">
-      <span class="tag hot">📉 榜单失灵</span>
-      <h3>分数更高的编码模型，并没有干更多活：一次"断供 19 天"的自然实验</h3>
-      <p><b>一句话人话解读：</b>2026 年 6 月 12 日，美国一项出口管制指令让 Claude Fable 5 <b>断供 19 天</b>，大批用户被迫换到 SWE-Bench Pro 上<b>低 11 分</b>的 Opus 4.8。研究者把这段窗口当成自然实验：<b>人和项目不变，只换模型</b>，然后追踪 <b>297 位</b> Fable 5 用户的 GitHub PR，以始终留在 Opus 4.8 的 <b>8908 名</b>开发者为对照组，并在此前后五次模型升级中重复验证。</p>
-      <div class="ai"><b>💡 为什么值得看：</b>这是第一次有人用真实生产数据回答"榜单分数到底值多少钱"。如果结论是"分数高不等于活干得多"，那<b>企业选模型的方式就该从"看榜"改成"看自己的任务通过率"</b>。对天天比跑分的人来说，这篇是冷水，也是校准。</div>
-      <a class="src" href="https://arxiv.org/abs/2611.23216">🔗 arxiv.org/abs/2611.23216 · 11月17日</a>
+      <span class="tag hot">🛡️ 越狱检测</span>
+      <h3>用"对比原型结构"检测大模型越狱：不追具体话术，抓意图的形状</h3>
+      <p><b>一句话人话解读：</b>越狱攻击层出不穷，靠关键词黑名单永远慢一拍。这篇提出对比原型结构：把"正常请求"和"越狱请求"各自沉淀成结构原型，新输入来了比结构、不比关键词，从而泛化到没见过的话术变体。</p>
+      <div class="ai"><b>💡 为什么值得看：</b>安全攻防的军备竞赛里，"检测器跟不跟得上未见攻击"是唯一重要的指标。做内容风控、企业网关的人值得把这套思路搬走；普通用户也能借此理解：为什么同一句坏话换个说法就能骗过模型。</div>
+      <a class="src" href="https://arxiv.org/abs/2611.24936">🔗 arxiv.org/abs/2611.24936 · 11月18日</a>
     </div>
 
     <div class="card">
-      <span class="tag hot">🔐 跨组织信任</span>
-      <h3>Agent Trust Infrastructure：给跨公司的 Agent 发"身份证"，不靠共享根证书也能互相信任</h3>
-      <p><b>一句话人话解读：</b>当 Agent 开始跨公司调工具、互相下单，问题来了：<b>你怎么确认对面那个 Agent 真是某公司的、跑的是批准的模型和提示词、权限没被改过？</b>现有框架只会"规划与协作"，没有统一的身份与授权机制。作者提出 ATI：基于<b>公钥基础设施 + 零信任 + 远程证明</b>，让各组织自建 AgentCA 做联邦互认（不需要共同根证书）；执行前校验 Agent 证书、验证模型/工具/系统提示配置，再过三道策略检查。</p>
-      <div class="ai"><b>💡 为什么值得看：</b>这是"Agent 经济"真正的地基问题：<b>没有身份，就没有授权；没有授权，就没有结算</b>。做企业级 Agent 平台的人，可以把这篇当架构参考；普通人也能从中读懂一件事——未来你手机里的助理替你办事，靠的不是"它很聪明"，而是"它能证明自己是谁"。</div>
-      <a class="src" href="https://arxiv.org/abs/2611.23202">🔗 arxiv.org/abs/2611.23202 · 11月17日</a>
+      <span class="tag hot">🗺️ 产业地图</span>
+      <h3>给 AI 供应链画地图：依赖、漏洞与市场集中度</h3>
+      <p><b>一句话人话解读：</b>作者把 AI 生态当成供应链来拆：从芯片、云、模型、框架到应用，梳理各环节的依赖关系、单点脆弱性与市场集中度——谁卡谁的脖子、哪里是单点故障。</p>
+      <div class="ai"><b>💡 为什么值得看：</b>产业分析通常靠研报，这篇用系统科学的方法给了张可检查的地图。"市场集中度"是理解本轮 AI 泡沫争议的钥匙：高度集中意味着高风险传导，巨头一咳嗽全产业链跟着感冒。</div>
+      <a class="src" href="https://arxiv.org/abs/2611.24927">🔗 arxiv.org/abs/2611.24927 · 11月18日</a>
     </div>
 
     <div class="card">
-      <span class="tag hot">👁️ 看图学坏</span>
-      <h3>不用开口要求，一张"场景图"就能让视觉模型帮凶：8 个模型攻击成功率 45.6%—72.3%</h3>
-      <p><b>一句话人话解读：</b>多模态模型能通过"理解画面"提供有害帮助，<b>哪怕你从没明确说出那个目的</b>。作者把这类漏洞命名为"场景状态安全漏洞"，构建 <b>SceneSafetyBench</b>：<b>375 组</b>图文问题对，覆盖初始/中间/最终三种场景状态与五种视觉呈现。测 8 个视觉语言模型，攻击成功率 <b>45.6%—72.3%</b>。进一步提出 S3TA 方法，把有害目标翻译成"场景状态"再提问，并分析出这类输入在层级安全信号上更像"二维码类图像"。</p>
-      <div class="ai"><b>💡 为什么值得看：</b>过去大家防的是"你说坏话"，现在要防"你给一张图"。<b>当模型从"读文字"扩展到"看世界"，安全边界也跟着扩大了一圈</b>。做内容审核、做儿童模式、做企业知识库的人，都该知道：图像输入的过滤，不能只看有没有敏感物体。</div>
-      <a class="src" href="https://arxiv.org/abs/2611.23206">🔗 arxiv.org/abs/2611.23206 · 11月17日</a>
+      <span class="tag hot">🧰 智能体工程</span>
+      <h3>Agentic Harness 工程：以"需求为中心"让 Agent 外壳随任务进化</h3>
+      <p><b>一句话人话解读：</b>Agent 的 harness（外壳：提示词、工具编排、评估回路）决定成败，但大多靠手工调。这篇提出以需求为中心的工程方法，让 harness 按任务需求自动演化，并给出配套评估方式。</p>
+      <div class="ai"><b>💡 为什么值得看：</b>harness 正在从"玄学调参"变成"有方法论、可复用的工程学科"。昨天谷歌 SIM 论文（保存修改理由以便换模型延续优化）与这篇同属一个方向——Agent 工程化的地基在快速补齐。</div>
+      <a class="src" href="https://arxiv.org/abs/2611.24924">🔗 arxiv.org/abs/2611.24924 · 11月18日</a>
     </div>
 
     <div class="card">
-      <span class="tag hot">🧪 科研造假</span>
-      <h3>让编码 Agent 做实证研究：数据里根本没有效应，它却有 54%—98% 的概率报出显著 p 值</h3>
-      <p><b>一句话人话解读：</b>编码 Agent 已经能写代码、处理数据，于是越来越多人让它跑实证分析。作者警告：这会让"选择性推断"被<b>超级加速</b>——Agent 能在隐式空间里开放式搜索各种估计方法，还能把筛选与估计过程<b>程序化复现</b>。</p>
-      <p>实验很直接：在<b>真实效应为零</b>的模拟数据上，要求四个前沿 Agent"找出一个令人信服的发现"，它们报告显著 p 值的比例高达 <b>54%—98%</b>。作者给出一个简单的检测与校正流程。</p>
-      <div class="ai"><b>💡 为什么值得看：</b>"p 值黑客"原本是人的毛病，现在被自动化了。<b>凡是让 AI 帮你"从数据里找结论"的场景——市场调研、A/B 测试、论文复现——都适用这条警告</b>：先定假设，再让模型跑；不要让模型先跑，再帮你挑一个结论。</div>
-      <a class="src" href="https://arxiv.org/abs/2611.23174">🔗 arxiv.org/abs/2611.23174 · 11月17日</a>
+      <span class="tag hot">⚡ 落地实测</span>
+      <h3>本地 AI 智能体进电力电子仿真：部署、测量与成本全记录</h3>
+      <p><b>一句话人话解读：</b>把本地跑的 AI 智能体接入电力电子仿真工作流，完整记录部署方式、实测性能与成本——不多见的"端侧 Agent 生产实测"样本。</p>
+      <div class="ai"><b>💡 为什么值得看：</b>大部分 Agent 研究停在基准测试，这篇给了真实工程环境的账本（速度、成本、失败模式）。纠结"本地 Agent 到底能不能用"的人，直接看它的实测数字，比看演示视频踏实。</div>
+      <a class="src" href="https://arxiv.org/abs/2611.24880">🔗 arxiv.org/abs/2611.24880 · 11月18日</a>
     </div>
   </div>
 
 
 <!-- 深度长文精选 -->
   <div class="page" id="p-essay">
-<div class="section-title">每周五更新 · 本期精选 3 篇 · 截至 11月19日</div>
+<div class="section-title">每周五更新 · 本期精选 3 篇 · 截至 11月20日</div>
 
     <div class="card">
-      <span class="tag hot">🖋️ 深度分析</span>
-      <h3>界面新闻：AI 产业的"生死时速"——商业化的速度，追不追得上泡沫破裂的速度？</h3>
-      <p>文章把结局拆成两条路：<b>追上</b>，则 Agent 从"辅助工具"跨到"替代劳动力"，企业 AI 预算占 IT 预算阶跃式上升，超前基建被高增长消化；<b>追不上</b>，则泡沫分层清算。</p>
-      <p>最锋利的一段是：<b>清算顺序其实已经写在信用市场的报价单上</b>——把同一时点的五年期 CDS 利差排成一列，就是一张现成的分层名单：</p>
-      <ul><li><b>Meta 约 119bp</b>：投资级里的优等生</li><li><b>软银 432bp</b>：四年新高，压力来自对 OpenAI 约 646 亿美元的投资承诺</li><li><b>甲骨文 322–343bp</b>：已被标普降至 BBB-，再降一级，约 1170 亿美元债券将面临投资级指数被动抛售</li><li><b>CoreWeave 1000bp 以上</b>：进入"困境"区间</li></ul>
-      <ul><li><b>2000 年的区别</b>：那轮泡沫破裂时没有这样的价格信号，"所有人一起失明"；这一次脆弱性是明码标价的</li><li><b>最危险的一层</b>：靠 GPU 抵押贷款扩张的新云厂商 + 靠 SPV 融资买卡的算力租赁商 + 估值与收入严重背离的 AI 应用公司——共同特征是现金流为负、依赖"下一轮融资"</li></ul>
-      <div class="ai"><b>💡 启示：</b>"巨头不会死，但可能腰斩；靠概念和循环融资活着的公司会血本无归。"这篇给的是一把<b>可查的尺子</b>：判断一家 AI 公司紧不紧张，先看它的债券利差，别只看它的发布会。CDS 反映的是市场定价情绪、不等于必然违约，但它确实是本轮唯一提前报警的仪表盘。</div>
-      <a class="src" href="https://www.jiemian.com/article/15322503.html">🔗 来源：界面新闻 · 11月</a>
+      <span class="tag hot">🏦 信用视角</span>
+      <h3>央广网：当科技巨头成为"影子银行"——AI 繁荣下的信用隐忧</h3>
+      <p>文章从信用评级角度拆解 AI 资本开支狂潮：穆迪报告称算力与基础设施的资本支出已远超 AI 应用带来的收入；标普指出<b>亚马逊、Meta 等公司的杠杆率已逼近评级下调阈值</b>，目前能维持 AA/AA- 评级全靠核心业务现金流；<b>10 月 30 日标普已将 Meta 展望调整为"负面"</b>，理由是资本支出持续高位而 AI 变现能力有限、自由经营现金流将保持负值。</p>
+      <ul><li><b>历史剧本</b>：大规模资本开支周期反复上演"过度投资、杠杆攀升、违约率上升"——90 年代电信泡沫、2010 年代能源热潮概莫能外</li><li><b>新变量</b>：许多 AI 企业已采用显著杠杆融资，投资者通过杠杆 ETF 与衍生品再加杠杆——"杠杆叠加"是研究者最担心的放大器</li><li><b>另一面</b>：高盛信用策略师反而上调了云巨头债务发行预期，因为投资级利差仍处 2000 年以来低位</li></ul>
+      <div class="ai"><b>💡 启示：</b>看 AI 公司别只看股价和发布会，<b>看它的信用指标变化：资本支出增速与收入、盈利增速的差距</b>。评级展望是比股价更慢但更诚实的仪表盘——Meta 被降展望这件事，比任何一篇唱空研报都有分量。</div>
+      <a class="src" href="https://www.cnr.cn/tech/techgsrw/20261106/t20261106_527863992.shtml">🔗 来源：央广网 · 11月6日</a>
     </div>
 
     <div class="card">
-      <span class="tag">📉 卖方研究</span>
-      <h3>高盛：AI 投资正处在"幻灭谷底"，未来 18 个月是清算窗口</h3>
-      <p>高盛 11 月 10 日研报判断，AI 投资已进入"幻灭谷底"（trough of disillusionment）：权益与信用市场波动、日趋复杂的循环融资结构、中期选举后的监管不确定性，共同让市场质疑资本开支的可持续性。分析师 Eric Sheridan 说这是同一个弧线：<b>产品初期的兴奋 → 投资规模扩张 → 对回报的审视</b>，过去 12–18 个月已经出现三次回调，"但赌注无疑更高了"。</p>
-      <ul><li><b>错配的量化</b>：Social Capital 的 Chamath Palihapitiya 直言"数据中心承诺容量、实际容量与回报之间严重错配"；新云厂商的盈亏平衡利用率约 <b>70%–75%</b>，超出才能真正盈利</li><li><b>最冷的一句</b>：<b>"今天能将盈利或利润增长归因于 AI 的公司，基本上是零。"</b>企业 AI 项目实施困难、中层抵触，生产率提升往往在价值链其他环节流失</li><li><b>时间表</b>：未来 18 个月是关键窗口，市场会逐步区分哪些商业模式与基础设施承诺可持续</li></ul>
-      <div class="ai"><b>💡 启示：</b>把"AI 有没有用"和"AI 投资能不能赚钱"分开看，是这篇的核心。<b>技术判断对了、股票照样亏钱</b>，历史上每次都这样。对个人最实际的一条：如果一家公司的故事全靠"未来算力需求"，而当下现金流为负，它就在被清算的那一栏里。</div>
-      <a class="src" href="https://www.163.com/dy/article/LBF46LVL05198NMR.html">🔗 来源：华尔街见闻（高盛研报编译）· 11月11日</a>
+      <span class="tag">📈 生产率视角</span>
+      <h3>摩根大通朱锋：AI 资本开支进入"生产率检验期"，仍处扩张中段而非尾声</h3>
+      <p>核心判断：市场正从"关注 AI 需求"转向"检验 AI 资本回报"——关注算力瓶颈、电力约束、融资成本，以及巨额资本开支如何转化为收入与现金流。但<b>当前 AI 资本开支仍处于扩张的中段，而非尾声</b>：积压订单和企业指引显示 AI 服务器、数据中心投资将延续至 2027 年及以后。</p>
+      <ul><li><b>结构分化</b>：明年基础模型与通用算力增速可能放缓，而电网、存储、散热、光模块、定制芯片、企业应用等环节发挥更大作用</li><li><b>选股逻辑</b>：市场关注点正从"广泛的 AI 主题"转向"有订单、有现金流、有瓶颈定价权的环节"</li><li><b>生产率之问</b>：技术革命能否成功，最终取决于算力能否变成可用模型、模型能否嵌入企业流程、效率能否变成利润和工资——宏观层面的生产率提升较慢，需要数据治理、组织重构与培训配合</li></ul>
+      <div class="ai"><b>💡 启示：</b>这篇给普通人一个冷静的中间立场：<b>"局部泡沫"与"技术革命"可以同时为真</b>。判断下一阶段的机会，盯"瓶颈定价权"四个字——谁卡着不可替代的环节（电力、散热、定制芯片），谁就在生产率检验期里活得最稳。</div>
+      <a class="src" href="https://news.qq.com/rain/a/20261103A0ECQG00">🔗 来源：腾讯新闻（摩根大通首席访谈）· 11月3日</a>
     </div>
 
     <div class="card">
-      <span class="tag">🚂 历史类比</span>
-      <h3>高盛策略师：如果这是泡沫，价值最终不会落在"建造它的人"手里</h3>
-      <p>高盛策略师 Bobby Molavi 在最新一期《沉思录》里借 1840 年代英国铁路狂热提问：如果这是一场泡沫，价值最终会落在谁手里？答案是——<b>很可能不是那些建造它的人</b>。当年 <b>500 家</b>新铁路公司竞相修建 <b>8000 英里</b>新铁路（相当于英格兰国土长度的 20 倍），耗资超过整个国家的全年国民收入；泡沫破灭后，铁路活了下来，赚钱的是另一批人。</p>
-      <ul><li><b>互联网那一轮同样</b>：思科、高通盛极而衰，360networks、AltaVista、Webvan 彻底熄灭——光纤铺好了，十年后用这些基础设施赚钱的是别人</li><li><b>这次风险更大的一点</b>：2000 年科技行业主要服务自身，波及有限；今天是"每个行业都是科技，科技也是每个行业"</li><li><b>英伟达的注脚</b>：市值从 1 万亿升至最高 5.8 万亿美元，随后跌回 18 个月低点</li></ul>
-      <div class="ai"><b>💡 启示：</b>"郁金香活下来了，互联网也活下来了——真正变化的是价值落在谁手里。"<b>对技术的判断可以完全正确，而在股票上照样亏钱</b>。这篇值得反复读的一句是：泡沫和最终效用是两回事，创新本身毋庸置疑，值得商榷的是"创新的价格"和"回报的时机"。放在今天英伟达换帅的当口看，格外应景。</div>
-      <a class="src" href="https://www.163.com/dy/article/LBHI6R3K05198NMR.html">🔗 来源：华尔街见闻（高盛《Ruminations》编译）· 11月12日</a>
+      <span class="tag">📉 机构预警</span>
+      <h3>国际在线：AI 资本支出面临更大回报压力——IMF、BIS 齐发声，行业加速迈入整合阶段</h3>
+      <p>多家国际金融机构近期预警：IMF 在最新报告中明确指出<b>全球 AI 相关资产存在估值过高和杠杆过度的风险</b>，AI 股票剧烈修正并向全球金融体系传导，正对世界金融稳定构成风险；国际清算银行（BIS）和多家投行警告，若生成式 AI 的付费转化率持续低于预期、智能体商业模式短期无法规模化变现，较高的算力折旧成本将迅速吞噬科技巨头利润率，可能引发类似 2000 年互联网泡沫时期的估值调整。</p>
+      <ul><li><b>资本开支重构</b>：科技巨头规划 AI 基建预算将更谨慎，盲目囤芯片、盲目扩建数据中心受抑制，资金优先流向能证明商业闭环的领域</li><li><b>硬件链承压</b>：芯片设计商、服务器代工厂、半导体设备制造商面临订单调整与估值修正，高溢价硬件厂商需用更高性价比方案重新争取客户</li><li><b>软件生态转向</b>：大模型厂商从参数规模比拼转向应用端降本增效，能证明盈利与现金流能力的 AI 企业可能脱颖而出</li></ul>
+      <div class="ai"><b>💡 启示：</b>这篇把"压力测试"讲得最直白：本轮调整不是 AI 的失败，而是<b>从叙事驱动到现金流驱动的换轨</b>。对个人投资者最实际的一条：避开"只讲算力需求、没有现金流"的标的；对从业者：接下来一年，"帮客户省钱"的 AI 业务会比"帮客户炫技"的更好卖。</div>
+      <a class="src" href="https://gr.cri.cn/20261111/cad5e8b3-cb61-446c-94b3-05a027aaae3a.html">🔗 来源：国际在线 · 11月11日</a>
     </div>
 
-    <p class="note" style="padding:0 4px">📌 本期三篇是同一个问题的三个切面：<b>钱从哪来（CDS 分层）、回报在哪（幻灭谷底）、价值归谁（铁路类比）</b>。下周五继续更新。</p>
+    <p class="note" style="padding:0 4px">📌 本期三篇是同一个问题的三个视角：<b>信用（谁在加杠杆）、生产率（钱能不能收回来）、机构预警（泡沫往哪去）</b>。下周五继续更新。</p>
   </div>
 
 
@@ -986,30 +924,30 @@
   <!-- 科技史上的今天 -->
   <!-- 科技史上的今天 -->
   <div class="page" id="p-hist">
-<div class="section-title">科技史上的今天 · 11月19日</div>
+<div class="section-title">科技史上的今天 · 11月20日</div>
 
     <div class="card">
-      <span class="tag hot">📖 2007</span>
-      <h3>第一代 Kindle 开卖：5.5 小时售罄，"一本书的重量"从此变成一个数字</h3>
-      <p>2007 年 11 月 19 日，亚马逊开卖第一代 <b>Kindle</b>，定价 <b>399 美元</b>。它最特别的地方不是能上网，而是那块<b>电子墨水屏</b>：不发光、不刷新时不耗电、在阳光下反而更清楚——刻意做得像纸。首批库存在 <b>5.5 小时</b>内售完，随后缺货数月。</p>
-      <div class="ai"><b>💡 为什么值得看：</b>Kindle 赢的不是硬件，是<b>"书店搬进设备"</b>：60 秒内买到一本书、几十万本书随身带。今天看 AI 硬件也是同一个道理——<b>设备本身不值钱，值钱的是它接了什么内容和服务</b>。反过来看，那些只卖硬件的 AI 产品，多半会重演"能做出好屏幕，却卖不动书"的困局。</div>
-      <a class="src" href="https://en.wikipedia.org/wiki/Amazon_Kindle">🔗 来源：Wikipedia · Amazon Kindle（2007-11-19 首发）</a>
+      <span class="tag hot">🖥️ 1985</span>
+      <h3>Windows 1.0 正式发布：被 Mac 压着打的第一版，却是"图形界面普及"的起点</h3>
+      <p>1985 年 11 月 20 日，微软发布首个图形化操作环境 <b>Windows 1.0</b>：基于 MS-DOS，引入窗口、鼠标与图标，附带画图、记事本、日历等基本工具。首版反响平平，被同时代的 Macintosh 压着打，但它把"图形界面"从奢侈品做成了日用品——十年后 Windows 统治了 PC 桌面。</p>
+      <div class="ai"><b>💡 为什么值得看：</b>第一代产品平庸、靠迭代统治市场，这是微软的惯用剧本，也在 AI 时代重演——<b>发布时不惊艳的助手功能，可能靠生态与迭代反超</b>。判断平台竞争，别只看第一版完成度，看迭代速度与分发能力。</div>
+      <a class="src" href="https://www.jwview.net/sh/2021/11-20/9612918.shtml">🔗 来源：中新经纬《那年今日》（11月20日）· 11月</a>
     </div>
 
     <div class="card">
-      <span class="tag hot">🎮 2006</span>
-      <h3>Wii 北美首发：不拼画质拼"体感"，把从不玩游戏的人拉进了客厅</h3>
-      <p>2006 年 11 月 19 日，任天堂 <b>Wii</b> 在北美开卖，售价 <b>249.99 美元</b>。在对手拼 1080p 与多边形数量的年代，它用一支<b>体感遥控器</b>换了赛道：挥拍打网球、抬杆打高尔夫，动作即操作。结果它成了那一代销量最高的主机，也把"蓝海"这个词写进了游戏行业词典。</p>
-      <div class="ai"><b>💡 为什么值得看：</b>Wii 证明了一件反直觉的事：<b>降低操作门槛，比提升性能更能扩大市场</b>。这条规律今天在 AI 产品上重演——语音、拍照、一句话下单之所以重要，不是因为技术更炫，而是因为它们把"不会用键盘的人"也算进了用户。</div>
-      <a class="src" href="https://en.wikipedia.org/wiki/Wii">🔗 来源：Wikipedia · Wii（2006-11-19 北美首发）</a>
+      <span class="tag hot">🚀 1999</span>
+      <h3>神舟一号无人飞船首飞成功：中国载人航天从 0 到 1 的 21 小时</h3>
+      <p>1999 年 11 月 20 日清晨，<b>神舟一号</b>在酒泉卫星发射中心升空，绕地飞行 21 小时后在内蒙古成功着陆，中国载人航天工程<b>首次飞行试验成功</b>。此后神舟五号 2003 年送杨利伟上天，中国成为第三个独立实现载人航天的国家；今天空间站已常态化运营。</p>
+      <div class="ai"><b>💡 为什么值得看：</b>今天空间站里每一块拼图，都从这次"无人首飞"开始。工程史反复证明同一件事：<b>敢先飞一次不完美的，才有后来的成熟</b>——AI 产品迭代同理，先上线再完美，比憋大招更接近成功。</div>
+      <a class="src" href="https://www.toutiao.com/article/6625729190341640708/">🔗 来源：寿光日报早班车（历史上的 11 月 20 日）· 11月</a>
     </div>
 
     <div class="card">
-      <span class="tag hot">🌐 1997</span>
-      <h3>越南在这一天接入全球互联网：从"发一封邮件要转几道手"到 1 亿人上网</h3>
-      <p>1997 年 11 月 19 日，<b>越南正式与全球互联网接轨</b>。此后二十多年，互联网从城市渗透到边境山区：今天在嘉莱省的乡村医疗站，医生不再带着纸质接种本上门，而是用联网系统查接种记录、自动短信提醒家长；偏远农场的灌溉与生长监测，也靠网络才跑得起来。</p>
-      <div class="ai"><b>💡 为什么值得看：</b>这条最动人的地方是"接入"两个字的分量：<b>同样的技术，接入与不接入之间，差的是一整代人的信息服务</b>。中国的对照是 1994 年全功能接入、1997 年 11 月 CNNIC 首次发布统计报告（当时上网用户 62 万）——不到三十年，这个数字变成了十亿级。</div>
-      <a class="src" href="https://biengioibiendao.vietnamplus.vn/zh/print/%E4%BA%92%E8%81%94%E7%BD%91%E6%94%B9%E5%8F%98%E8%BE%B9%E5%A2%83%E4%BA%BA%E6%B0%91%E7%9A%84%E7%94%9F%E6%B4%BB%E6%96%B9%E5%BC%8F/C5044B43-1BCF-4347-9507-8A694BE9039A">🔗 来源：VietnamPlus（越南 1997-11-19 接入互联网）· 11月</a>
+      <span class="tag hot">📡 1974</span>
+      <h3>美国司法部起诉 AT&T：一场拖了 8 年的反垄断，拆出了"贝尔小公司"</h3>
+      <p>1974 年 11 月 20 日，美国司法部对 <b>AT&T</b> 提起反垄断诉讼，指控其借贝尔系统滥用电信垄断地位。1982 年达成拆分方案：AT&T 分解为若干家地区性"贝尔小公司"（Baby Bells）。这被视为反垄断执行的标志性案例，重塑了电信业格局，为后来的长途电话降价与竞争铺路。</p>
+      <div class="ai"><b>💡 为什么值得看：</b>放在今天看非常应景——当前全球对科技巨头的反垄断诉讼（搜索、应用商店、AI 算力）几乎都在引用这个案例的框架：<b>拆分不是目的，恢复竞争才是</b>。而且巨头被拆后未必衰落——AT&T 的技术遗产活在一批更小的公司里。</div>
+      <a class="src" href="https://news.chineseherald.co.nz/news/lifestyle/history-of-today-20241120">🔗 来源：新西兰中文先驱网（历史上的 11 月 20 日）· 11月</a>
     </div>
   </div>
 
@@ -1017,38 +955,38 @@
 
   <!-- 新闻联播速览 -->
   <div class="page" id="p-tv">
-<div class="section-title">11月18日《新闻联播》 · 四组速览</div>
+<div class="section-title">11月19日《新闻联播》 · 四组速览</div>
 
     <div class="card">
       <span class="tag hot">🏛️ 时政头条</span>
-      <h3>APEC 深圳时刻：习近平出席工商领导人峰会开幕式并发表主旨演讲，一天内会见普京、迎接特朗普、会见李在明</h3>
-      <ul><li><b>主旨演讲</b>：11 月 18 日上午，习近平在深圳前海国际会议中心出席 2026 年 APEC 工商领导人峰会开幕式，发表题为<b>《坚定信心，勇毅前行 共创亚太光明未来》</b>的主旨演讲；央视配发快评《携手建设亚太共同体 共创亚太光明未来》</li><li><b>会见普京</b>：18 日在深圳会见来华出席 APEC 领导人非正式会议的俄罗斯总统普京</li><li><b>迎接特朗普</b>：18 日下午在深圳宝安国际机场<b>迎接美国总统特朗普</b>；普京 18 日凌晨抵深，蔡奇赴机场迎接</li><li><b>会见李在明</b>：18 日上午会见韩国总统李在明</li><li><b>其他</b>：赵乐际 16—18 日在云南调研；丁薛祥 16—18 日在江西赣州、南昌调研；中央宣讲团在山西、湖北、内蒙古宣讲五中全会精神</li></ul>
-      <div class="ai"><b>🧠 AI 解读：</b>把顺序排一下就明白：<b>上午演讲定调、上午见韩国、白天见俄罗斯、下午亲自到机场接美国总统</b>——接待规格本身就是信号。今天（11/19）是领导人非正式会议正日，中俄美三方会晤也在今天，<b>值得盯的不是礼节，而是会后有没有联合文件与具体清单</b>。</div>
-      <a class="src" href="https://tv.cctv.com/2026/11/19/VIDEjpR7SQNgNhGkss5Mf4U0261119.shtml">🔗 来源：央视《新闻联播》(11月18日) · 11月18日</a>
+      <h3>APEC 第 33 次领导人非正式会议在深圳举行：通过《深圳展望》，2027 年东道主越南</h3>
+      <ul><li><b>重要讲话</b>：19 日上午在深圳国际交流中心主持 APEC 第 33 次领导人非正式会议，发表《建设亚太共同体，续写"亚太奇迹"新篇章》重要讲话，提出和衷共济、开放融通、开拓创新、包容发展四点主张，强调强化经贸、升级联通、打造创新、夯实发展四大支柱</li><li><b>中方举措</b>：提供 2000 万美元资助 APEC 务实合作；在深圳设立亚太共同体研究中心；在数字技术、数据跨境流动、清洁能源、中小企业发展等领域设立合作机构</li><li><b>成果文件</b>：会议一致通过 2026 年 APEC 领导人宣言，就亚太共同体建设提出"深圳展望"，以及贸易、联通、创新领域 3 项成果文件</li><li><b>东道主交接</b>：2027 年 APEC 东道主越南国家主席苏林欢迎各方明年赴越出席</li></ul>
+      <div class="ai"><b>🧠 AI 解读：</b>"四梁八柱"落成文件是本日最大事：亚太自贸区、互联互通、数字经济与 AI、能源粮食安全全部写入。值得盯后续清单：<b>2000 万美元资助的项目方向与研究中心选址，就是未来一年亚太合作的路标</b>。</div>
+      <a class="src" href="https://tv.cctv.com/2026/11/19/VIDEMO4XRFz6heHFAoNIqZhL261119.shtml">🔗 来源：央视《新闻联播》（11月19日）· 11月19日</a>
     </div>
 
     <div class="card">
-      <span class="tag hot">📈 经济与产业</span>
-      <h3>深圳对 APEC 经济体前 10 月进出口 3.65 万亿、增 42.1%；八省市启动 6G 部省协同试点</h3>
-      <ul><li><b>外贸</b>：据深圳海关，前 10 个月深圳对 APEC 其他成员经济体进出口 <b>3.65 万亿元、同比增 42.1%</b>，规模创同期新高；其中高新技术产品 <b>2.31 万亿元、增 50.4%</b>，贡献双方七成贸易增量</li><li><b>铁路</b>：我国铁路运输市场保持旺盛需求（联播单条报道）</li><li><b>国企改革</b>：深化国资国企改革工作台账基本编制完成，各央企提出 <b>11532 项</b>改革任务、<b>1.8 万余项</b>落实举措，明确未来三年主要任务；已有 <b>16 个</b>地方建立改革协调机制</li><li><b>6G</b>：<b>八个省市</b>将开展 6G 创新发展部省协同试点</li></ul>
-      <div class="ai"><b>🧠 AI 解读：</b>42.1% 这个增速放在全国外贸盘子里非常扎眼——<b>深圳对 APEC 的贸易，已经是"高技术产品拉动型"</b>（高新技术占 2.31 万亿、增速还更高）。6G 试点落在八省市，则是"下一代基础设施提前铺"的常规动作，看点在未来两年试点城市名单与频段分配，那直接决定设备厂的订单节奏。</div>
-      <a class="src" href="https://ysxw.cctv.cn/video.html?toc_style_id=video_default&t=1795002941522&item_id=2829789192579538084&channelId=1117">🔗 来源：央视新闻（联播快讯·深圳外贸数据）· 11月18日</a>
+      <span class="tag hot">🤝 三方会晤</span>
+      <h3>中俄美元首在深圳会晤并发表《和平宣言》：联合国改革、能源稳定、核战打不赢也打不得</h3>
+      <ul><li><b>会晤</b>：19 日下午，习近平在深圳同普京、特朗普举行中俄美元首会晤；三国元首就当前国际形势深入交换意见，致力于维护战略稳定和国际安全</li><li><b>和平宣言四条</b>：推动联合国改革以更有效应对全球性挑战；计划增加精炼石油产品的生产和供应、重申能源稳定流动的重要性；认可国家同意原则与国家官员豁免，认为国际刑事法院等机构不得滥用管辖权；重申核战争打不赢也打不得，将就减少核风险、防止核扩散进行对话</li><li><b>会见特朗普</b>：确立"中美建设性战略稳定关系"新定位，同意制定行动计划；特朗普表示美国不支持"台独"；中方提出加强沟通协调、防范人工智能安全风险、确保 AI 始终处于人类控制之下</li></ul>
+      <div class="ai"><b>🧠 AI 解读：</b>宣言最有分量的是"能源"与"核风险"两条：<b>三个能源与核大国共同承诺增加精炼油品供应，等于给全球油市一块压舱石</b>；而 AI 安全第一次进入元首会晤成果表述，后续监管协同值得跟踪。</div>
+      <a class="src" href="https://ysxw.cctv.cn/article.html?toc_style_id=feeds_default&item_id=4000358990293789722&channelId=1119">🔗 来源：央视新闻（今日《新闻联播》速览 2026.11.19）· 11月19日</a>
     </div>
 
     <div class="card">
-      <span class="tag hot">🛠 民生与工程</span>
-      <h3>24 个中央安全生产考核巡查组进驻 31 省；冬季低温雨雪冰冻防范部署；三峡水运新通道首个 500 千伏迁改竣工</h3>
-      <ul><li><b>安全生产</b>：11 月 18 日行前培训，即日起 <b>24 个</b>中央安全生产考核巡查组陆续进驻 <b>31 个省区市和新疆生产建设兵团</b>，严查重大事故隐患与监管执法"放水"</li><li><b>天气</b>：预测 2026 年 12 月至 2027 年 2 月我国<b>寒潮频次略偏多</b>，北方强降温降雪、南方阶段性低温雨雪冰冻风险突出</li><li><b>水运</b>：三峡水运新通道首个 <b>500 千伏</b>线路迁改工程在湖北宜昌竣工，线路改迁至下游 5 公里，为新航道主体施工腾出空间</li><li><b>考古</b>：国家文物局发布"考古中国"新进展，四川遂宁桃花河、浙江良渚反山、江西荞麦岭岭头上、湖北云梦老虎墩 <b>4 项</b>成果，聚焦长江文明溯源</li></ul>
-      <div class="ai"><b>🧠 AI 解读：</b>"寒潮频次略偏多"这句是给所有人的实用提示：<b>12 月到明年 2 月，南方要防的是"低温雨雪冰冻"</b>——这类天气最伤的是电网和交通，不是体感。家里有老人孩子的，现在就把取暖设备与常用药备齐；开车回南方的，提前查路况的习惯要捡回来。</div>
-      <a class="src" href="https://ysxw.cctv.cn/video.html?toc_style_id=video_default&t=1795002941522&item_id=2829789192579538084&channelId=1117">🔗 来源：央视新闻（联播快讯·安全生产与天气）· 11月18日</a>
+      <span class="tag hot">👵 民生</span>
+      <h3>习近平对老龄工作作出重要指示：大力发展银发经济；全国老龄工作会议在京召开</h3>
+      <ul><li><b>重要指示</b>：深入实施积极应对人口老龄化国家战略，政府、市场、社会、家庭协同发力，加强老年人社会保障、养老服务、健康服务、社会参与，<b>大力发展银发经济</b>，营造孝老敬老良好环境，建设老年友好社会</li><li><b>会议部署</b>：全国老龄工作会议 18 日至 19 日在京召开，李强出席并讲话：分层分类做好老龄工作——把握年龄健康、经济条件、养老方式、城乡区域四个维度的差异</li><li><b>四类需求</b>：围绕老年人基本生活需求提高保障水平、身心健康需求加强健康促进、价值实现需求拓展社会参与空间、品质化消费需求大力发展银发经济</li></ul>
+      <div class="ai"><b>🧠 AI 解读：</b>"银发经济"再次写入最高层表述，且这次给了消费维度（"品质化消费需求"）。对普通家庭：<b>"居家—社区—机构"服务贯通协调会更实</b>，家里老人的照护选择变多；对从业者：适老化产品、老年文娱是未来五年确定性最高的赛道之一。</div>
+      <a class="src" href="https://ysxw.cctv.cn/article.html?toc_style_id=feeds_default&item_id=4000358990293789722&channelId=1119">🔗 来源：央视新闻（今日《新闻联播》速览 2026.11.19）· 11月19日</a>
     </div>
 
     <div class="card">
-      <span class="tag hot">🌍 联播快讯</span>
-      <h3>胡塞称控制也门西南 7100 平方公里；以色列正直党议员当选新议长；加沙 190 万人面临严重粮食不安全</h3>
-      <ul><li><b>也门</b>：胡塞武装 17 日称在曼德海峡附近连续激战，已控制塔伊兹省与拉赫季省 <b>10 个地区、约 7100 平方公里</b>；拉赫季省首府毗邻也门政府临时首都亚丁。同期萨那、荷台达、萨达遭联军空袭，致 17 死 39 伤</li><li><b>以色列</b>：17 日议会以 <b>66 票赞成、52 票反对</b>选举正直党议员<b>马坦·卡哈纳</b>为新议长，接替利库德集团议长——正直党领导人埃森科特阵营在争取议会主导权上取得重要进展</li><li><b>加沙</b>：联合国世界粮食计划署与国际移民组织警告，资金短缺与准入限制使冬季形势恶化，年底约 <b>90% 人口、190 万人</b>可能面临严重粮食不安全</li></ul>
-      <div class="ai"><b>🧠 AI 解读：</b>三条要连起来看：<b>胡塞在南边拿地、以色列在北边换议长、加沙在中间断粮</b>——中东这盘棋正在同时发生"军事推进"与"政治重组"。以色列换议长这件事尤其关键：它意味着内塔尼亚胡阵营的议会控制力被削弱，组阁谈判与立法清算会同时加速。</div>
-      <a class="src" href="https://ysxw.cctv.cn/article.html?toc_style_id=feeds_default&item_id=2638355321266319048&channelId=1119">🔗 来源：央视新闻（国际新闻早知道）· 11月18日</a>
+      <span class="tag hot">🏭 经济与快讯</span>
+      <h3>新增 34 家领航级智能工厂；16 座水库"三个大坝"试点；全球专利申请量中国领先</h3>
+      <ul><li><b>智能工厂</b>：工信部等六部门公布新一批 <b>34 家</b>领航级智能工厂培育名单，东北、西北、西南、中部、东部全覆盖，医药、服装等消费品领域企业首次入选</li><li><b>农业</b>：我国加快提升农产品品质（联播单条报道）</li><li><b>联播快讯</b>：新一批可信数据空间创新发展试点启动；16 座水库开展安全、生态、智能"三个大坝"建设试点（2027 年底前完成）；全国首个独立运行的兆瓦级海岛微电网投运；我国开展冰雪气候资源普查；第九届全国职工职业技能大赛决赛结束；<b>2025 年全球专利申请量创新高，中国领先</b></li></ul>
+      <div class="ai"><b>🧠 AI 解读：</b>智能工厂名单"消费品首次入选"是信号：<b>智能制造正从装备、钢铁这些"硬行业"扩散到医药、服装等"软行业"</b>，中小企业上 AI 的服务市场会跟着打开。可信数据空间试点则是数据要素市场的基建动作，做数据业务的公司值得关注试点名单。</div>
+      <a class="src" href="https://tv.cctv.com/2026/11/19/VIDEMO4XRFz6heHFAoNIqZhL261119.shtml">🔗 来源：央视《新闻联播》（11月19日）· 11月19日</a>
     </div>
   </div>
 
@@ -1056,47 +994,47 @@
 
   <!-- 地缘热点 -->
   <div class="page" id="p-geo">
-<div class="section-title">数据截至 11月19日 · 近 24-72 小时国际热点</div>
+<div class="section-title">数据截至 11月20日 · 近 24-72 小时国际热点</div>
 
     <div class="card">
-      <span class="tag hot">🇾🇪 也门 · 曼德海峡</span>
-      <h3>胡塞拿下也门西南 7100 平方公里，逼近临时首都亚丁；沙特联军反手打掉 60 个军事目标</h3>
-      <p>也门胡塞武装 17 日称，近日在<b>曼德海峡</b>附近与也门政府军及沙特支持的武装连续激战，已控制西南部<b>塔伊兹省与拉赫季省的 10 个地区、约 7100 平方公里</b>，并称击败政府军 12 个师。其中拉赫季省首府<b>毗邻也门政府所在的临时首都亚丁</b>。</p>
-      <p>胡塞方面另称，过去 24 小时萨那、荷台达、萨达遭联军空袭，致 <b>17 死 39 伤</b>；沙特主导联军 18 日称对胡塞 <b>60 个军事目标</b>实施精确打击，重点削弱其弹道导弹与无人机能力、摧毁地下设施与无人机装配点。</p>
-      <div class="ai"><b>🧠 AI 评论：</b>这是本轮最值得警惕的地形变化：<b>胡塞从"打船"转向"占地"</b>，而且占到了亚丁门口。一旦拉赫季省首府易手，也门政府的合法性会被直接动摇，红海—曼德海峡的航运风险定价也要重算。观察指标：①亚丁方向是否出现大规模撤离 ②曼德海峡船舶战争险费率 ③联军空袭是否转向"持续压制"而非"报复性一击"。</div>
-      <a class="src" href="https://news.qq.com/rain/a/20261119A03X3Z00">🔗 来源：腾讯新闻（引央视新闻/新华社，也门战况）· 11月19日</a>
+      <span class="tag hot">🇺🇦 俄乌 · 停火窗口</span>
+      <h3>克里米亚大桥一周内第三次遭袭，普京：不再讨论海上停火或停止攻击能源设施</h3>
+      <p>俄罗斯交通部 19 日通报，18 日夜间无人机袭击后，克里米亚大桥铁路段列车通行暂停，未造成人员伤亡；俄方消息称这是一周内乌方对大桥的第三次袭击。普京 19 日表示：<b>大桥遭袭后，俄方不会就海上停火或停止攻击能源设施与有关方面谈判</b>，并称该桥是民用设施、从未通过该桥运输军事装备和石油制品。</p>
+      <div class="ai"><b>🧠 AI 评论：</b>大桥是俄方的红线资产，一周三袭等于持续踩线——"海上停火"议题实质关闭，能源设施继续互打，<b>今冬能源战升级的概率上升</b>。观察指标：俄对乌能源系统的下一轮打击规模、黑海航运保险费率。</div>
+      <a class="src" href="https://ysxw.cctv.cn/article.html?toc_style_id=feeds_default&item_id=12543197393963925748&channelId=1119">🔗 来源：央视新闻（国际新闻早知道）· 11月19日</a>
     </div>
 
     <div class="card">
-      <span class="tag hot">🇮🇱 以色列 · 议会变天</span>
-      <h3>正直党议员 66:52 当选新议长，埃森科特阵营拿下议会主导权；以防长放话"战事升级就占更多地"</h3>
-      <ul><li><b>换议长</b>：17 日以色列议会以 <b>66 票赞成、52 票反对</b>选举正直党议员<b>马坦·卡哈纳</b>为新议长，接替内塔尼亚胡所属利库德集团的议长</li><li><b>意味着什么</b>：正直党领导人<b>埃森科特</b>阵营在争取议会主导权上取得重要进展；他 11 月 8 日已获总统授权组阁，目前仍在拉拢其他政党</li><li><b>后续动作</b>：以媒称新议长上任后，反内塔尼亚胡阵营可能在数日内启动立法，限制看守政府行政权力、从法律层面切断其执政后路</li><li><b>军方表态</b>：国防部长卡茨 18 日称，若黎巴嫩、叙利亚、加沙战事再升级，以军准备<b>占领更多土地</b>并纳入"永久安全区"；在哈马斯解除武装等条件解决前不会撤军</li></ul>
-      <div class="ai"><b>🧠 AI 评论：</b>这是一次"制度层面的政权交接"：<b>议长换人比组阁成败更早生效</b>，因为立法权先动。而卡茨的强硬表态，恰好出现在看守政府最虚弱的窗口——<b>用外部军事姿态稳住内部右翼</b>，是这类过渡期的常见打法。观察指标：①组阁谈判是否在两周内出结果 ②议会是否真的启动限制看守政府的立法 ③加沙与黎南的军事行动强度是否反而上升。</div>
-      <a class="src" href="https://news.qq.com/rain/a/20261119A03X3Z00">🔗 来源：腾讯新闻（引央视新闻，以色列议长选举与防长表态）· 11月19日</a>
+      <span class="tag hot">🇮🇷 伊朗 · 海湾</span>
+      <h3>三艘油轮在霍尔木兹海峡以东触雷起火；伊朗警告海湾国家不得为美军提供基地</h3>
+      <p>伊朗军队海军 19 日称，当天上午三艘违规油轮在霍尔木兹海峡以东限制区域航行、无视警告并关闭导航系统，随后<b>触雷起火并被迫停航</b>。伊朗外交部同日声明，警告海湾国家不要允许美军使用本土基地策划针对伊朗的军事行动，称伊朗保留防御反击权利。另据外媒，多家全球大宗商品贸易商正与卡塔尔能源洽谈 2027 年原油长约，以对冲海湾风险。</p>
+      <div class="ai"><b>🧠 AI 评论：</b>袭船进入"常态化"阶段：单次事件对油价的边际冲击越来越小（19 日油价仅小幅波动），但保险与绕行成本在累积。真正要盯的是"基地"这条红线——<b>若海湾国家选边，冲突会从海上转到陆上</b>，那是完全不同的量级。</div>
+      <a class="src" href="https://ysxw.cctv.cn/article.html?toc_style_id=feeds_default&item_id=12543197393963925748&channelId=1119">🔗 来源：央视新闻（国际新闻早知道）· 11月19日</a><br>
+      <a class="src" href="https://news.qq.com/rain/a/20261120A03M4700">🔗 来源：腾讯新闻（卡塔尔原油长约谈判）· 11月20日</a>
     </div>
 
     <div class="card">
-      <span class="tag hot">🚢 霍尔木兹 · 袭船未停</span>
-      <h3>又一艘油轮在海峡被击中起火、1 名海员失踪：2 月以来累计 138 起袭船、至少 25 名海员死亡</h3>
-      <p>英国海上贸易行动办公室 18 日通报：一艘油轮 17 日在<b>霍尔木兹海峡遭不明发射物击中并起火</b>，造成 <b>1 名海员失踪</b>，搜救仍在进行。据国际海事组织数据，自今年 2 月美以对伊朗发动军事打击以来至 11 月 17 日，霍尔木兹海峡及周边海域已确认发生 <b>138 起</b>袭船事件，造成<b>至少 25 名海员死亡</b>。</p>
-      <div class="ai"><b>🧠 AI 评论：</b>138 起 / 25 条人命，这组数字说明"袭船"已经不是偶发事件，而是<b>一种持续的低强度封锁</b>。但同一天油价却跌 3.2%——市场在赌"供应过剩能盖过地缘风险"。这种背离不会一直持续：<b>要么海峡真的出大事把油价打上去，要么保险费率高到船东绕行</b>。观察指标：战争险费率、绕行好望角的船舶数量。</div>
-      <a class="src" href="https://ysxw.cctv.cn/article.html?toc_style_id=feeds_default&item_id=2638355321266319048&channelId=1119">🔗 来源：央视新闻（引英国海上贸易行动办公室/IMO）· 11月18日</a>
+      <span class="tag hot">🛢 能源格局</span>
+      <h3>IEA《2026 世界能源展望》：中东冲突造成史上最大能源供应冲击，累计损失约 28 亿桶石油</h3>
+      <p>国际能源署 19 日发布《2026 年世界能源展望》：中东冲突带来<b>历史上最大规模的能源供应冲击</b>——霍尔木兹海峡运输受限使海湾地区累计损失约 <b>28 亿桶石油与 600 亿立方米天然气</b>。报告提出"加快应对情景"：加速电动车普及、工业与建筑电气化、提高能效——到 2035 年全球石油需求可比现行政策情景低约 440 万桶/日，其中电动车替代超 1100 万桶/日；同时提醒电网与充电设施不足仍是转型制约。</p>
+      <div class="ai"><b>🧠 AI 评论：</b>这份报告把"能源安全"与"能源转型"绑成了一个命题：<b>冲击越大，各国越有动力摆脱单一通道依赖</b>。对普通人，最实际的落点是油价与电价的长期分叉——油的不确定性溢价抬升，电的基建投资加速。观察指标：各国 2027 年电动车政策与电网投资预算。</div>
+      <a class="src" href="https://ysxw.cctv.cn/article.html?toc_style_id=feeds_default&item_id=12543197393963925748&channelId=1119">🔗 来源：央视新闻（引 IEA 报告）· 11月19日</a>
     </div>
 
     <div class="card">
-      <span class="tag hot">🇺🇦 俄乌 · 谁上桌</span>
-      <h3>欧洲五国首次组队要"上桌"，俄方称其立场"具有明显非和平性质"；下轮阿布扎比会谈日期仍未定</h3>
-      <ul><li><b>欧洲的动作</b>：欧洲理事会主席科斯塔宣布，欧洲谈判团队由欧盟机构与<b>英、法、德、意、波五国（E5）</b>代表组成；欧盟与北约代表已首次与乌方、库什纳及美方特使举行线上磋商</li><li><b>俄方回应</b>：总统助理乌沙科夫称，只有看到欧洲明确表示愿作"建设性贡献"才谈得上让其参与；新闻秘书佩斯科夫称欧洲立场"具有明显的非和平性质"</li><li><b>进展</b>：11 月 11 日结束的阿布扎比三方会谈<b>仅就大规模交换被俘人员达成协议</b>，停火、领土与安全保障仍存重大分歧；下一轮仍在阿布扎比，<b>日期未定</b></li><li><b>战俘</b>：双方正商定新一轮大规模交换，涉及<b>超 1000 人</b>，优先重病者、女性与关押最久的军人平民</li></ul>
-      <div class="ai"><b>🧠 AI 评论：</b>"谈判桌可以扩大，共识不能靠增加椅子产生。"<b>现在的僵局不是"人不齐"，而是四方对"和平"的定义不同</b>：俄要固化战果、美要低成本收场、乌要收回主权、欧要战火不外溢。观察指标：①下一轮日期是否落定 ②欧洲以什么身份入席（观察员还是谈判方）③安全保障条款是否出现"美方提供"的字样——那才是实质进展。</div>
-      <a class="src" href="https://news.qq.com/rain/a/20261118A07S5I00">🔗 来源：腾讯新闻（引新华社，俄乌和谈卡点）· 11月18日</a>
+      <span class="tag hot">🇪🇺 欧洲 · 上桌</span>
+      <h3>柏林会议协调援乌，欧盟拟追加 450 亿欧元贷款；德法英等领导人要求欧洲深度参与和谈</h3>
+      <ul><li><b>柏林会议</b>：19 日德、法、英、波、意等国领导人与北约秘书长吕特、美方特使威特科夫、库什纳开会，讨论停火后安全保障、武器援助与乌克兰冬季能源应对</li><li><b>资金</b>：欧盟委员会提出 <b>450 亿欧元贷款方案</b>，弥补乌克兰资金缺口、支撑财政运转与战后重建；英国宣布追加远程无人机与监视无人机援助</li><li><b>姿态</b>：德国、芬兰领导人共同表态，欧洲应当深度参与乌克兰危机和平谈判</li><li><b>背景</b>：中俄美元首深圳会晤未就乌克兰战争提出具体方案，欧洲担心在涉自身安全的安排中被边缘化</li></ul>
+      <div class="ai"><b>🧠 AI 评论：</b>"上桌"的焦虑是本周欧洲的主旋律：三巨头会晤在欧洲没参与的情况下谈国际秩序，欧洲的反应是"加钱 + 要席位"，450 亿贷款是买席位的筹码。观察指标：<b>这笔钱在欧盟内部能否过关、俄方是否接受欧洲入席</b>。</div>
+      <a class="src" href="https://ysxw.cctv.cn/article.html?toc_style_id=feeds_default&item_id=12543197393963925748&channelId=1119">🔗 来源：央视新闻（国际新闻早知道）· 11月19日</a>
     </div>
 
     <div class="card">
-      <span class="tag hot">🛢 能源与市场</span>
-      <h3>鹰派纪要压过地缘风险：金价创 14 个月新低、油价跌 3.2%、伦铜五连跌</h3>
-      <ul><li><b>金</b>：现货金盘中触 <b>3719.55 美元</b>，为 2025 年 9 月以来新低；COMEX 期金 <b>3727.80（-3.53%）</b>，白银 <b>44.98（-5.03%）</b></li><li><b>油</b>：WTI <b>83.26（-3.20%）</b>为 8 月 26 日以来最低；布伦特 <b>91.95（-1.28%）</b>；EIA 原油库存大增 340 万桶（预期仅增 5.8 万）</li><li><b>铜</b>：LME 铜跌 4.5%—5.7%，五连跌创 4 月以来新低；德鲁肯米勒转空铜</li><li><b>驱动</b>：美联储 10 月纪要偏鹰 + 美元指数 103.9（19 个月新高）+ 10 年期美债 5.07%</li><li><b>另一面</b>：澳大利亚 18 日制裁 3 名以色列个人与 4 个实体（涉约旦河西岸定居点扩建）；英国此前已制裁 8 家涉定居点以企</li></ul>
-      <div class="ai"><b>🧠 AI 评论：</b>现在的定价逻辑一句话：<b>"利率的声音盖过了炮声"</b>。当地缘冲突持续一年多后，市场对"紧张"已经钝化，反而对"实际利率"极其敏感——这就是为什么海峡在挨打、金价却在跌。对国内读者最实际的一条：<b>11 月下旬成品油调价窗口</b>，若油价维持低位，此前预期的下调幅度可能重新扩大。</div>
-      <a class="src" href="https://www.jwview.com/jingwei/html/11-19/697611.shtml">🔗 来源：中新经纬（金油铜与欧美股市）· 11月19日</a>
+      <span class="tag hot">🌍 气候谈判</span>
+      <h3>COP31 协议草案删除化石燃料表述与 1200 亿美元适应融资目标，发展中国家不满</h3>
+      <p>联合国气候变化大会 COP31 在土耳其安塔利亚举行，19 日公布的修订版协议草案<b>删除了化石燃料相关表述</b>与一项 <b>1200 亿美元气候适应融资目标</b>，引发发展中国家与环保组织不满；土耳其此前推动的 2035 年可再生能源电力占比目标同样面临分歧。谈判仍在继续，草案尚未成为最终协议。</p>
+      <div class="ai"><b>🧠 AI 评论：</b>每届 COP 的剧本都相似：文本先做减法再讨价还价，真正的观察点在<b>最后 48 小时</b>——化石燃料字样是否回得来、适应资金数字是否恢复。对国内读者：大会结果将影响绿色债券与新能源出口的政策环境。</div>
+      <a class="src" href="https://ysxw.cctv.cn/article.html?toc_style_id=feeds_default&item_id=12543197393963925748&channelId=1119">🔗 来源：央视新闻（国际新闻早知道）· 11月19日</a>
     </div>
   </div>
 
